@@ -1,0 +1,20 @@
+.about {
+  height: 100vh;
+  background: green;
+}
+
+.header {
+  padding-top: 5vw;
+}
+
+.bio {
+  text-align: left;
+  width: 40vw;
+  padding-left: 15vw;
+}
+
+.picture {
+  width: 30vw;
+  padding-left: 10vw;
+  padding-right: 15vw;
+}

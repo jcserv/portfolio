@@ -1,0 +1,13 @@
+.landing {
+  height: 100vh;
+  width: 100vw;
+}
+
+.center {
+  padding-top: 40vh;
+  text-align: center;
+}
+
+.learn {
+  padding-top: 5vh;
+}

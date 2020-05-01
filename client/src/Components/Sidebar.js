@@ -1,27 +1,47 @@
 import React from "react";
-import { ListGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
-import { GrDocumentText } from "react-icons/gr";
+import { IoMdDocument } from "react-icons/io";
 
 import "../css/Components/Sidebar.css";
 
 export function Sidebar() {
   return (
     <div className="sidebar">
-      <ListGroup>
-        <ListGroup.Item>
+      <div className="list-group list-group-sidebar">
+        <Button
+          href="https://github.com/jcserv"
+          target="_blank"
+          variant="secondary"
+          className="list-group-item"
+        >
           <FaGithub />
-        </ListGroup.Item>
-        <ListGroup.Item>
+        </Button>
+        <Button
+          href="https://www.linkedin.com/in/jarrod-servilla/"
+          target="_blank"
+          variant="secondary"
+          className="list-group-item"
+        >
           <FaLinkedin />
-        </ListGroup.Item>
-        <ListGroup.Item>
+        </Button>
+        <Button
+          href="https://devpost.com/jcserv"
+          target="_blank"
+          variant="secondary"
+          className="list-group-item"
+        >
           <FaDev />
-        </ListGroup.Item>
-        <ListGroup.Item>
-          <GrDocumentText />
-        </ListGroup.Item>
-      </ListGroup>
+        </Button>
+        <Button
+          href={require("../data/resume.pdf")}
+          target="_blank"
+          variant="secondary"
+          className="list-group-item"
+        >
+          <IoMdDocument />
+        </Button>
+      </div>
     </div>
   );
 }

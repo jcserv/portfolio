@@ -37,10 +37,21 @@
   }
 }
 
-.blue {
-  background: blue;
+.sidebar-bg,
+.row-bg {
+  background: #252934;
 }
 
 .red {
   background: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
 }

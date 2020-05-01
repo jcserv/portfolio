@@ -1,20 +1,34 @@
 .about {
-  height: 100vh;
-  background: green;
-}
-
-.header {
-  padding-top: 5vw;
+  /*height: 100vh;*/
+  background: #252934;
 }
 
 .bio {
   text-align: left;
-  width: 40vw;
+  /*width: 35vw;*/
   padding-left: 15vw;
 }
 
 .picture {
-  width: 30vw;
+  /*width: 30vw;*/
   padding-left: 10vw;
   padding-right: 15vw;
+}
+
+.skills {
+  padding-top: 3vw;
+  padding-left: 15vw;
+}
+
+.skills-buttons {
+  padding-top: 1vw;
+}
+
+.barchart-group {
+  padding-top: 6vw;
+}
+
+.button-text {
+  padding-top: 0.4vw;
+  padding-left: 0.1vw;
 }

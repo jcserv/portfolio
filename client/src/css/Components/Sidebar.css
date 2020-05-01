@@ -1,4 +1,15 @@
 .sidebar {
   padding-top: 60vh;
   width: 50px;
+  background: #252934;
+}
+
+.list-group-sidebar .list-group-item {
+  color: #fff;
+  background-color: #252934;
+  border: none;
+}
+
+.list-group-sidebar .list-group-item:hover {
+  background-color: #252934;
 }

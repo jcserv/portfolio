@@ -20,8 +20,10 @@ export function Landing() {
           offset={-70}
           duration={500}
         >
-          <h6>Learn More</h6>
-          <BsChevronDown />
+          <h5>Learn More</h5>
+          <h6>
+            <BsChevronDown />
+          </h6>
         </Link>
       </div>
     </div>

@@ -1,13 +1,18 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "../css/Components/NavigationBar.css";
 
 export function NavigationBar() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" fixed="top" className="d-flex">
-        <Navbar.Brand href="/dashboard" className="p-2">
+      <Navbar fixed="top" className="d-flex">
+        <Navbar.Brand
+          className="p-2"
+          onClick={() => {
+            scroll.scrollToTop();
+          }}
+        >
           <img
             alt=""
             src={require("../logo.svg")}

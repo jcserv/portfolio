@@ -1,4 +1,65 @@
 .contact {
-  height: 100vh;
-  background: orange;
+  min-height: 100vh;
+  background: #252934;
+}
+
+.contact-card {
+  width: 35vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.contact-form {
+  text-align: left;
+
+  padding-top: 1vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 3vw;
+}
+
+.contact-hdr {
+  padding-top: 3vw;
+  padding-bottom: 1vw;
+}
+
+h6 {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.form-group {
+  padding-top: 1vw;
+}
+
+input,
+textarea {
+  border-radius: 0;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-color: #246175 !important;
+  border-bottom: 2px solid grey !important;
+}
+
+.focus-input {
+  border-bottom: 3px solid #246175 !important;
+}
+
+label {
+  position: absolute;
+  top: 15;
+  left: 15;
+  padding-top: 0.5vw;
+  padding-left: 1vw;
+  pointer-events: none;
+  z-index: 0;
+
+  transition: 0.2s all;
+}
+
+.elevated-label {
+  transform: translateY(-2.2vw);
+  color: #246175;
+  font-weight: bold;
 }

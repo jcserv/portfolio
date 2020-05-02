@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 import "../css/Components/Sidebar.css";
 
@@ -40,6 +41,14 @@ export function Sidebar() {
           className="list-group-item"
         >
           <IoMdDocument />
+        </Button>
+        <Button
+          href="mailto:jarrod.servilla@gmail.com"
+          target="_blank"
+          variant="secondary"
+          className="list-group-item"
+        >
+          <MdEmail />
         </Button>
       </div>
     </div>

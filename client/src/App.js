@@ -1,4 +1,5 @@
 import React from "react";
+import StickyBox from "react-sticky-box";
 import NavigationBar from "./Components/NavigationBar";
 import Sidebar from "./Components/Sidebar";
 import Landing from "./Containers/Landing";
@@ -18,7 +19,11 @@ function App() {
       <NavigationBar />
       <Row className="row-bg">
         <Col xs={1} className="sidebar-bg">
-          <Sidebar />
+          <StickyBox>
+            <div className="d-flex justify-content-center">
+              <Sidebar />
+            </div>
+          </StickyBox>
         </Col>
         <Col className="row-bg">
           <About />
@@ -26,9 +31,7 @@ function App() {
           <Projects />
           <Contact />
         </Col>
-        <Col xs={1} className="sidebar-bg">
-          <Sidebar />
-        </Col>
+        <Col xs={1} className="sidebar-bg"></Col>
       </Row>
     </div>
   );

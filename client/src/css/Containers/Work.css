@@ -1,4 +1,5 @@
 .work {
-  height: 100vh;
-  background: teal;
+  min-height: 100vh;
+  background: #252934;
+  text-align: center;
 }

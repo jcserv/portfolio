@@ -13,7 +13,8 @@
     "react-icons": "^3.10.0",
     "react-move": "^6.1.0",
     "react-scripts": "3.4.1",
-    "react-scroll": "^1.7.16"
+    "react-scroll": "^1.7.16",
+    "react-sticky-box": "^0.9.3"
   },
   "scripts": {
     "start": "react-scripts start",

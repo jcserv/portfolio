@@ -108,7 +108,7 @@ class BarChart extends Component {
         <Row>
           <Col xs={1}>{this.renderLogos()}</Col>
           <Col xs={5}>
-            <svg width="800" height="2200">
+            <svg width="800" height="200">
               <g className="chart" transform="translate(100,10)">
                 <NodeGroup
                   data={this.state.data}

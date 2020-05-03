@@ -24,6 +24,10 @@
   padding-top: 1vw;
 }
 
+.skill-btn:hover {
+  background: #246175;
+}
+
 .barchart-group {
   padding-top: 6vw;
 }
@@ -31,4 +35,14 @@
 .button-text {
   padding-top: 0.4vw;
   padding-left: 0.1vw;
+}
+
+.bio-img {
+  box-shadow: 5px 10px 18px #888888;
+  transition: all 0.2s ease-in-out;
+}
+
+.bio-img:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 18px #3b5998;
 }

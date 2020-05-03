@@ -8,17 +8,17 @@ export function NavigationBar() {
     <div className="nav-box">
       <Navbar fixed="top" className="d-flex" style={{ background: "#252934" }}>
         <Navbar.Brand
-          className="p-2"
+          className=""
           onClick={() => {
             scroll.scrollToTop();
           }}
         >
           <img
             alt=""
-            src={require("../logo.svg")}
+            src={require("../logo.png")}
             width="60"
-            height="30"
-            className="d-inline-block align-top"
+            height="60"
+            className="d-inline-block align-top logo"
           />
         </Navbar.Brand>
         <Nav className="ml-auto">

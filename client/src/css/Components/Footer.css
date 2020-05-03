@@ -5,9 +5,11 @@
 
 .footer-text {
   color: white;
+  transition: all 0.1s ease-in-out;
 }
 
 .footer-text:hover {
-  color: blue;
+  color: #0079fd;
+  font-weight: bold;
   text-decoration: none;
 }

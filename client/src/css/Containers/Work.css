@@ -3,3 +3,8 @@
   background: #252934;
   text-align: center;
 }
+
+.work-btn:hover > p {
+  color: black;
+  font-weight: bold;
+}

@@ -15,7 +15,7 @@ export function WorkOverview(props) {
             onClick={() => {
               setDisplay(job.id);
             }}
-            className="rounded-0"
+            className="rounded-0 work-btn"
           >
             <p>{job.workplace}</p>
           </Button>
@@ -33,6 +33,17 @@ export function WorkOverview(props) {
     }
   }
 
+  function renderWorkplace(selected) {
+    if (selected && selected.url) {
+      return (
+        <a href={selected.url} target="_blank" rel="noopener noreferrer">
+          {selected.workplace}
+        </a>
+      );
+    }
+    return selected.workplace;
+  }
+
   function renderWorkInfo() {
     if (props.data) {
       const selected = props.data[display];
@@ -43,10 +54,7 @@ export function WorkOverview(props) {
       return (
         <div style={{ "text-align": "left" }}>
           <h5 style={{ paddingTop: "2vw" }}>
-            {selected.position} @{" "}
-            <a href={selected.url} target="_blank" rel="noopener noreferrer">
-              {selected.workplace}
-            </a>
+            {selected.position} @ {renderWorkplace(selected)}
           </h5>
           <h6>{selected.duration}</h6>
           <ul>{info}</ul>

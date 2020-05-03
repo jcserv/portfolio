@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link /*, animateScroll as scroll*/ } from "react-scroll";
+import Jump from "react-reveal/Jump";
 import { BsChevronDown } from "react-icons/bs";
 import "../css/Containers/Landing.css";
 
@@ -20,9 +21,12 @@ export function Landing() {
           offset={-70}
           duration={500}
         >
-          <h5>Learn More</h5>
+          <h5 className="learn-more">Learn More</h5>
+
           <h6>
-            <BsChevronDown />
+            <Jump forever={true} duration={1500}>
+              <BsChevronDown />
+            </Jump>
           </h6>
         </Link>
       </div>

@@ -12,3 +12,13 @@
 .learn {
   padding-top: 5vh;
 }
+
+.learn-more {
+  transition: all 0.2s ease-in-out;
+}
+
+.learn-more:hover {
+  color: #0079fd;
+
+  transform: scale(1.1);
+}

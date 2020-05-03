@@ -72,7 +72,7 @@ export function About() {
           </Col>
           <Col>
             <div className="picture">
-              <Image src={require("../img/me.jpg")} />
+              <Image src={require("../img/me.jpg")} className="bio-img" />
             </div>
           </Col>
         </Row>
@@ -82,7 +82,8 @@ export function About() {
               <h3>Skills</h3>
               <ButtonGroup vertical className="skills-buttons">
                 <Button
-                  className="text-decoration-none"
+                  block
+                  className="text-decoration-none skill-btn"
                   variant="link"
                   onClick={() => {
                     setActiveChart(1);

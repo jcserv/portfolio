@@ -35,4 +35,15 @@ export const jobs = [
     ],
     url: "https://www.psycholinguistics.ca/",
   },
+  {
+    id: 3,
+    workplace: "U of T",
+    position: "CSC148 TAship",
+    duration: "Jan 2020 - April 2020",
+    description: [
+      "Provided assistance to students during lecture activities",
+      "Answered students questions on the course forums",
+      "Marked midterm and final exams",
+    ],
+  },
 ];

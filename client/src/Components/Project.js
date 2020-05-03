@@ -54,7 +54,7 @@ export function Project(props) {
             <Card.Title>{data.name}</Card.Title>
             {data ? <Card.Subtitle>{data.subtitle}</Card.Subtitle> : ""}
           </div>
-          <div className="text-left description" style={{ paddingTop: "2vw" }}>
+          <div className="text-left description" style={{ paddingTop: "1vw" }}>
             {data.description}
           </div>
         </div>
@@ -116,6 +116,7 @@ export function Project(props) {
                   ? data.pic
                   : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
               }
+              className="project-img"
             />
           </a>
           <div className="d-flex justify-content-center">{renderTech()}</div>

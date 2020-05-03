@@ -1,0 +1,26 @@
+.group {
+  padding-top: 60vh;
+  width: 50px;
+  background: #252934;
+}
+
+.content {
+  padding-top: 2vw;
+  padding-left: 1vw;
+}
+
+.list-group-h .list-group-item {
+  color: #fff;
+  background-color: #252934;
+  border: none;
+}
+
+.list-group-card .list-group-item {
+  color: #fff;
+  background-color: #343a40;
+  border: none;
+}
+
+.description {
+  padding-top: "2vw";
+}

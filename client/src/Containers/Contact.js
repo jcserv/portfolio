@@ -128,7 +128,7 @@ export function Contact() {
               />
             </Form.Group>
             <div className="d-flex justify-content-end">
-              <Button variant="info" type="submit">
+              <Button variant="info" type="submit" className="shadow">
                 Submit
               </Button>
             </div>

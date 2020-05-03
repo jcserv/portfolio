@@ -7,6 +7,7 @@ import About from "./Containers/About";
 import Work from "./Containers/Work";
 import Projects from "./Containers/Projects";
 import Contact from "./Containers/Contact";
+import Footer from "./Components/Footer";
 
 import { Row, Col } from "react-bootstrap";
 
@@ -32,6 +33,11 @@ function App() {
           <Contact />
         </Col>
         <Col xs={1} className="sidebar-bg"></Col>
+      </Row>
+      <Row>
+        <Col>
+          <Footer />
+        </Col>
       </Row>
     </div>
   );

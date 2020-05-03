@@ -5,8 +5,8 @@ import "../css/Components/NavigationBar.css";
 
 export function NavigationBar() {
   return (
-    <div>
-      <Navbar fixed="top" className="d-flex">
+    <div className="nav-box">
+      <Navbar fixed="top" className="d-flex" style={{ background: "#252934" }}>
         <Navbar.Brand
           className="p-2"
           onClick={() => {
@@ -21,7 +21,7 @@ export function NavigationBar() {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Nav className="ml-auto p-2">
+        <Nav className="ml-auto">
           <Link
             className="p-2 link"
             style={{ color: "white" }}

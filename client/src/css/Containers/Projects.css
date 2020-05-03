@@ -1,4 +1,8 @@
 .projects {
-  height: 100vh;
-  background: purple;
+  min-height: 100vh;
+  background: #252934;
+  text-align: center;
+}
+
+.project-image {
 }

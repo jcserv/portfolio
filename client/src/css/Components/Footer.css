@@ -1,0 +1,13 @@
+.footer {
+  background: #252934;
+  padding-bottom: 2vw;
+}
+
+.footer-text {
+  color: white;
+}
+
+.footer-text:hover {
+  color: blue;
+  text-decoration: none;
+}

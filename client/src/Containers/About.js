@@ -92,7 +92,7 @@ export function About() {
                     <h3>
                       <AiOutlineCode />
                     </h3>
-                    <p className="button-text">Programming Languages</p>
+                    <p className="button-text">Languages</p>
                   </Row>
                 </Button>
 

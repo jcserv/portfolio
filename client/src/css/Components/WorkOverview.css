@@ -1,0 +1,18 @@
+.work-overview {
+  width: 45vw;
+}
+
+.btn-howdy {
+  color: white;
+}
+
+.btn-howdy:hover {
+  background: #246175;
+}
+.btn-howdy:focus {
+  background: #246175;
+}
+
+.btn-howdy:focus p {
+  font-weight: bold;
+}

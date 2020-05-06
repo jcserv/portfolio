@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+  background: #252934;
+  width: 100vw;
+}
+.sidebar-bg,
+.row-bg {
+  background: #252934;
+  max-width: 100vw;
+}
+
+.red {
+  background: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: white;
+}
+
+.btn-grey {
+  color: #ffffff;
+  background-color: #252934;
+  border-color: #252934;
+}
+
+.btn-grey:hover,
+.btn-grey:focus,
+.btn-grey:active,
+.btn-grey.active,
+.open .dropdown-toggle.btn-grey {
+  color: #ffffff;
+  background-color: #252934;
+  border-color: #252934;
+}
+
+.btn-grey:active,
+.btn-grey.active,
+.open .dropdown-toggle.btn-grey {
+  background-image: none;
+}
+
+.btn-grey.disabled,
+.btn-grey[disabled],
+fieldset[disabled] .btn-grey,
+.btn-grey.disabled:hover,
+.btn-grey[disabled]:hover,
+fieldset[disabled] .btn-grey:hover,
+.btn-grey.disabled:focus,
+.btn-grey[disabled]:focus,
+fieldset[disabled] .btn-grey:focus,
+.btn-grey.disabled:active,
+.btn-grey[disabled]:active,
+fieldset[disabled] .btn-grey:active,
+.btn-grey.disabled.active,
+.btn-grey[disabled].active,
+fieldset[disabled] .btn-grey.active {
+  background-color: #252934;
+  border-color: #252934;
+}
+
+.btn-grey .badge {
+  color: #252934;
+  background-color: #ffffff;
+}

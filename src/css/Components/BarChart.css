@@ -1,0 +1,45 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#menu {
+  margin-bottom: 20px;
+}
+#menu button {
+  margin: 10px;
+}
+
+.bar-group .name-label {
+  text-anchor: end;
+  font-weight: 300;
+  fill: #fff;
+}
+
+.bar-group .value-label {
+  text-anchor: end;
+  fill: #fff;
+  font-weight: 400;
+}
+
+.bar-group rect {
+  /* Hmmm... this conflicts with react-move's leave fade! */
+  /* transition: opacity 0.3s; */
+}
+
+.bar-group:hover rect {
+  opacity: 0.5 !important;
+}
+
+.bar-group:hover .name-label {
+  font-weight: 400;
+}
+
+.list-group-tech .list-group-item {
+  color: #fff;
+  background-color: #252934;
+  border: none;
+}
+
+.list-group-tech .list-group-item:hover {
+  background-color: #252934;
+}

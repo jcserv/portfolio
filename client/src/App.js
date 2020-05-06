@@ -8,7 +8,6 @@ import Work from "./Containers/Work";
 import Projects from "./Containers/Projects";
 import Contact from "./Containers/Contact";
 import Footer from "./Components/Footer";
-import Fade from "react-reveal/Fade";
 import { Row, Col } from "react-bootstrap";
 
 import "./App.css";
@@ -22,21 +21,17 @@ function App() {
         <Col xs={1} className="sidebar-bg">
           <StickyBox>
             <div className="d-flex justify-content-center">
-              <Sidebar />
+              <div className="d-none d-sm-block">
+                <Sidebar />
+              </div>
             </div>
           </StickyBox>
         </Col>
         <Col className="row-bg">
-          <Fade>
-            <About />
-          </Fade>
-          <Fade>
-            <Work />
-          </Fade>
+          <About />
+          <Work />
           <Projects />
-          <Fade>
-            <Contact />
-          </Fade>
+          <Contact />
         </Col>
         <Col xs={1} className="sidebar-bg"></Col>
       </Row>

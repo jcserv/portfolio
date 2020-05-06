@@ -11,6 +11,7 @@ export const projects = [
   {
     id: 1,
     name: "HarMoney",
+    subtitle: "UofT Hacks 2020",
     description:
       'Simple mobile application that allows users to solve the issue of "group bill payments" with a streamlined process of creating rooms and sending invites.',
     pic: "https://i.imgur.com/sCb7zFm.png",
@@ -23,7 +24,7 @@ export const projects = [
   {
     id: 2,
     name: "VapeSafe",
-    subtitle: "3rd Place Overall Winner",
+    subtitle: "3rd Place @ EngHacks 2019",
     description:
       "An Android/Arduino project allowing vape users to limit their daily usage and view their usage statistics.",
     pic: "https://i.imgur.com/ybtfPuO.png",

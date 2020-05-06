@@ -6,7 +6,7 @@ import "../css/Components/BarChart.css";
 let barHeight = 25;
 let barPadding = 2;
 let barColour = "#348AA7";
-let widthScale = (d) => d * 5;
+let widthScale = (d) => d * 3;
 
 function BarGroup(props) {
   let width = widthScale(props.state.value);
@@ -26,14 +26,6 @@ function BarGroup(props) {
         height={barHeight - barPadding}
         style={{ fill: barColour, opacity: props.state.opacity }}
       />
-      <text
-        className="value-label"
-        x={width - 6}
-        y={yMid}
-        alignmentBaseline="middle"
-      >
-        {props.state.value.toFixed(0)}
-      </text>
       {renderLogo()}
       <text
         className="name-label"

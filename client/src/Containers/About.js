@@ -19,6 +19,8 @@ import {
   DiEclipse,
 } from "react-icons/di";
 import BarChart from "../Components/BarChart";
+import Fade from "react-reveal/Fade";
+
 import { languages, frameworks, tools } from "../data/skills";
 import "../css/Containers/About.css";
 
@@ -46,93 +48,107 @@ export function About() {
   const [activeChart, setActiveChart] = useState(1);
 
   return (
-    <div id="about" name="about" className="d-flex flex-wrap about">
-      <div>
-        <h1 style={{ "padding-top": "3vw" }}>About Me</h1>
-        <Row style={{ "padding-top": "3vw" }}>
-          <Col>
-            <div className="bio">
+    <div id="about" name="about" className="about">
+      <Fade>
+        <div>
+          <h1 style={{ "padding-top": "3vw" }}>About Me</h1>
+          <Row
+            style={{ "padding-top": "3vw" }}
+            className="d-flex justify-content-center"
+          >
+            <Col lg={6}>
+              <div className="p-4 bio">
+                <p>
+                  Hi, I'm Jarrod! I am a third year Computer Science Specialist
+                  student at the University of Toronto Mississauga.
+                </p>
+                <p>
+                  I'm passionate about designing and creating web and mobile
+                  applications, with the goal of providing useful solutions to
+                  users with an elegant user experience and design.
+                </p>
+                <p>
+                  I worked as a Social Robotics Programmer at the Perception
+                  Action Language Lab at UTM, where I programmed the Furhat
+                  robot to conduct experiments focusing on human-robot
+                  interaction. These experiments utilized features of the robot
+                  such as eye-tracking and human-like body/facial gestures.
+                </p>
+              </div>
+            </Col>
+            <Col lg={6}>
+              <div className="picture">
+                <Image src={require("../img/me.jpg")} className="bio-img" />
+              </div>
+            </Col>
+          </Row>
+          <Row className="d-flex justify-content-center">
+            <h3 style={{ paddingTop: "3vw" }}>Skills</h3>
+          </Row>
+          <Row className="d-flex justify-content-center">
+            <div className="skills-desc">
               <p>
-                Hi, I'm Jarrod! I am a third year Computer Science Specialist
-                student at the University of Toronto Mississauga.
+                Languages: JavaScript, Python, Java, C, PHP, HTML/CSS, Kotlin
               </p>
-              <p>
-                I'm passionate about designing and creating web and mobile
-                applications, with the goal of providing useful solutions to
-                users with an elegant user experience and design.
-              </p>
-              <p>
-                I worked as a Social Robotics Programmer at the Perception
-                Action Language Lab at UTM, where I programmed the Furhat robot
-                to conduct experiments focusing on human-robot interaction.
-                These experiments utilized features of the robot such as
-                eye-tracking and human-like body/facial gestures.
-              </p>
+              <p>Technologies: React, Express, Node.js, SQL, jQuery, MongoDB</p>
+              <p>Tools: Git, VS Code, IntelliJ, Eclipse</p>
             </div>
-          </Col>
-          <Col>
-            <div className="picture">
-              <Image src={require("../img/me.jpg")} className="bio-img" />
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <div className="skills">
-              <h3>Skills</h3>
-              <ButtonGroup vertical className="skills-buttons">
-                <Button
-                  block
-                  className="text-decoration-none skill-btn"
-                  variant="link"
-                  onClick={() => {
-                    setActiveChart(1);
-                  }}
-                >
-                  <Row>
-                    <h3>
-                      <AiOutlineCode />
-                    </h3>
-                    <p className="button-text">Languages</p>
-                  </Row>
-                </Button>
+          </Row>
+          <Row>
+            <Col lg={6}>
+              <div className="skills">
+                <ButtonGroup vertical className="skills-buttons">
+                  <Button
+                    block
+                    variant="skill"
+                    className="text-decoration-none btn-skill"
+                    onClick={() => {
+                      setActiveChart(1);
+                    }}
+                  >
+                    <Row>
+                      <h3>
+                        <AiOutlineCode />
+                      </h3>
+                      <p className="button-text">Languages</p>
+                    </Row>
+                  </Button>
 
-                <Button
-                  className="text-decoration-none"
-                  variant="link"
-                  onClick={() => {
-                    setActiveChart(2);
-                  }}
-                >
-                  <Row>
-                    <h3>
-                      <GrStackOverflow />
-                    </h3>
-                    <p className="button-text">Frameworks</p>
-                  </Row>
-                </Button>
-                <Button
-                  className="text-decoration-none"
-                  variant="link"
-                  onClick={() => {
-                    setActiveChart(3);
-                  }}
-                >
-                  <Row>
-                    <h3>
-                      <AiFillTool />
-                    </h3>
-                    <p className="button-text">Tools</p>
-                  </Row>
-                </Button>
-              </ButtonGroup>
-              <p style={{ "font-size": "12px" }}>
-                Click on one of the above to see my proficiency stats
-              </p>
-            </div>
-          </Col>
-          <Col>
-            <Row>
+                  <Button
+                    className="text-decoration-none btn-skill"
+                    variant="skill"
+                    onClick={() => {
+                      setActiveChart(2);
+                    }}
+                  >
+                    <Row>
+                      <h3>
+                        <GrStackOverflow />
+                      </h3>
+                      <p className="button-text">Frameworks</p>
+                    </Row>
+                  </Button>
+                  <Button
+                    className="text-decoration-none btn-skill"
+                    variant="skill"
+                    onClick={() => {
+                      setActiveChart(3);
+                    }}
+                  >
+                    <Row>
+                      <h3>
+                        <AiFillTool />
+                      </h3>
+                      <p className="button-text">Tools</p>
+                    </Row>
+                  </Button>
+                </ButtonGroup>
+                <p style={{ "font-size": "12px" }}>
+                  Click on one of the above to see my proficiency stats
+                </p>
+              </div>
+            </Col>
+            <Col lg={6}>
               <div className="barchart-group">
                 <BarChart
                   x={languages.x}
@@ -159,10 +175,10 @@ export function About() {
                   visible={activeChart === 3}
                 />
               </div>
-            </Row>
-          </Col>
-        </Row>
-      </div>
+            </Col>
+          </Row>
+        </div>
+      </Fade>
     </div>
   );
 }

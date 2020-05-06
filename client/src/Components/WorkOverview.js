@@ -5,7 +5,7 @@ import "../css/Components/WorkOverview.css";
 export function WorkOverview(props) {
   const [display, setDisplay] = useState(0);
 
-  function renderButtons() {
+  function renderButtons(isVertical) {
     if (props.data) {
       const btns = props.data.map((job) => {
         return (
@@ -22,11 +22,7 @@ export function WorkOverview(props) {
         );
       });
       return (
-        <ButtonGroup
-          vertical
-          style={{ paddingTop: "2vw", paddingLeft: "0.5vw" }}
-          className="w-100"
-        >
+        <ButtonGroup vertical={isVertical} className="p-2 w-100">
           {btns}
         </ButtonGroup>
       );
@@ -52,8 +48,8 @@ export function WorkOverview(props) {
       });
 
       return (
-        <div style={{ "text-align": "left" }}>
-          <h5 style={{ paddingTop: "2vw" }}>
+        <div style={{ "text-align": "left" }} className="m-2">
+          <h5 className="p-2">
             {selected.position} @ {renderWorkplace(selected)}
           </h5>
           <h6>{selected.duration}</h6>
@@ -64,10 +60,13 @@ export function WorkOverview(props) {
   }
 
   return (
-    <Card bg="dark" className="work-overview">
-      <Row style={{ paddingTop: "1vw", paddingBottom: "2vw" }}>
-        <Col xs={4}>{renderButtons()}</Col>
-        <Col xs={7}>{renderWorkInfo()}</Col>
+    <Card bg="dark" className="w-50">
+      <Row className="d-block d-lg-none">{renderButtons(false)}</Row>
+      <Row className="p-2">
+        <Col xs={5} md={3} className="d-none d-lg-block">
+          {renderButtons(true)}
+        </Col>
+        <Col>{renderWorkInfo()}</Col>
       </Row>
     </Card>
   );

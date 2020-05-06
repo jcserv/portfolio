@@ -1,31 +1,33 @@
 .about {
   min-height: 100vh;
   background: #252934;
+  text-align: center;
 }
 
 .bio {
   text-align: left;
-  /*width: 35vw;*/
-  padding-left: 15vw;
-}
-
-.picture {
-  /*width: 30vw;*/
-  padding-left: 10vw;
-  padding-right: 15vw;
 }
 
 .skills {
   padding-top: 3vw;
-  padding-left: 15vw;
+}
+
+.skills-desc {
+  text-align: left;
+  padding-top: 2vw;
 }
 
 .skills-buttons {
   padding-top: 1vw;
 }
 
-.skill-btn:hover {
+.btn-skill:hover,
+.btn-skill:focus {
   background: #246175;
+}
+
+.btn-skill:focus p {
+  font-weight: bold;
 }
 
 .barchart-group {

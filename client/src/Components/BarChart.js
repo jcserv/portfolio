@@ -85,7 +85,7 @@ class BarChart extends Component {
       });
       return (
         <div
-          classname="list-group list-group-tech"
+          className="list-group list-group-tech"
           style={{ paddingTop: "0.35vw", paddingLeft: "3.5vw" }}
         >
           {list_items}

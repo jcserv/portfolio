@@ -69,3 +69,9 @@ fieldset[disabled] .btn-grey.active {
   color: #252934;
   background-color: #ffffff;
 }
+
+.sidebar {
+  padding-top: 60vh;
+  width: 50px;
+  background: #252934;
+}

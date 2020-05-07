@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Card, Row, Form, Col, Button } from "react-bootstrap";
+import { Card, Row, Form, Col, Button, Spinner } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
-
+import { submitMsg } from "../Actions/msg";
 import "../css/Containers/Contact.css";
 
 export function Contact() {
@@ -10,10 +10,27 @@ export function Contact() {
   const [subject, setSubject] = useState("");
   const [msg, setMsg] = useState("");
 
+  const [err, setErr] = useState("");
+
   const [nameFocus, setNameFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
   const [subjectFocus, setSubjectFocus] = useState(false);
   const [msgFocus, setMsgFocus] = useState(false);
+
+  const [isLoading, setLoading] = useState(false);
+
+  async function submitForm(e) {
+    e.preventDefault();
+    setErr("");
+    setLoading(true);
+    const response = await submitMsg(name, email, subject, msg);
+    if (response === "Success") {
+      setErr("Message sent.");
+    } else {
+      setErr("Error occurred.");
+    }
+    setLoading(false);
+  }
 
   return (
     <div id="contact" className="contact">
@@ -34,7 +51,7 @@ export function Contact() {
           </h6>
           <Row className="d-flex justify-content-center">
             <Card className="contact-card">
-              <Form className="contact-form">
+              <Form className="contact-form" onSubmit={submitForm}>
                 <Row>
                   <Col>
                     <Form.Group controlId="formName">
@@ -139,9 +156,20 @@ export function Contact() {
                     className={msgFocus || msg !== "" ? "focus-input" : ""}
                   />
                 </Form.Group>
+
+                {err !== "" && <p className="err-msg">{err}</p>}
                 <div className="d-flex justify-content-end">
                   <Button variant="info" type="submit" className="shadow">
-                    Submit
+                    {isLoading ? "" : "Submit "}
+                    {isLoading && (
+                      <Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                      />
+                    )}
                   </Button>
                 </div>
               </Form>

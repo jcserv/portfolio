@@ -1,6 +1,8 @@
 import React from "react";
+import { Row } from "react-bootstrap";
 import { animateScroll as scroll } from "react-scroll";
 import Jump from "react-reveal/Jump";
+import ContactList from "./ContactList";
 import "../css/Components/Footer.css";
 
 export function Footer() {
@@ -18,6 +20,9 @@ export function Footer() {
         </span>{" "}
         (and React) by Jarrod Servilla
       </a>
+      <Row className="d-block d-sm-none justify-content-center">
+        <ContactList isHorizontal={true} />
+      </Row>
       <Jump duration={1500}>
         <p
           onClick={() => {

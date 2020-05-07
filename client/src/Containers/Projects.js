@@ -8,7 +8,7 @@ export function Projects() {
   function renderProjects() {
     const proj_list = projects.map((project, index) => {
       return (
-        <Fade>
+        <Fade key={index}>
           <Project
             data={project}
             alternate={index % 2 === 1}

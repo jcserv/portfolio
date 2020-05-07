@@ -11,9 +11,9 @@ export function Work() {
     <div id="work" className="work">
       <Fade>
         <div>
-          <h1 style={{ "padding-top": "6vw" }}>Work Experience</h1>
+          <h1 style={{ paddingTop: "6vw" }}>Work Experience</h1>
           <Row
-            style={{ "padding-top": "3vw" }}
+            style={{ paddingTop: "3vw" }}
             className="d-flex justify-content-center"
           >
             <WorkOverview data={jobs} />

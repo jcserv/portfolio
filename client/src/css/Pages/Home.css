@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background: #252934;
+  width: 100vw;
+}
+.sidebar-bg,
+.row-bg {
+  background: #252934;
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: white;
+}
+
+.sidebar {
+  padding-top: 60vh;
+  width: 50px;
+  background: #252934;
+}

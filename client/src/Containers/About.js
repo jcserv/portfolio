@@ -51,9 +51,9 @@ export function About() {
     <div id="about" name="about" className="about">
       <Fade>
         <div>
-          <h1 style={{ "padding-top": "3vw" }}>About Me</h1>
+          <h1 style={{ paddingTop: "3vw" }}>About Me</h1>
           <Row
-            style={{ "padding-top": "3vw" }}
+            style={{ paddingTop: "3vw" }}
             className="d-flex justify-content-center"
           >
             <Col lg={6}>
@@ -143,7 +143,7 @@ export function About() {
                     </Row>
                   </Button>
                 </ButtonGroup>
-                <p style={{ "font-size": "12px" }}>
+                <p style={{ fontSize: "12px" }}>
                   Click on one of the above to see my proficiency stats
                 </p>
               </div>

@@ -7,9 +7,10 @@ export function WorkOverview(props) {
 
   function renderButtons(isVertical) {
     if (props.data) {
-      const btns = props.data.map((job) => {
+      const btns = props.data.map((job, index) => {
         return (
           <Button
+            key={index}
             variant="howdy"
             block
             onClick={() => {
@@ -43,12 +44,12 @@ export function WorkOverview(props) {
   function renderWorkInfo() {
     if (props.data) {
       const selected = props.data[display];
-      const info = selected.description.map((task) => {
-        return <li>{task}</li>;
+      const info = selected.description.map((task, index) => {
+        return <li key={index}>{task}</li>;
       });
 
       return (
-        <div style={{ "text-align": "left" }} className="m-2">
+        <div style={{ textAlign: "left" }} className="m-2">
           <h5 className="p-2">
             {selected.position} @ {renderWorkplace(selected)}
           </h5>

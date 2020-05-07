@@ -63,3 +63,7 @@ label {
   color: #246175;
   font-weight: bold;
 }
+
+.err-msg {
+  color: black;
+}

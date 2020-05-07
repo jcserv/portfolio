@@ -1,15 +1,18 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 import { FaGithub, FaLinkedin, FaDev } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 
-import "../css/Components/Sidebar.css";
+import "../css/Components/ContactList.css";
 
-export function Sidebar() {
+export function ContactList(props) {
   return (
-    <div className="sidebar">
-      <div className="list-group list-group-sidebar">
+    <ListGroup
+      horizontal={props.isHorizontal}
+      className="list-group list-group-sidebar"
+    >
+      <ListGroup.Item>
         <Button
           href="https://github.com/jcserv"
           target="_blank"
@@ -18,6 +21,9 @@ export function Sidebar() {
         >
           <FaGithub />
         </Button>
+      </ListGroup.Item>
+
+      <ListGroup.Item>
         <Button
           href="https://www.linkedin.com/in/jarrod-servilla/"
           target="_blank"
@@ -26,6 +32,8 @@ export function Sidebar() {
         >
           <FaLinkedin />
         </Button>
+      </ListGroup.Item>
+      <ListGroup.Item>
         <Button
           href="https://devpost.com/jcserv"
           target="_blank"
@@ -34,6 +42,8 @@ export function Sidebar() {
         >
           <FaDev />
         </Button>
+      </ListGroup.Item>
+      <ListGroup.Item>
         <Button
           href={require("../data/resume.pdf")}
           target="_blank"
@@ -42,6 +52,8 @@ export function Sidebar() {
         >
           <IoMdDocument />
         </Button>
+      </ListGroup.Item>
+      <ListGroup.Item>
         <Button
           href="mailto:jarrod.servilla@gmail.com"
           target="_blank"
@@ -50,9 +62,9 @@ export function Sidebar() {
         >
           <MdEmail />
         </Button>
-      </div>
-    </div>
+      </ListGroup.Item>
+    </ListGroup>
   );
 }
 
-export default Sidebar;
+export default ContactList;

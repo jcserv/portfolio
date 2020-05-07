@@ -64,9 +64,9 @@ export function Project(props) {
 
   function renderTech() {
     if (data) {
-      const technologies = data.tech.map((techIndex) => {
+      const technologies = data.tech.map((techIndex, index) => {
         return (
-          <ListGroup.Item className="list-group-item">
+          <ListGroup.Item key={index} className="list-group-item">
             <h4>{tech[techIndex]}</h4>
           </ListGroup.Item>
         );
@@ -81,9 +81,9 @@ export function Project(props) {
 
   function renderLinks() {
     if (data) {
-      const link_items = data.links.map((link) => {
+      const link_items = data.links.map((link, index) => {
         return (
-          <ListGroup.Item className="list-group-item">
+          <ListGroup.Item key={index} className="list-group-item">
             <a
               href={link}
               target="_blank"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 import Jump from "react-reveal/Jump";
 import ContactList from "./ContactList";
 import "../css/Components/Footer.css";
@@ -39,6 +40,9 @@ export function Footer() {
           </span>
         </p>
       </Jump>
+      <div className="d-flex justify-content-end admin">
+        <Link to="/admin">admin</Link>
+      </div>
     </div>
   );
 }

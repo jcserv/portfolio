@@ -1,4 +1,5 @@
 export const jobs = [
+  /*
   {
     id: 0,
     workplace: "CitiGroup",
@@ -22,9 +23,21 @@ export const jobs = [
       "Develop solutions to seamlessly integrate layers of water-related data from thousands of disparate, unstructured and semi-structured data sources into data pipeline",
     ],
     url: "https://www.watrhub.com/",
+  },*/
+
+  {
+    id: 0,
+    workplace: "U of T",
+    position: "CSC148 TAship",
+    duration: "Jan 2020 - April 2020",
+    description: [
+      "Provided assistance to students during lecture activities",
+      "Answered students questions on the course forums",
+      "Marked midterm and final exams",
+    ],
   },
   {
-    id: 2,
+    id: 1,
     workplace: "PAL Lab",
     position: "Social Robotics Programmer",
     duration: "May 2019 - Dec 2019",
@@ -34,16 +47,5 @@ export const jobs = [
       "Designed the UI/UX of the PAL Lab website",
     ],
     url: "https://www.psycholinguistics.ca/",
-  },
-  {
-    id: 3,
-    workplace: "U of T",
-    position: "CSC148 TAship",
-    duration: "Jan 2020 - April 2020",
-    description: [
-      "Provided assistance to students during lecture activities",
-      "Answered students questions on the course forums",
-      "Marked midterm and final exams",
-    ],
   },
 ];

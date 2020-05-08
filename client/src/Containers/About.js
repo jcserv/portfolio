@@ -57,23 +57,26 @@ export function About() {
             className="d-flex justify-content-center"
           >
             <Col lg={6}>
-              <div className="p-4 bio">
-                <p>
-                  Hi, I'm Jarrod! I am a third year Computer Science Specialist
-                  student at the University of Toronto Mississauga.
-                </p>
-                <p>
-                  I'm passionate about designing and creating web and mobile
-                  applications, with the goal of providing useful solutions to
-                  users with an elegant user experience and design.
-                </p>
-                <p>
-                  I worked as a Social Robotics Programmer at the Perception
-                  Action Language Lab at UTM, where I programmed the Furhat
-                  robot to conduct experiments focusing on human-robot
-                  interaction. These experiments utilized features of the robot
-                  such as eye-tracking and human-like body/facial gestures.
-                </p>
+              <div style={{ paddingLeft: "6vw" }}>
+                <div className="p-4 bio">
+                  <p>
+                    Hi, I'm Jarrod! I am a third year Computer Science
+                    Specialist student at the University of Toronto Mississauga.
+                  </p>
+                  <p>
+                    I'm passionate about designing and creating web and mobile
+                    applications, with the goal of providing useful solutions to
+                    users with an elegant user experience and design.
+                  </p>
+                  <p>
+                    I worked as a Social Robotics Programmer at the Perception
+                    Action Language Lab at UTM, where I programmed the Furhat
+                    robot to conduct experiments focusing on human-robot
+                    interaction. These experiments utilized features of the
+                    robot such as eye-tracking and human-like body/facial
+                    gestures.
+                  </p>
+                </div>
               </div>
             </Col>
             <Col lg={6}>

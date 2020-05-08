@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavigationBar from "../Components/NavigationBar";
+import AdminBar from "../Components/AdminBar";
 import MessageList from "../Components/MessageList";
 import { login } from "../Actions/login";
 import { Row, Form, Button } from "react-bootstrap";
@@ -10,7 +10,8 @@ export function Admin() {
   const [title, setTitle] = useState("Login");
   const [show, setShow] = useState(false);
 
-  async function loginUser() {
+  async function loginUser(e) {
+    e.preventDefault();
     const response = await login(password);
     if (response === "Success") {
       setShow(true);
@@ -44,7 +45,7 @@ export function Admin() {
 
   return (
     <div className="Home">
-      <NavigationBar />
+      <AdminBar />
       <h1 className="header">{title}</h1>
       <Row className="d-flex justify-content-center">{renderContent()}</Row>
     </div>

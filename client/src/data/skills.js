@@ -1,7 +1,7 @@
 export const languages = {
   height: 173,
-  width: 80,
-  x: -80,
+  width: 82,
+  x: -82,
   stats: [
     {
       id: 1,

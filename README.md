@@ -9,6 +9,8 @@
 
 ## 📗 Acknowledgements <a name = "acknowledgement"></a>
 
+This README format is from <a href="http://github.com/collabcloud/project-collabcloud>CollabCloud</a>, authored by my good friend Matthew Huynh.
+
 The design of the site was heavily influenced by a lot of awesome portfolios out there, such as:
 - <a href="https://brittanychiang.com/">Brittany Chiang</a>
 - <a href="http://findmatthew.com/">Matthew Williams</a>
@@ -18,6 +20,31 @@ The design of the site was heavily influenced by a lot of awesome portfolios out
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
+Project Structure:
+
+### Pages
+
+App.js: Router containing all the Pages
+Home.js: Primary page
+Admin.js: Page where you can log in and view the messages that have been sent
+More.js: Under construction
+
+### Containers
+
+TBD
+
+### Components
+
+TBD
+
+- client
+   - src
+      - Actions (Functions that make calls to our endpoints)
+      - Components (Components make up containers and try to be as modular as possible)
+      - Containers (Sections within a page)
+      - Pages (Pages that can be navigated to, and have a url)
+      - data (Fixed data for usage in components such as WorkOverview)
+      - img (I have my personal picture in here)
 ### Prerequisites
 What things you need to install and run the application
 - Node.js (runtime environment, Node package manager) [node.js](https://nodejs.org/en/download/)
@@ -66,6 +93,7 @@ Instructions: TBD
 Other Packages:
   Frontend:
   - React-bootstrap (Awesome, responsive components)
+  - react-router-dom
   - react-icons
   - react-move (animation for the barchart)
   - react-reveal (Beautiful animations)
@@ -77,7 +105,7 @@ Other Packages:
   - Mongoose (Middleware for MongoDB)
 
 
-## 🌲Environment Variables<a name = "environment_variables"></a>
+## 🌲Environment Variables and Package.json Scripts<a name = "environment_variables"></a>
 Note that you will need to restart the Create React App development server after making any modifications to this file.
 
 Your environment file in the root directory should be:
@@ -85,3 +113,20 @@ Your environment file in the root directory should be:
 ATLAS_URI=[your mongodb atlas uri here]
 password=[your password for the admin page here]
 ```
+
+Under "scripts" in package.json, you should add these:
+
+client:
+    "start": "react-scripts start",
+    "client": "npm start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" (if you wanna nix the server portion and deploy on GH pages)
+root directory:
+    "client-install": "npm install --prefix client",
+    "client": "npm run client --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"

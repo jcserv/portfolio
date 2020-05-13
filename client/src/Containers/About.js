@@ -100,16 +100,20 @@ export function About() {
           <Row>
             <Col lg={6}>
               <div className="skills">
-                <ButtonGroup vertical className="skills-buttons">
+                <ButtonGroup vertical className="w-25 skills-buttons">
                   <Button
                     block
                     variant="skill"
-                    className="text-decoration-none btn-skill"
+                    className={
+                      activeChart === 1
+                        ? "text-decoration-none active-button"
+                        : "text-decoration-none btn-skill"
+                    }
                     onClick={() => {
                       setActiveChart(1);
                     }}
                   >
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                       <h3>
                         <AiOutlineCode />
                       </h3>
@@ -118,13 +122,18 @@ export function About() {
                   </Button>
 
                   <Button
-                    className="text-decoration-none btn-skill"
+                    block
+                    className={
+                      activeChart === 2
+                        ? "text-decoration-none active-button"
+                        : "text-decoration-none btn-skill"
+                    }
                     variant="skill"
                     onClick={() => {
                       setActiveChart(2);
                     }}
                   >
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                       <h3>
                         <GrStackOverflow />
                       </h3>
@@ -132,17 +141,27 @@ export function About() {
                     </Row>
                   </Button>
                   <Button
-                    className="text-decoration-none btn-skill"
+                    block
+                    className={
+                      activeChart === 3
+                        ? "text-decoration-none active-button"
+                        : "text-decoration-none btn-skill"
+                    }
                     variant="skill"
                     onClick={() => {
                       setActiveChart(3);
                     }}
                   >
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                       <h3>
                         <AiFillTool />
                       </h3>
-                      <p className="button-text">Tools</p>
+                      <p
+                        className="button-text"
+                        style={{ paddingRight: "1vw" }}
+                      >
+                        Tools
+                      </p>
                     </Row>
                   </Button>
                 </ButtonGroup>

@@ -104,10 +104,10 @@ export function Project(props) {
   }
 
   function renderProject(indicator) {
-    if (indicator) {
+    if (data && indicator) {
       return (
         <div>
-          <a href="/">
+          <a href={data.links[0]} target="_blank" rel="noopener noreferrer">
             {" "}
             <Image
               fluid

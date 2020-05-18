@@ -5,6 +5,7 @@ import {
   FaNode,
   FaAndroid,
   FaGithub,
+  FaYoutube,
   FaDev,
   FaExternalLinkAlt,
   FaLink,
@@ -13,7 +14,13 @@ import { DiPostgresql, DiMongodb } from "react-icons/di";
 import { Card, Row, Col, Image, ListGroup } from "react-bootstrap";
 import "../css/Components/Project.css";
 
-const links = [<FaGithub />, <FaDev />, <FaExternalLinkAlt />, <FaLink />];
+const links = [
+  <FaGithub />,
+  <FaDev />,
+  <FaYoutube />,
+  <FaExternalLinkAlt />,
+  <FaLink />,
+];
 
 const tech = [
   <FaReact />,
@@ -40,10 +47,12 @@ export function Project(props) {
       return 0;
     } else if (link.includes("https://devpost")) {
       return 1;
-    } else if (small.includes(data.name.toLowerCase())) {
+    } else if (link.includes("https://youtu.be")) {
       return 2;
+    } else if (small.includes(data.name.toLowerCase())) {
+      return 3;
     }
-    return 3;
+    return 4;
   }
 
   function renderContent() {
@@ -107,24 +116,26 @@ export function Project(props) {
     if (data && indicator) {
       return (
         <div>
-          <a href={data.links[0]} target="_blank" rel="noopener noreferrer">
-            {" "}
-            <Image
-              fluid
-              src={
-                data
-                  ? data.pic
-                  : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
-              }
-              className="project-img"
-            />
-          </a>
-          <div className="d-flex justify-content-center">{renderTech()}</div>
+          <Row className="d-flex justify-content-center">
+            <a href={data.links[0]} target="_blank" rel="noopener noreferrer">
+              {" "}
+              <Image
+                fluid
+                src={
+                  data
+                    ? data.pic
+                    : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
+                }
+                className="w-100 project-img"
+              />
+            </a>
+          </Row>
+          <Row className="d-flex justify-content-center">{renderTech()}</Row>
         </div>
       );
     }
     return (
-      <div style={{ paddingTop: "15%" }}>
+      <div className="project-info">
         <Card bg="dark" text="white" className="project-card">
           {renderContent()}
           <div className="d-flex justify-content-end">{renderLinks()}</div>
@@ -134,9 +145,13 @@ export function Project(props) {
   }
 
   return (
-    <Row style={{ paddingTop: "5vw" }}>
-      <Col>{renderProject(!alternate)}</Col>
-      <Col>{renderProject(alternate)}</Col>
+    <Row style={{ paddingTop: "5vw", paddingLeft: "2vw" }}>
+      <Col xs={12} sm={6}>
+        {renderProject(!alternate)}
+      </Col>
+      <Col xs={12} sm={6}>
+        {renderProject(alternate)}
+      </Col>
     </Row>
   );
 }

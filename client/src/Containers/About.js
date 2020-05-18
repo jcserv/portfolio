@@ -69,12 +69,16 @@ export function About() {
                     users with an elegant user experience and design.
                   </p>
                   <p>
+                    I was a Intro to Computer Science TA (CSC148) last semester
+                    and am currently working with the instructors to develop
+                    assignments for future offerings.
+                  </p>
+                  <p>
                     I worked as a Social Robotics Programmer at the Perception
-                    Action Language Lab at UTM, where I programmed the Furhat
-                    robot to conduct experiments focusing on human-robot
-                    interaction. These experiments utilized features of the
-                    robot such as eye-tracking and human-like body/facial
-                    gestures.
+                    Action Language Lab, where I programmed the Furhat robot to
+                    conduct experiments focusing on human-robot interaction,
+                    utilizing features of the robot such as eye-tracking and
+                    human-like body/facial gestures.
                   </p>
                 </div>
               </div>
@@ -89,7 +93,7 @@ export function About() {
             <h3 style={{ paddingTop: "3vw" }}>Skills</h3>
           </Row>
           <Row className="d-flex justify-content-center">
-            <div className="skills-desc">
+            <div className="p-5 skills-desc">
               <p>
                 Languages: JavaScript, Python, Java, C, PHP, HTML/CSS, Kotlin
               </p>

@@ -33,6 +33,7 @@ export const jobs = [
     description: [
       "Provided assistance to students during lecture activities",
       "Answered students questions on the course forums",
+      "3rd Highest Contributions amongst TAs",
       "Marked midterm and final exams",
     ],
   },

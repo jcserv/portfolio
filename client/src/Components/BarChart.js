@@ -22,7 +22,7 @@ function BarGroup(props) {
     <g className="bar-group" transform={`translate(0, ${props.state.y})`}>
       <rect
         y={barPadding * 0.5}
-        width={width}
+        width={((width / 10) * Math.sqrt(window.innerWidth)) / 4}
         height={barHeight - barPadding}
         style={{ fill: barColour, opacity: props.state.opacity }}
       />

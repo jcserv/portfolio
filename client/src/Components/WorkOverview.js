@@ -23,7 +23,7 @@ export function WorkOverview(props) {
         );
       });
       return (
-        <ButtonGroup vertical={isVertical} className="p-2 w-100">
+        <ButtonGroup vertical={isVertical} className="p-2 w-75">
           {btns}
         </ButtonGroup>
       );
@@ -61,7 +61,7 @@ export function WorkOverview(props) {
   }
 
   return (
-    <Card bg="dark" className="w-50">
+    <Card bg="dark" className="w-50 d-flex flex-wrap">
       <Row className="d-block d-lg-none">{renderButtons(false)}</Row>
       <Row className="p-2">
         <Col xs={5} md={3} className="d-none d-lg-block">

@@ -23,7 +23,7 @@ export function Landing() {
         >
           <h5 className="learn-more">Learn More</h5>
 
-          <h6>
+          <h6 style={{ paddingTop: "2vw" }}>
             <Jump forever={true} duration={1500}>
               <BsChevronDown />
             </Jump>

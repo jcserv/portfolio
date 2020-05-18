@@ -9,6 +9,12 @@
   padding-right: 3vw;
 }
 
+@media (max-width: 575.98px) {
+  .contact-card {
+    width: 50vw;
+  }
+}
+
 .contact-form {
   text-align: left;
 

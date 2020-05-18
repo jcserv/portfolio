@@ -6,7 +6,12 @@ import "../css/Components/NavigationBar.css";
 export function NavigationBar() {
   return (
     <div className="nav-box">
-      <Navbar fixed="top" className="d-flex" style={{ background: "#252934" }}>
+      <Navbar
+        fixed="top"
+        className="d-flex navbar"
+        style={{ background: "#252934" }}
+        expand="md"
+      >
         <Navbar.Brand
           className=""
           onClick={() => {
@@ -21,57 +26,67 @@ export function NavigationBar() {
             className="d-inline-block align-top logo"
           />
         </Navbar.Brand>
-        <Nav className="ml-auto">
-          <Link
-            className="p-2 link"
-            style={{ color: "white" }}
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About
-          </Link>
-
-          <Link
-            className="p-2 link"
-            style={{ color: "white" }}
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Work
-          </Link>
-          <Link
-            className="p-2 link"
-            style={{ color: "white" }}
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Projects
-          </Link>
-          <Link
-            className="p-2 link"
-            style={{ color: "white" }}
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </Nav>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link>
+              <Link
+                className="p-2 link"
+                style={{ color: "white" }}
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                className="p-2 link"
+                style={{ color: "white" }}
+                activeClass="active"
+                to="work"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Work
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                className="p-2 link"
+                style={{ color: "white" }}
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                className="p-2 link"
+                style={{ color: "white" }}
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </div>
   );

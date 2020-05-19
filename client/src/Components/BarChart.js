@@ -97,7 +97,7 @@ class BarChart extends Component {
   renderBarChart() {
     if (this.props.visible) {
       return (
-        <Row>
+        <Row className="d-flex justify-content-center">
           <Col xs={1}>{this.renderLogos()}</Col>
           <Col xs={5}>
             <svg width="800" height="200">

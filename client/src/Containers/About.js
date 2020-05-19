@@ -141,7 +141,7 @@ export function About() {
                       <h3>
                         <GrStackOverflow />
                       </h3>
-                      <p className="button-text">Frameworks</p>
+                      <p className="button-text"> Technologies</p>
                     </Row>
                   </Button>
                   <Button
@@ -176,30 +176,32 @@ export function About() {
             </Col>
             <Col lg={6}>
               <div className="barchart-group">
-                <BarChart
-                  x={languages.x}
-                  height={languages.height}
-                  width={languages.width}
-                  logos={[js, python, java, c, php, html, css]}
-                  data={languages.stats}
-                  visible={activeChart === 1}
-                />
-                <BarChart
-                  x={frameworks.x}
-                  height={frameworks.height}
-                  width={frameworks.width}
-                  logos={[react, express, node, sql, jquery, mongo]}
-                  data={frameworks.stats}
-                  visible={activeChart === 2}
-                />
-                <BarChart
-                  x={tools.x}
-                  height={tools.height}
-                  width={tools.width}
-                  logos={[git, vscode, intellij, eclipse]}
-                  data={tools.stats}
-                  visible={activeChart === 3}
-                />
+                <Row className="d-flex justify-content-center">
+                  <BarChart
+                    x={languages.x}
+                    height={languages.height}
+                    width={languages.width}
+                    logos={[js, python, java, c, php, html, css]}
+                    data={languages.stats}
+                    visible={activeChart === 1}
+                  />
+                  <BarChart
+                    x={frameworks.x}
+                    height={frameworks.height}
+                    width={frameworks.width}
+                    logos={[react, express, node, sql, jquery, mongo]}
+                    data={frameworks.stats}
+                    visible={activeChart === 2}
+                  />
+                  <BarChart
+                    x={tools.x}
+                    height={tools.height}
+                    width={tools.width}
+                    logos={[git, vscode, intellij, eclipse]}
+                    data={tools.stats}
+                    visible={activeChart === 3}
+                  />
+                </Row>
               </div>
             </Col>
           </Row>

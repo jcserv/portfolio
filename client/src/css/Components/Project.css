@@ -27,8 +27,15 @@
 
 .project-img {
   box-shadow: 5px 10px 18px #888888;
+  margin-top: 4vw;
   margin-bottom: 4vw;
   transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 575.98px) {
+  .project-img {
+    width: 75%;
+  }
 }
 
 .project-img:hover {
@@ -36,7 +43,6 @@
   box-shadow: 5px 10px 18px #3b5998;
 }
 
-.project-info {
-  padding-top: 15%;
-  padding-bottom: 3vw;
+.vertical-center {
+  margin-bottom: 4vw;
 }

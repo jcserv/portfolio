@@ -126,7 +126,7 @@ export function Project(props) {
                     ? data.pic
                     : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
                 }
-                className="w-100 project-img"
+                className="project-img"
               />
             </a>
           </Row>
@@ -135,21 +135,19 @@ export function Project(props) {
       );
     }
     return (
-      <div className="project-info">
-        <Card bg="dark" text="white" className="project-card">
-          {renderContent()}
-          <div className="d-flex justify-content-end">{renderLinks()}</div>
-        </Card>
-      </div>
+      <Card bg="dark" text="white" className="vertical-center">
+        {renderContent()}
+        <div className="d-flex justify-content-end">{renderLinks()}</div>
+      </Card>
     );
   }
 
   return (
     <Row style={{ paddingTop: "5vw", paddingLeft: "2vw" }}>
-      <Col xs={12} sm={6}>
+      <Col xs={12} sm={6} className="d-flex align-items-center">
         {renderProject(!alternate)}
       </Col>
-      <Col xs={12} sm={6}>
+      <Col xs={12} sm={6} className="d-flex align-items-center">
         {renderProject(alternate)}
       </Col>
     </Row>

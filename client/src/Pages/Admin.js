@@ -10,7 +10,7 @@ export function Admin() {
   const [title, setTitle] = useState("Login");
   const [show, setShow] = useState(false);
 
-  async function loginUser(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     const response = await login(password);
     if (response === "Success") {
@@ -22,7 +22,7 @@ export function Admin() {
   function renderContent() {
     if (!show) {
       return (
-        <Form onSubmit={loginUser}>
+        <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Control
               value={password}
@@ -33,7 +33,7 @@ export function Admin() {
               }}
             />
           </Form.Group>
-          <Button variant="primary" onClick={loginUser}>
+          <Button type="submit" variant="primary">
             Submit
           </Button>
         </Form>

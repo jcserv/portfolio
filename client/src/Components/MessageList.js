@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { retrieveMsgs } from "../Actions/msg";
-import { Card } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
 
 export function MessageList() {
   const [msgs, setMsgs] = useState([]);
@@ -19,13 +19,15 @@ export function MessageList() {
   function renderMsgs() {
     if (msgs && msgs.length > 0) {
       const messages = msgs.map((msg, index) => (
-        <Card key={index} className="p-4 w-50 text-left">
-          <Card.Title>
-            {msg.subject} from: {msg.name}
-          </Card.Title>
-          <Card.Subtitle>{msg.email}</Card.Subtitle>
-          <Card.Body>{msg.message}</Card.Body>
-        </Card>
+        <Row>
+          <Card key={index} className="p-4 w-50 text-left">
+            <Card.Title>
+              {msg.subject} from: {msg.name}
+            </Card.Title>
+            <Card.Subtitle>{msg.email}</Card.Subtitle>
+            <Card.Body>{msg.message}</Card.Body>
+          </Card>
+        </Row>
       ));
       return <div className="d-flex justify-content-center">{messages}</div>;
     }

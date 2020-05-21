@@ -50,7 +50,7 @@ export function Contact() {
             </a>
           </h6>
           <Row className="d-flex justify-content-center">
-            <Card className="contact-card">
+            <Card className="w-50 contact-card">
               <Form className="contact-form" onSubmit={submitForm}>
                 <Row>
                   <Col>

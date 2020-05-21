@@ -69,7 +69,20 @@ export function About() {
                     users with an elegant user experience and design.
                   </p>
                   <p>
-                    I was a Intro to Computer Science TA (CSC148) last semester
+                    In addition, I enjoy writing and have a few articles for new
+                    UTM CS students on{" "}
+                    <a
+                      href="https://medium.com/@jarrod.servilla"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      Medium
+                    </a>
+                    .
+                  </p>
+                  <p>
+                    I was an Intro to Computer Science TA (CSC148) last semester
                     and am currently working with the instructors to develop
                     assignments for future offerings.
                   </p>

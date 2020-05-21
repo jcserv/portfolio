@@ -26,6 +26,7 @@
 }
 
 .project-img {
+  z-index: 1;
   box-shadow: 5px 10px 18px #888888;
   margin-top: 4vw;
   margin-bottom: 4vw;
@@ -45,4 +46,5 @@
 
 .vertical-center {
   margin-bottom: 4vw;
+  z-index: -1;
 }

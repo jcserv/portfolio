@@ -29,9 +29,9 @@ export function NavigationBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link>
+            <Nav.Link className="link">
               <Link
-                className="p-2 link"
+                className="p-2"
                 style={{ color: "white" }}
                 activeClass="active"
                 to="about"
@@ -43,7 +43,7 @@ export function NavigationBar() {
                 About
               </Link>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link className="link">
               <Link
                 className="p-2 link"
                 style={{ color: "white" }}
@@ -57,7 +57,7 @@ export function NavigationBar() {
                 Work
               </Link>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link className="link">
               <Link
                 className="p-2 link"
                 style={{ color: "white" }}
@@ -71,7 +71,7 @@ export function NavigationBar() {
                 Projects
               </Link>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link className="link">
               <Link
                 className="p-2 link"
                 style={{ color: "white" }}

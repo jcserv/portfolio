@@ -12,6 +12,8 @@ import {
 } from "react-icons/fa";
 import { DiPostgresql, DiMongodb } from "react-icons/di";
 import { Card, Row, Col, Image, ListGroup } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
+
 import "../css/Components/Project.css";
 
 const links = [
@@ -81,9 +83,11 @@ export function Project(props) {
         );
       });
       return (
-        <ListGroup horizontal className="list-group-h">
-          {technologies}
-        </ListGroup>
+        <Fade>
+          <ListGroup horizontal className="list-group-h">
+            {technologies}
+          </ListGroup>
+        </Fade>
       );
     }
   }
@@ -117,28 +121,32 @@ export function Project(props) {
       return (
         <div>
           <Row className="d-flex justify-content-center">
-            <a href={data.links[0]} target="_blank" rel="noopener noreferrer">
-              {" "}
-              <Image
-                fluid
-                src={
-                  data
-                    ? data.pic
-                    : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
-                }
-                className="project-img"
-              />
-            </a>
+            <Fade>
+              <a href={data.links[0]} target="_blank" rel="noopener noreferrer">
+                {" "}
+                <Image
+                  fluid
+                  src={
+                    data
+                      ? data.pic
+                      : "https://dficlub.org/wp-content/uploads/2019/09/dcfdsdf.jpg"
+                  }
+                  className="project-img"
+                />
+              </a>
+            </Fade>
           </Row>
           <Row className="d-flex justify-content-center">{renderTech()}</Row>
         </div>
       );
     }
     return (
-      <Card bg="dark" text="white" className="vertical-center">
-        {renderContent()}
-        <div className="d-flex justify-content-end">{renderLinks()}</div>
-      </Card>
+      <Fade>
+        <Card bg="dark" text="white" className="vertical-center">
+          {renderContent()}
+          <div className="d-flex justify-content-end">{renderLinks()}</div>
+        </Card>
+      </Fade>
     );
   }
 

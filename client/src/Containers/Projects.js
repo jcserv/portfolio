@@ -8,13 +8,11 @@ export function Projects() {
   function renderProjects() {
     const proj_list = projects.map((project, index) => {
       return (
-        <Fade key={index}>
-          <Project
-            data={project}
-            alternate={index % 2 === 1}
-            key={"proj-" + index}
-          />
-        </Fade>
+        <Project
+          data={project}
+          alternate={index % 2 === 1}
+          key={"proj-" + index}
+        />
       );
     });
     return proj_list;

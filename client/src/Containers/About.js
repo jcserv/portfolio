@@ -82,9 +82,9 @@ export function About() {
                     .
                   </p>
                   <p>
-                    I was an Intro to Computer Science TA (CSC148) last semester
-                    and am currently working with the instructors to develop
-                    assignments for future offerings.
+                    I was a Intro to Computer Science TA (CSC148) last semester,
+                    where I answered questions in lecture and on the discussion
+                    board.
                   </p>
                   <p>
                     I worked as a Social Robotics Programmer at the Perception

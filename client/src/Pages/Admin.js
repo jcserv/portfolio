@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AdminBar from "../Components/AdminBar";
 import MessageList from "../Components/MessageList";
 import { login } from "../Actions/login";
-import { Row, Form, Button } from "react-bootstrap";
+import { Row, Form, Button, Col } from "react-bootstrap";
 import "../css/Pages/Admin.css";
 
 export function Admin() {
@@ -39,7 +39,11 @@ export function Admin() {
         </Form>
       );
     } else {
-      return <MessageList />;
+      return (
+        <Col>
+          <MessageList />
+        </Col>
+      );
     }
   }
 

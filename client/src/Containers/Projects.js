@@ -21,7 +21,7 @@ export function Projects() {
   return (
     <div id="projects" className="projects">
       <Fade>
-        <h1>Projects</h1>
+        <h1 style={{ paddingTop: "2vw" }}>Projects</h1>
       </Fade>
       {renderProjects()}
     </div>

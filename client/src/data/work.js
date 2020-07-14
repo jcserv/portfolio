@@ -5,7 +5,7 @@ export const jobs = [
     position: "Summer Technology Analyst Intern",
     duration: "Jul 2020 - Aug 2020",
     description: [
-      "Worked in an Agile team built around a microservice-oriented architecture,",
+      "Worked in an Agile team built around a microservice-oriented architecture",
       "Collaborated with a team of engineers to build software solutions for consumers",
       "Transformed business requirements and customer experiences into tech-ready user stories",
     ],

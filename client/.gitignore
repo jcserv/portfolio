@@ -12,6 +12,7 @@
 /build
 
 # misc
+client/debug.log
 .DS_Store
 .env.local
 .env.development.local

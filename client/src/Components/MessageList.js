@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { retrieveMsgs } from "../Actions/msg";
-import { Card, Row } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 
 export function MessageList() {
   const [msgs, setMsgs] = useState([]);
@@ -29,11 +29,11 @@ export function MessageList() {
           </Card>
         </Row>
       ));
-      return <div className="d-flex justify-content-center">{messages}</div>;
+      return <Col>{messages}</Col>;
     }
   }
 
-  return <div className="w-100">{renderMsgs()}</div>;
+  return renderMsgs();
 }
 
 export default MessageList;

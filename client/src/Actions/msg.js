@@ -2,16 +2,14 @@ const axios = require("axios");
 
 export async function retrieveMsgs() {
   var response;
-  await axios
-    .get("http://localhost:5000/api/msg/")
-    .then((res) => (response = res.data));
+  await axios.get("api/msg/").then((res) => (response = res.data));
   return response;
 }
 
 export async function submitMsg(name, email, subject, msg) {
   var response;
   await axios
-    .post("http://localhost:5000/api/msg/", {
+    .post("api/msg/", {
       name: name,
       subject: subject,
       email: email,
@@ -27,7 +25,7 @@ export async function submitMsg(name, email, subject, msg) {
 export async function deleteMsg(id) {
   var response;
   await axios
-    .delete(`http://localhost:5000/api/msg/${id}`)
+    .delete(`api/msg/${id}`)
     .then((res) => (response = res.data))
     .catch(function (error) {
       response = "Error";

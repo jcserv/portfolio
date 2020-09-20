@@ -20,8 +20,8 @@ router.route("/").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/").delete((req, res) => {
-  const _id = req.body._id;
+router.route("/:id").delete((req, res) => {
+  const _id = req.params.id;
   Msg.deleteOne({ _id: _id })
     .then(() => res.json("Message deleted"))
     .catch((err) => res.status(400).json("Error: " + err));

@@ -20,7 +20,7 @@ export const jobs = [
     description: [
       "Conducted labs and provided assistance to students during lecture activities",
       "Marked midterm and final exams at a rate of 20 submissions per hour",
-      "Answered students questions on the course forums, with 3rd Highest Contributions among TAs",
+      "Answered students questions on the course forums, with 3rd Highest Contributions amongst TAs",
     ],
   },
   {

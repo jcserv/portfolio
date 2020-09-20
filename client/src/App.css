@@ -13,9 +13,14 @@
   background: red;
 }
 
+.blue {
+  color: #19aad5;
+}
+
 h1,
-h3 {
-  color: #6980e9;
+h3,
+strong {
+  color: #19aad5;
 }
 
 h2,

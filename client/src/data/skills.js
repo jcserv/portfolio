@@ -42,7 +42,7 @@ export const languages = {
 };
 
 export const frameworks = {
-  height: 149,
+  height: 173,
   width: 80,
   x: -80,
   stats: [
@@ -54,33 +54,38 @@ export const frameworks = {
     {
       id: 2,
       value: 90,
-      name: "Express",
-    },
-    {
-      id: 3,
-      value: 90,
-      name: "Node.js",
-    },
-    {
-      id: 6,
-      value: 90,
       name: "SQL",
     },
     {
-      id: 4,
+      id: 3,
       value: 85,
+      name: "Redux",
+    },
+    {
+      id: 4,
+      value: 75,
       name: "jQuery",
     },
     {
       id: 5,
-      value: 80,
+      value: 75,
+      name: "Spring",
+    },
+    {
+      id: 6,
+      value: 60,
       name: "MongoDB",
+    },
+    {
+      id: 7,
+      value: 75,
+      name: "Neo4j",
     },
   ],
 };
 
 export const tools = {
-  height: 99,
+  height: 173,
   width: 80,
   x: -80,
   stats: [
@@ -91,16 +96,31 @@ export const tools = {
     },
     {
       id: 2,
+      value: 70,
+      name: "Jenkins",
+    },
+    {
+      id: 3,
+      value: 70,
+      name: "Docker",
+    },
+    {
+      id: 4,
+      value: 80,
+      name: "Figma",
+    },
+    {
+      id: 5,
+      value: 80,
+      name: "Adobe XD",
+    },
+    {
+      id: 6,
       value: 95,
       name: "VS Code",
     },
     {
-      id: 3,
-      value: 90,
-      name: "IntelliJ",
-    },
-    {
-      id: 4,
+      id: 7,
       value: 80,
       name: "Eclipse",
     },

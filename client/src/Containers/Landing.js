@@ -10,7 +10,10 @@ export function Landing() {
     <div id="landing" className="landing">
       <div className="center">
         <h1 style={{ color: "white" }}>Hi, I'm Jarrod Servilla, </h1>
-        <h1 style={{ color: "white" }}> a full stack developer.</h1>
+        <h1 style={{ color: "white" }}>
+          {" "}
+          a <strong>full stack developer.</strong>
+        </h1>
       </div>
       <div className="learn">
         <Link

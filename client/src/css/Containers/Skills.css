@@ -1,0 +1,36 @@
+.skills {
+  padding-top: 3vw;
+  background: #252934;
+}
+
+.skills-desc {
+  text-align: left;
+  padding-top: 2vw;
+}
+
+.skills-buttons {
+  padding-top: 1vw;
+}
+
+.active-button {
+  background: #246175;
+  font-weight: bold;
+}
+
+.btn-skill:hover,
+.btn-skill:focus {
+  background: #246175;
+}
+
+.btn-skill:focus p {
+  font-weight: bold;
+}
+
+.barchart-group {
+  padding-top: 1vw;
+}
+
+.button-text {
+  padding-top: 0.4vw;
+  padding-left: 0.1vw;
+}

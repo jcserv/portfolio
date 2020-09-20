@@ -45,6 +45,20 @@ export function NavigationBar() {
             </Nav.Link>
             <Nav.Link className="link">
               <Link
+                className="p-2"
+                style={{ color: "white" }}
+                activeClass="active"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Skills
+              </Link>
+            </Nav.Link>
+            <Nav.Link className="link">
+              <Link
                 className="p-2 link"
                 style={{ color: "white" }}
                 activeClass="active"

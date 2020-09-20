@@ -9,8 +9,8 @@ export function Landing() {
   return (
     <div id="landing" className="landing">
       <div className="center">
-        <h1>Hi, I'm Jarrod Servilla, </h1>
-        <h1> a full stack developer.</h1>
+        <h1 style={{ color: "white" }}>Hi, I'm Jarrod Servilla, </h1>
+        <h1 style={{ color: "white" }}> a full stack developer.</h1>
       </div>
       <div className="learn">
         <Link

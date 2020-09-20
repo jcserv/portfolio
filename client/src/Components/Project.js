@@ -11,7 +11,15 @@ import {
   FaLink,
 } from "react-icons/fa";
 import { DiPostgresql, DiMongodb } from "react-icons/di";
-import { Card, Row, Col, Image, ListGroup } from "react-bootstrap";
+import {
+  Card,
+  Row,
+  Col,
+  Image,
+  ListGroup,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 
 import "../css/Components/Project.css";
@@ -33,7 +41,20 @@ const tech = [
   <FaAndroid />,
 ];
 
+const tech_names = [
+  "React",
+  "Express",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+  "Android",
+];
+
 export function Project(props) {
+  const tooltip = (name) => {
+    return <Tooltip id={`tooltip-${name}`}>{name}</Tooltip>;
+  };
+
   useEffect(() => {
     setAlternate(props.alternate);
     setData(props.data);
@@ -78,7 +99,13 @@ export function Project(props) {
       const technologies = data.tech.map((techIndex, index) => {
         return (
           <ListGroup.Item key={index} className="list-group-item">
-            <h4>{tech[techIndex]}</h4>
+            <OverlayTrigger
+              trigger="hover"
+              placement="bottom"
+              overlay={tooltip(tech_names[techIndex])}
+            >
+              <h4>{tech[techIndex]}</h4>
+            </OverlayTrigger>
           </ListGroup.Item>
         );
       });

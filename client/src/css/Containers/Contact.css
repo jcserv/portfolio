@@ -69,6 +69,17 @@ label {
   font-weight: bold;
 }
 
+.row {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.smallrow {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-right: 10vw;
+}
+
 .err-msg {
   color: black;
 }

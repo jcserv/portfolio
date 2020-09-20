@@ -60,38 +60,17 @@ export function About() {
               <div style={{ paddingLeft: "6vw" }}>
                 <div className="p-4 bio">
                   <p>
-                    Hi, I'm Jarrod! I am a third year Computer Science
+                    Hi, I'm Jarrod! I am a fourth year Computer Science
                     Specialist student at the University of Toronto Mississauga.
                   </p>
                   <p>
-                    I'm passionate about designing and creating web and mobile
-                    applications, with the goal of providing useful solutions to
-                    users with an elegant user experience and design.
-                  </p>
-                  <p>
-                    In addition, I enjoy writing and have a few articles for new
-                    UTM CS students on{" "}
-                    <a
-                      href="https://medium.com/@jarrod.servilla"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      Medium
-                    </a>
-                    .
-                  </p>
-                  <p>
-                    I was a Intro to Computer Science TA (CSC148) last semester,
-                    where I answered questions in lecture and on the discussion
-                    board.
-                  </p>
-                  <p>
-                    I worked as a Social Robotics Programmer at the Perception
-                    Action Language Lab, where I programmed the Furhat robot to
-                    conduct experiments focusing on human-robot interaction,
-                    utilizing features of the robot such as eye-tracking and
-                    human-like body/facial gestures.
+                    I enjoy designing & engineering efficient full stack and
+                    mobile applications, and always try to optimize the user
+                    experience for a simple and elegant user journey through the
+                    application. I have a passion for teaching, and have worked
+                    as a TA in university and highschool CS courses. I'm an avid
+                    hackathon goer, and received 3rd place at EngHacks 2019 for
+                    VapeSafe with my amazing team!
                   </p>
                 </div>
               </div>
@@ -110,7 +89,10 @@ export function About() {
               <p>
                 Languages: JavaScript, Python, Java, C, PHP, HTML/CSS, Kotlin
               </p>
-              <p>Technologies: React, Express, Node.js, SQL, jQuery, MongoDB</p>
+              <p>
+                Technologies: React, Git, SQL, Redux, Django, Express, jQuery,
+                MongoDB, Neo4j
+              </p>
               <p>Tools: Git, VS Code, IntelliJ, Eclipse</p>
             </div>
           </Row>

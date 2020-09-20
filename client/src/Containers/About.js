@@ -112,12 +112,12 @@ export function About() {
                       setActiveChart(1);
                     }}
                   >
-                    <Row className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center">
                       <h3>
                         <AiOutlineCode />
                       </h3>
                       <p className="button-text">Languages</p>
-                    </Row>
+                    </div>
                   </Button>
 
                   <Button
@@ -132,12 +132,12 @@ export function About() {
                       setActiveChart(2);
                     }}
                   >
-                    <Row className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center">
                       <h3>
                         <GrStackOverflow />
                       </h3>
                       <p className="button-text"> Technologies</p>
-                    </Row>
+                    </div>
                   </Button>
                   <Button
                     block
@@ -151,7 +151,7 @@ export function About() {
                       setActiveChart(3);
                     }}
                   >
-                    <Row className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center">
                       <h3>
                         <AiFillTool />
                       </h3>
@@ -161,7 +161,7 @@ export function About() {
                       >
                         Tools
                       </p>
-                    </Row>
+                    </div>
                   </Button>
                 </ButtonGroup>
                 <p style={{ fontSize: "12px" }}>

@@ -19,7 +19,7 @@ export function About() {
                   <p>
                     Hi, I'm Jarrod! I am a fourth year{" "}
                     <strong>Computer Science Specialist</strong> student at the{" "}
-                    <strong>University of Toronto Mississauga.</strong>
+                    University of Toronto Mississauga.
                   </p>
                   <p>
                     I enjoy designing & engineering{" "}

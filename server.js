@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const secure = require("ssl-express-www");
 const path = require("path");
 const cors = require("cors");
 require("dotenv").config();
@@ -7,6 +8,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(secure);
 app.use(cors());
 app.use(express.json());
 

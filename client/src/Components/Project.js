@@ -9,6 +9,7 @@ import {
   FaDev,
   FaExternalLinkAlt,
   FaLink,
+  FaDocker,
 } from "react-icons/fa";
 import { DiPostgresql, DiMongodb } from "react-icons/di";
 import {
@@ -39,6 +40,7 @@ const tech = [
   <DiMongodb />,
   <DiPostgresql />,
   <FaAndroid />,
+  <FaDocker />,
 ];
 
 const tech_names = [
@@ -48,6 +50,7 @@ const tech_names = [
   "MongoDB",
   "PostgreSQL",
   "Android",
+  "Docker",
 ];
 
 export function Project(props) {

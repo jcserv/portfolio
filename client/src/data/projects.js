@@ -3,7 +3,7 @@ export const projects = [
     id: 0,
     name: "CollabCloud",
     description:
-      "CollabCloud is a social networking platform built on top of Github’s API, allowing users to post CS related projects seeking collaborators, join projects, and find projects that would be best suited for their skillset and needs.",
+      "CollabCloud is a social networking platform built on top of Github’s API, allowing users to post software projects seeking collaborators, join projects, and find projects that would be best suited for their skillset and needs.",
     pic: "https://i.imgur.com/O30bnh4.png",
     tech: [0, 1, 2, 4],
     links: [
@@ -13,6 +13,27 @@ export const projects = [
   },
   {
     id: 1,
+    name: "SQL Automarker",
+    description:
+      "Developed under the supervision of Dr. Michael Liut & Professor Ilir Dema, SQL Automarker (SQAM) is an extension to the existing University of Toronto Automarker that uses machine learning to mark students' SQL submissions, providing partial marks. It will be utilized this upcoming semester to mark the submissions of UTM CSC343",
+    pic: "https://i.imgur.com/ZqCt7nD.png",
+    tech: [0, 1, 2, 3, 6],
+    links: ["https://www.michaelliut.ca/projects.html"],
+  },
+  {
+    id: 2,
+    name: "ResumeWords",
+    description:
+      "ResumeWords is a tool that identifies keywords that will improve your chances of getting contacted for a job based on its posting!",
+    pic: "https://i.imgur.com/qD6BgE3.png",
+    tech: [0, 6],
+    links: [
+      "https://resume-words.com/",
+      "https://github.com/ShahmeerShahid/ResumeWords",
+    ],
+  },
+  {
+    id: 3,
     name: "HarMoney",
     subtitle: "UofT Hacks 2020",
     description:
@@ -26,7 +47,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "VapeSafe",
     subtitle: "3rd Place @ EngHacks 2019",
     description:

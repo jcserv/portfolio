@@ -1,7 +1,7 @@
 export const jobs = [
   {
     id: 0,
-    workplace: "WatrHub",
+    workplace: "Citylitics",
     position: "Full Stack & Data Developer Co-op",
     duration: "Aug 2020 - Present",
     description: [
@@ -10,17 +10,19 @@ export const jobs = [
       "Developed in an agile environment, working with meaningful feedback from internal and external end users",
       "Automated deployments, testing, and monitoring using Jenkins and GCP",
     ],
-    url: "https://www.watrhub.com/",
+    url: "https://citylitics.com/",
   },
   {
     id: 1,
     workplace: "U of T",
-    position: "CSC108/CSC148 TA",
+    position: "Computer Science TA",
     duration: "Jan 2020 - Present",
     description: [
       "Conducted labs and provided assistance to students during lecture activities",
+      "Contributed to development of assignments and labs",
       "Marked midterm and final exams at a rate of 20 submissions per hour",
       "Answered students questions on the course forums, with 3rd Highest Contributions amongst TAs",
+      "Courses: Software Engineering, Intro to Programming, Intro to Computer Science",
     ],
   },
   {

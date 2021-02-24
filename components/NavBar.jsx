@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Flex,
+  HStack,
   IconButton,
   Spacer,
   useColorMode,
@@ -18,19 +19,14 @@ export default function Navbar() {
   const nextMode = useColorModeValue("dark", "light");
 
   return (
-    <Flex w="100%" m="2" mb="4">
+    <Flex w="100%">
       <Box m="2">
         <img alt="" src="/logo.png" width="60" height="60" />
       </Box>
       <Spacer />
-      <Box>
+      <HStack spacing="24px">
         {navBtns.map((btn) => (
-          <Button
-            key={btn}
-            m="1"
-            size="sm"
-            variant={useColorModeValue("primary", "primaryDark")}
-          >
+          <Button key={btn} size="sm" variant="link" mb={2}>
             {btn}
           </Button>
         ))}
@@ -45,7 +41,7 @@ export default function Navbar() {
           onClick={toggleColorMode}
           icon={<SwitchIcon />}
         />
-      </Box>
+      </HStack>
     </Flex>
   );
 }

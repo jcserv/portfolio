@@ -1,0 +1,13 @@
+.header {
+  font-size: 2.5em;
+  color: "#19aad5";
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

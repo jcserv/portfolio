@@ -4,12 +4,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: ["react", "jsx-a11y", "simple-import-sort", "prettier"],
+  plugins: ["react", "simple-import-sort", "prettier"],
   extends: [
     "plugin:react/recommended",
     "airbnb",
     "eslint:recommended",
-    "plugin:jsx-a11y/recommended",
     "prettier",
   ],
   parserOptions: {
@@ -20,7 +19,10 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
     "react/prop-types": "off",
+    "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "no-console": "warn",

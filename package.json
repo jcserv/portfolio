@@ -20,7 +20,9 @@
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-reveal": "^1.2.2",
+    "react-scroll": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^7.19.0",

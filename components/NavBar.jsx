@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { animateScroll as scroll, Link } from "react-scroll";
 
 const navBtns = ["About", "Skills", "Work", "Projects", "Contact"];
 
@@ -21,13 +22,21 @@ export default function Navbar() {
   return (
     <Flex w="100%">
       <Box m="2">
-        <img alt="" src="/logo.png" width="60" height="60" />
+        <img
+          alt=""
+          src="/logo.png"
+          width="60"
+          height="60"
+          onClick={scroll.scrollToTop}
+        />
       </Box>
       <Spacer />
       <HStack spacing="24px">
         {navBtns.map((btn) => (
           <Button key={btn} size="sm" variant="link" mb={2}>
-            {btn}
+            <Link to={btn.toLowerCase()} spy smooth offset={-70} duration={500}>
+              {btn}
+            </Link>
           </Button>
         ))}
         <IconButton

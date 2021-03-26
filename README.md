@@ -1,3 +1,5 @@
+NOTE: Currently working on a v2.0 that's more responsive and using Next.js/Chakra-UI. Fun!
+
 ## 📝 Table of Contents
 
 - [Acknowledgments](#acknowledgement)

@@ -4,8 +4,8 @@
 }
 
 .container {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

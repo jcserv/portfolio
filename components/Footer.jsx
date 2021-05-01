@@ -1,25 +1,42 @@
-import {
-  Box,
-  Icon,
-  Link,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import { FaDev, FaLinkedin } from "react-icons/fa";
+import { IoMdDocument } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 import { VscGithubInverted } from "react-icons/vsc";
 import { animateScroll as scroll } from "react-scroll";
 
-export default function Footer() {
-  const links = [
-    {
-      label: "Github",
-      icon: VscGithubInverted,
-      url: "https://github.com/jcserv/PostureAI/",
-    },
-  ];
+import LinkIconBar from "./LinkIconBar";
 
-  const color = useColorModeValue("secondary.light", "secondary.dark");
+const links = [
+  {
+    label: "Github",
+    icon: VscGithubInverted,
+    url: "https://github.com/jcserv/",
+  },
+  {
+    label: "LinkedIn",
+    icon: FaLinkedin,
+    url: "https://www.linkedin.com/in/jarrod-servilla/",
+  },
+  {
+    label: "Devpost",
+    icon: FaDev,
+    url: "https://devpost.com/jcserv",
+  },
+  {
+    label: "Email",
+    icon: MdEmail,
+    url: "mailto:jarrod.servilla@gmail.com",
+  },
+  {
+    label: "Resume",
+    icon: IoMdDocument,
+    url: "/resume.pdf",
+  },
+];
+
+export default function Footer() {
   return (
     <Box as="footer" mt={12} height="100%" textAlign="center" className="app">
       <Text fontSize="sm">
@@ -38,24 +55,7 @@ export default function Footer() {
           &#128640;
         </span>
       </Text>
-      <Stack mt={4} direction="row" spacing="12px" justify="center" mb={10}>
-        {links.map((link, index) => (
-          <Link
-            key={`link-${index}`}
-            display="inline-block"
-            href={link.url}
-            aria-label={link.label}
-            isExternal
-          >
-            <Icon
-              as={link.icon}
-              fontSize="xl"
-              color="gray.400"
-              _hover={{ color }}
-            />
-          </Link>
-        ))}
-      </Stack>
+      <LinkIconBar links={links} />
     </Box>
   );
 }

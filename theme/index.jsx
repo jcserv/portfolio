@@ -6,8 +6,8 @@ export const colors = {
     dark: "#252934",
   },
   secondary: {
-    light: "#90cdf4",
-    dark: "#1ca7d0",
+    light: "#1ca7d0",
+    dark: "#90cdf4",
   },
 };
 

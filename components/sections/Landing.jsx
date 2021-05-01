@@ -1,4 +1,4 @@
-import { useColorModeValue, VStack } from "@chakra-ui/react";
+import { Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Jump from "react-reveal/Jump";
@@ -11,8 +11,8 @@ import SectionContainer from "../SectionContainer";
 export default function Landing() {
   const primary = useColorModeValue(colors.primary.dark, colors.primary.light);
   const secondary = useColorModeValue(
-    colors.secondary.dark,
-    colors.secondary.light
+    colors.secondary.light,
+    colors.secondary.dark
   );
 
   const header = (
@@ -38,7 +38,9 @@ export default function Landing() {
         duration={500}
       >
         <VStack>
-          <h5 className={styles.learn}>Learn More</h5>
+          <Text as="strong" className={styles.learn}>
+            Learn More
+          </Text>
           <Jump forever duration={1500}>
             <BsChevronDown />
           </Jump>

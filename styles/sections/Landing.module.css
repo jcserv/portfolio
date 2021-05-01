@@ -4,11 +4,14 @@
 }
 
 .learn {
+  font-style: bold;
+  font-size: 1.25em;
   padding-bottom: 20px;
   transition: all 0.2s ease-in-out;
 }
 
 .learn:hover {
+  font-size: 1.25em;
   color: #0079fd;
   transform: scale(1.1);
 }

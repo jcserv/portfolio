@@ -1,40 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
-import { FaDev, FaLinkedin } from "react-icons/fa";
-import { IoMdDocument } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
-import { VscGithubInverted } from "react-icons/vsc";
 import { animateScroll as scroll } from "react-scroll";
 
+import links from "../data/footerLinks";
 import LinkIconBar from "./LinkIconBar";
-
-const links = [
-  {
-    label: "Github",
-    icon: VscGithubInverted,
-    url: "https://github.com/jcserv/",
-  },
-  {
-    label: "LinkedIn",
-    icon: FaLinkedin,
-    url: "https://www.linkedin.com/in/jarrod-servilla/",
-  },
-  {
-    label: "Devpost",
-    icon: FaDev,
-    url: "https://devpost.com/jcserv",
-  },
-  {
-    label: "Email",
-    icon: MdEmail,
-    url: "mailto:jarrod.servilla@gmail.com",
-  },
-  {
-    label: "Resume",
-    icon: IoMdDocument,
-    url: "/resume.pdf",
-  },
-];
 
 export default function Footer() {
   return (

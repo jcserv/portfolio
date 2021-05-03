@@ -6,19 +6,21 @@ import styles from "../styles/components/SectionContainer.module.css";
 
 export default function SectionContainer({
   children,
+  headerMt = "",
   headerText = "",
-  useHeaderStyle,
+  useHeaderStyle = false,
   ...props
 }) {
   const color = useColorModeValue("secondary.light", "secondary.dark");
   return (
     <div className={styles.container} {...props}>
       <Fade>
-        <div>
+        <div className={styles.column}>
           <Text
             as="h1"
-            className={useHeaderStyle ? styles.header : ""}
             color={color}
+            mt={headerMt}
+            className={useHeaderStyle ? styles.header : ""}
           >
             {headerText}
           </Text>

@@ -10,6 +10,7 @@ import {
   Link,
   Spacer,
   Stack,
+  Tooltip,
   useColorMode,
   useColorModeValue,
   useDisclosure,
@@ -23,20 +24,17 @@ const navBtns = [
     label: "About",
   },
   {
-    label: "Skills",
-  },
-  {
-    label: "Work",
+    label: "Experience",
   },
   {
     label: "Projects",
   },
   {
-    label: "Blog",
-    href: "https://jarrod-servilla.medium.com/",
+    label: "Contact",
   },
   {
-    label: "Contact",
+    label: "Blog",
+    href: "https://jarrod-servilla.medium.com/",
   },
 ];
 
@@ -88,34 +86,41 @@ const NavButtons = ({ size, onClose }) => {
   return <>{btns}</>;
 };
 
-const MenuLinks = ({ onClose }) => {
+const ColorModeButton = ({ mr }) => {
   const { toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
   const nextMode = useColorModeValue("dark", "light");
   return (
-    <Stack
-      display={{ sm: "none", md: "block" }}
-      width={{ sm: "full", md: "auto" }}
-      spacing="24px"
-      direction={["column", "row", "row", "row"]}
-      alignItems="center"
+    <Tooltip
+      label={`Toggle ${nextMode} mode`}
+      aria-label={`Toggle ${nextMode} mode`}
     >
-      <NavButtons size="sm" onClose={onClose} />
       <IconButton
         size="md"
         fontSize="lg"
-        aria-label={`Switch to ${nextMode} mode`}
+        aria-label={`Toggle ${nextMode} mode`}
         variant="ghost"
         color="current"
-        margin="2"
-        pt="1"
-        mr="4"
         onClick={toggleColorMode}
         icon={<SwitchIcon />}
+        style={{ marginRight: mr }}
       />
-    </Stack>
+    </Tooltip>
   );
 };
+
+const MenuLinks = ({ onClose }) => (
+  <Stack
+    display={{ base: "none", sm: "none", md: "block" }}
+    width={{ sm: "full", md: "auto" }}
+    spacing="24px"
+    direction={["column", "row", "row", "row"]}
+    alignItems="center"
+  >
+    <NavButtons size="sm" onClose={onClose} />
+    <ColorModeButton mr="12px" />
+  </Stack>
+);
 
 const NavMenu = ({ isOpen, onClose }) => (
   <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
@@ -124,11 +129,13 @@ const NavMenu = ({ isOpen, onClose }) => (
         <DrawerBody>
           <Stack
             alignItems="center"
+            justifyContent="center"
             direction={["column"]}
             spacing="24px"
             mt="20vh"
           >
             <NavButtons size="lg" onClose={onClose} />
+            <ColorModeButton />
           </Stack>
         </DrawerBody>
       </DrawerContent>
@@ -141,6 +148,7 @@ export default function Navbar() {
 
   return (
     <Stack
+      as="header"
       w="100%"
       direction={["column", "row", "row", "row"]}
       alignItems="center"

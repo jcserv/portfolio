@@ -1,4 +1,5 @@
-import { Button, Link, Text } from "@chakra-ui/react";
+import { Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Grid } from "@material-ui/core";
 import React from "react";
 
 import SectionContainer from "../SectionContainer";
@@ -11,13 +12,32 @@ export default function Contact() {
       headerText="Contact Me"
       useHeaderStyle
     >
-      <Text fontSize="xl" mt={6}>
-        Whether it&apos;s a job opportunity, an invite to coffee,
-      </Text>
-      <Text fontSize="xl">or feedback on my portfolio, my inbox is open!</Text>
-      <Button as={Link} href="mailto:jarrod.servilla@gmail.com" mt={6}>
-        Send Email
-      </Button>
+      <Flex
+        as={Grid}
+        container
+        item
+        xs={9}
+        sm={6}
+        justify="center"
+        textAlign="center"
+        pl={4}
+        pr={4}
+      >
+        <Text fontSize="xl" m="auto" mt={6}>
+          Whether it&apos;s a job opportunity, an invite to coffee,
+        </Text>
+        <Text fontSize="xl" m="auto">
+          or feedback on my portfolio, my inbox is open!
+        </Text>
+        <Button
+          as={Link}
+          href="mailto:jarrod.servilla@gmail.com"
+          m="auto"
+          mt={6}
+        >
+          Send Email
+        </Button>
+      </Flex>
     </SectionContainer>
   );
 }

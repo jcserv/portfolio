@@ -63,8 +63,8 @@ const ExperienceDetails = ({ index }) => {
           {job.workplace}
         </Link>
       </Heading>
-      <Text>{job.duration}</Text>
-      <UnorderedList>
+      <Text mt={2}>{job.duration}</Text>
+      <UnorderedList mt={2}>
         {job.description.map((desc) => (
           <ListItem key={desc}>{desc}</ListItem>
         ))}
@@ -79,34 +79,38 @@ export default function ExperienceOverview() {
   const bg = useColorModeValue(colors.bg.light, colors.bg.dark);
   return (
     <Flex
+      as={Grid}
+      container
+      item
+      direction="row"
+      justify="center"
+      xs={9}
+      sm={6}
       bgColor={bg}
       borderRadius="lg"
       borderWidth={bg === colors.bg.light ? "1px" : ""}
       rounded="md"
       shadow="lg"
-      mt={6}
-      w="45vw"
-      minH="35vh"
+      margin="24px"
+      style={{ marginTop: "3vh" }}
     >
-      <Grid container direction="row" justify="center">
-        <Grid
-          container
-          direction="column"
-          item
-          sm={12}
-          md={4}
-          alignItems="center"
-          justify="center"
-        >
-          {showSelect ? (
-            <ExperienceButtons expIndex={index} setIndex={setIndex} />
-          ) : (
-            <ExperienceSelect setIndex={setIndex} />
-          )}
-        </Grid>
-        <Grid container item sm={12} md={8}>
-          <ExperienceDetails index={index} />
-        </Grid>
+      <Grid
+        container
+        direction="column"
+        item
+        xs={9}
+        sm={3}
+        alignItems="center"
+        justify="center"
+      >
+        {showSelect ? (
+          <ExperienceButtons expIndex={index} setIndex={setIndex} />
+        ) : (
+          <ExperienceSelect setIndex={setIndex} />
+        )}
+      </Grid>
+      <Grid container item xs={9} sm={7}>
+        <ExperienceDetails index={index} />
       </Grid>
     </Flex>
   );

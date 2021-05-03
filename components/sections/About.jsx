@@ -42,18 +42,29 @@ export default function About() {
               at the University of Toronto Mississauga.
             </Text>
             <Text>
+              I&apos;m currently working at Citi Bank as a{" "}
+              <strong style={{ color: secondary }}>
+                Technology Analyst Intern
+              </strong>
+              , and was previously at Citylitics Inc. as a{" "}
+              <strong style={{ color: secondary }}>
+                Full Stack & Data Developer Intern
+              </strong>{" "}
+              for 9 months prior.
+            </Text>
+            <Text>
               I enjoy designing & engineering{" "}
               <strong style={{ color: secondary }}>
                 efficient full stack and mobile applications
               </strong>
-              , and always try to optimize the user experience for a simple and
-              elegant user journey through the application. I have a{" "}
+              . I have a{" "}
               <strong style={{ color: secondary }}>passion for teaching</strong>
               , and have worked as a TA in university and highschool CS courses.
               I&apos;m an{" "}
-              <strong style={{ color: secondary }}>avid hackathon goer</strong>,
-              and received 3rd place at EngHacks 2019 for VapeSafe with my
-              amazing team!
+              <strong style={{ color: secondary }}>
+                avid hackathon attendee
+              </strong>{" "}
+              and received numerous awards at hackathons with my amazing teams!
             </Text>
           </VStack>
         </GridItem>

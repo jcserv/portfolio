@@ -1,21 +1,23 @@
-### 🚀 Portfolio V2.0
+## 🚀 Portfolio V2.0
 
 This portfolio has been re-designed with responsiveness, accessibility, and cleaner code (now that I've got more experience) in mind.
 See the previous portfolio [here](https://github.com/jcserv/portfoliov1)
 
 Changes:
+
+- Added dark mode
 - Added Eslint + CI checks
-- Removed sticky bar
+- Removed sticky sidebar
 - Removed skills
-- Added more projects
+- Added more projects section
 - Simplified contact
 
-### 💼 Prerequisites
+## 💼 Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - Yarn
 
-### ⚙️ Installing
+## ⚙️ Installing
 
 1. Clone the latest code on the master branch
 2. Install dependencies

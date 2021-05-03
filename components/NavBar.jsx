@@ -18,6 +18,9 @@ import {
 import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { animateScroll as scroll, Link as ScrollLink } from "react-scroll";
+import Sticky from "react-stickynode";
+
+import { colors } from "../theme";
 
 const navBtns = [
   {
@@ -54,7 +57,7 @@ const Logo = () => {
 };
 
 const MenuToggle = ({ isOpen, onOpen }) => (
-  <Box display={{ base: "block", md: "none" }}>
+  <Box display={{ base: "block", md: "none" }} pr={4}>
     <Button onClick={onOpen}>
       {isOpen ? <CloseIcon /> : <HamburgerIcon />}
     </Button>
@@ -144,21 +147,25 @@ const NavMenu = ({ isOpen, onClose }) => (
 );
 
 export default function Navbar() {
+  const primary = useColorModeValue(colors.primary.light, colors.primary.dark);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Stack
-      as="header"
-      w="100%"
-      direction={["column", "row", "row", "row"]}
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Logo />
-      <Spacer />
-      <MenuLinks onClose={onClose} />
-      <NavMenu isOpen={isOpen} onClose={onClose} />
-      <MenuToggle isOpen={isOpen} onOpen={onOpen} />
-    </Stack>
+    <Sticky enabled innerZ={99}>
+      <Stack
+        as="header"
+        w="100%"
+        direction={["row", "row", "row", "row"]}
+        alignItems="center"
+        justifyContent="center"
+        bg={primary}
+      >
+        <Logo />
+        <Spacer />
+        <MenuLinks onClose={onClose} />
+        <NavMenu isOpen={isOpen} onClose={onClose} />
+        <MenuToggle isOpen={isOpen} onOpen={onOpen} />
+      </Stack>
+    </Sticky>
   );
 }

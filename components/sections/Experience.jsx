@@ -8,7 +8,6 @@ export default function Experience() {
     <SectionContainer
       id="experience"
       name="experience"
-      headerMt="-10%"
       headerText="Experience"
       useHeaderStyle
     >

@@ -61,7 +61,7 @@ const ProjectCard = ({ name, description, links, tech }) => {
       container
       item
       xs={9}
-      sm={9}
+      sm={6}
       md={3}
       bgColor={bg}
       borderRadius="lg"
@@ -163,7 +163,7 @@ export default function MoreProjectsGrid() {
         />
       </Flex>
       <Flex justify="center" w="100vw">
-        <Grid container item xs={9} md={9} justify="center">
+        <Grid container item xs={12} sm={9} md={9} justify="center">
           {showGridView ? (
             projects.map((project) => (
               <ProjectCard key={project.name} {...project} />

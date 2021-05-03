@@ -67,7 +67,8 @@ export const extraProjects = [
   {
     name: "SQL Automarker",
     type: "Research",
-    description: "Developed microservices application for SQL automarking",
+    description:
+      "Microservices architecture enabling SQL automarking with admin panel",
     tech: ["React", "Node.js", "MongoDB", "Docker"],
     links: [
       {
@@ -80,7 +81,8 @@ export const extraProjects = [
   {
     name: "freeflo.io",
     type: "Hackathon",
-    description: "Created platform enabling open source journalism",
+    description:
+      "Full stack web application enabling collaborative & open source journalism",
     tech: ["React", "Redux", "Next.js"],
     links: [
       {
@@ -98,8 +100,7 @@ export const extraProjects = [
   {
     name: "AnonBot",
     type: "Personal",
-    description:
-      "Created discord bot for anonymous messaging, servicing 1600 users and with 2100 messages sent",
+    description: "Discord bot for anonymous messaging, with 2100 messages sent",
     tech: ["Node.js"],
     links: [
       {
@@ -112,7 +113,7 @@ export const extraProjects = [
   {
     name: "Portfolio V1",
     type: "Personal",
-    description: "My old personal portfolio!",
+    description: "My old personal portfolio, deployed with Heroku",
     tech: ["React", "Express", "MongoDB"],
     links: [
       {
@@ -120,14 +121,18 @@ export const extraProjects = [
         icon: "github",
         url: "https://github.com/jcserv/portfoliov1",
       },
+      {
+        label: "Website",
+        icon: "link",
+        url: "https://infinite-inlet-11529.herokuapp.com/",
+      },
     ],
   },
   {
     name: "HarMoney",
     type: "Hackathon",
-    description:
-      "Created mobile application enabling users to split transactions",
-    tech: ["React Native", "MongoDB", "Node.js"],
+    description: "Mobile application enabling users to split transactions",
+    tech: ["React Native", "Node.js"],
     links: [
       {
         label: "Github",
@@ -149,8 +154,7 @@ export const extraProjects = [
   {
     name: "InsurApp",
     type: "Hackathon",
-    description:
-      "Implemented a micro insurance helper mobile app using image recognition",
+    description: "Micro insurance mobile app using image recognition",
     tech: ["Android Studio", "Flask", "AWS"],
     links: [
       {
@@ -164,7 +168,7 @@ export const extraProjects = [
     name: "VapeSafe",
     type: "Hackathon",
     description:
-      "Implemented hardware solution allowing users to quit vaping, won 3rd Place",
+      "Mobile + hardware solution allowing users to quit vaping, won 3rd Place",
     tech: ["Android Studio", "Arduino"],
     links: [
       {
@@ -183,8 +187,8 @@ export const extraProjects = [
     name: "ETH-Aion Atomic Swap",
     type: "Hackathon",
     description:
-      "Implemented atomic swap protocol for ETH & Aion cryptocurrencies, winning Top 6 @ ETHUofT 2019",
-    tech: ["Blockchain Smart Contracts"],
+      "Atomic swap protocol for ETH & Aion cryptocurrencies, earning Top 6",
+    tech: ["Java"],
     links: [
       {
         label: "Github",

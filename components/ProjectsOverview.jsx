@@ -67,16 +67,16 @@ const ProjectContent = ({ alternate, name, description, pic, tech, links }) => {
 
 const Project = ({ index, shouldAlternate, ...props }) => (
   <Fade>
-    <Grid container direction="row" style={{ height: "80vh" }}>
+    <Grid container direction="row" style={{ height: "70vh" }}>
       <Grid container item xs={12} sm={6}>
         <ProjectContent
-          alternate={shouldAlternate ? index % 2 === 0 : true}
+          alternate={shouldAlternate ? index % 2 === 0 : false}
           {...props}
         />
       </Grid>
       <Grid container item xs={12} sm={6}>
         <ProjectContent
-          alternate={shouldAlternate ? index % 2 === 1 : false}
+          alternate={shouldAlternate ? index % 2 === 1 : true}
           {...props}
         />
       </Grid>

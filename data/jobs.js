@@ -18,7 +18,6 @@ const jobs = [
       "Developed microservices assignment using Java backend APIs with a JavaScript/React frontend, built and deployed with Docker",
       "Provided technical mentorship for multiple full stack projects over a 4-month scrum developmentcycle",
       "Answered questions on course forums with 1000+ students, with 3rd highest contributions amongst TAs",
-      "Courses: Software Engineering, Intro to Programming, Intro to Computer Science",
     ],
   },
   {

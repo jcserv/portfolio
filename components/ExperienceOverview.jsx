@@ -92,6 +92,8 @@ export default function ExperienceOverview() {
       rounded="md"
       shadow="lg"
       margin="24px"
+      w="45vw"
+      minH="35vh"
       style={{ marginTop: "3vh" }}
     >
       <Grid

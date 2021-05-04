@@ -1,3 +1,4 @@
+import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -176,8 +177,12 @@ export default function MoreProjectsGrid() {
         </Grid>
       </Flex>
       <Flex justify="center" w="100vw">
-        <Button mt={6} onClick={() => setIsExpanded(!isExpanded)}>
-          {isExpanded ? "Show Less" : "Show More"}
+        <Button
+          mt={6}
+          leftIcon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {`Show ${isExpanded ? "Less" : "More"}`}
         </Button>
       </Flex>
     </>

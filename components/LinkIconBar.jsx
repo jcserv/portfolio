@@ -26,7 +26,12 @@ const icons = {
 
 const LinkIcon = ({ index, color, onHoverColor, url, label, icon }) => (
   <Tooltip label={label} aria-label={`${label}-tooltip`} key={`link-${index}`}>
-    <Link display="inline-block" href={url} aria-label={label} isExternal>
+    <Link
+      aria-label={`Open link to ${url}`}
+      display="inline-block"
+      href={url}
+      isExternal
+    >
       <Icon
         as={icons[icon]}
         fontSize="xl"

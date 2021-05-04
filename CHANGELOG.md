@@ -8,3 +8,11 @@
 - persistent nav
 - fix sizing of experience for mobile
 - fix sizing of project grid for mobile
+
+# 2.0.2
+
+- add value to select
+- opens first provided url on click for project
+- add email icon to contact btn
+- slight fix for experience overview + resizing
+- remove all accessibility issues found with axe (from 7 down to 0)

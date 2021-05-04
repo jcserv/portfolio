@@ -38,6 +38,7 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
   >
     <Tooltip label="Grid View">
       <IconButton
+        aria-label="Display Grid View"
         icon={<BsGridFill />}
         isActive={showGridView}
         onClick={() => setShowGridView(true)}
@@ -45,6 +46,7 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
     </Tooltip>
     <Tooltip label="List View">
       <IconButton
+        aria-label="Display List View"
         icon={<FaListUl />}
         isActive={!showGridView}
         onClick={() => setShowGridView(false)}

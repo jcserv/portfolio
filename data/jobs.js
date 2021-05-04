@@ -27,6 +27,7 @@ const jobs = [
     description: [
       "Prototyped portfolio management service proposal with React",
       "Designed user interface mock-ups for mobile ATM application in Figma",
+      "Transformed business requirements and customer experiences into tech-ready user stories",
     ],
     url: "https://www.citigroup.com/citi/",
   },

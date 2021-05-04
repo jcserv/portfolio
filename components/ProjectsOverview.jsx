@@ -61,6 +61,9 @@ const ProjectContent = ({ alternate, name, description, pic, tech, links }) => {
       src={pic}
       alt={`${name} picture`}
       className="image"
+      onClick={() => {
+        window.open(links[0].url);
+      }}
     />
   );
 };

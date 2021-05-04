@@ -1,3 +1,4 @@
+import { EmailIcon } from "@chakra-ui/icons";
 import { Button, Flex, Link, Text } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
 import React from "react";
@@ -31,6 +32,7 @@ export default function Contact() {
         </Text>
         <Button
           as={Link}
+          leftIcon={<EmailIcon />}
           href="mailto:jarrod.servilla@gmail.com"
           m="auto"
           mt={6}

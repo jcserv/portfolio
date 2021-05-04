@@ -16,8 +16,8 @@ import React, { useState } from "react";
 import jobs from "../data/jobs";
 import { colors } from "../theme";
 
-const ExperienceSelect = ({ setIndex }) => (
-  <Select onChange={(e) => setIndex(e.target.value)}>
+const ExperienceSelect = ({ expIndex, setIndex }) => (
+  <Select value={expIndex} onChange={(e) => setIndex(e.target.value)}>
     {jobs.map((job, index) => (
       <option key={`${job.workplace}-select-option`} value={index}>
         {job.workplace}
@@ -109,14 +109,21 @@ export default function ExperienceOverview() {
         md={2}
         alignItems="center"
         justify="flex-start"
+        style={{ marginTop: "24px", marginBottom: "24px", marginRight: "3vw" }}
       >
         {showSelect ? (
           <ExperienceButtons expIndex={index} setIndex={setIndex} />
         ) : (
-          <ExperienceSelect setIndex={setIndex} />
+          <ExperienceSelect expIndex={index} setIndex={setIndex} />
         )}
       </Grid>
-      <Grid container item xs={9} sm={6} style={{ marginLeft: "12px" }}>
+      <Grid
+        container
+        item
+        xs={9}
+        sm={6}
+        style={{ marginTop: "24px", marginBottom: "24px", marginLeft: "12px" }}
+      >
         <ExperienceDetails index={index} />
       </Grid>
     </Flex>

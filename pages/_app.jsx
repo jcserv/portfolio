@@ -38,6 +38,18 @@ const SiteHead = ({ title }) => (
       content="Jarrod Servilla's personal portfolio"
     />
     <meta property="twitter:image" content="/logo512.png" />
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    />
+    <noscript>
+      <img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+      />
+    </noscript>
   </Head>
 );
 

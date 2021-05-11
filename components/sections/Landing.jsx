@@ -38,7 +38,11 @@ export default function Landing() {
         duration={500}
       >
         <VStack>
-          <Text as="strong" className={styles.learn}>
+          <Text
+            as="strong"
+            _hover={{ color: secondary }}
+            className={styles.learn}
+          >
             Learn More
           </Text>
           <Jump forever duration={1500}>

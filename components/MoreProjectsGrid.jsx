@@ -22,6 +22,7 @@ import React, { useState } from "react";
 import { BsGridFill } from "react-icons/bs";
 import { FaListUl } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
+import Fade from "react-reveal/Fade";
 
 import { extraProjects } from "../data/projects";
 import { colors } from "../theme";
@@ -131,7 +132,7 @@ const ProjectRow = ({ name, type, description, tech, links }) => (
 );
 
 const ProjectTable = ({ projs }) => (
-  <div style={{ overflowX: "auto" }}>
+  <Fade style={{ overflowX: "auto" }}>
     <Table size="md" w="100%">
       <Thead>
         <Tr>
@@ -148,7 +149,7 @@ const ProjectTable = ({ projs }) => (
         ))}
       </Tbody>
     </Table>
-  </div>
+  </Fade>
 );
 
 export default function MoreProjectsGrid() {

@@ -75,6 +75,9 @@ export default function About() {
             alt="Jarrod Servilla"
             zIndex={1}
             className="image"
+            onClick={() => {
+              window.open("http://linkedin.com/in/jarrod-servilla");
+            }}
           />
         </GridItem>
       </SimpleGrid>

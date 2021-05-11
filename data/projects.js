@@ -2,7 +2,8 @@ const projects = [
   {
     name: "PostureAI",
     description:
-      "PostureAI is an AI powered posture improvement web app that helps you maintain healthy posture while working. Awarded 1st Place in Best Use of Google Cloud @ UofT Hacks VIII",
+      "PostureAI is an AI powered posture improvement web app that helps you maintain healthy posture while working.",
+    subtitle: "1st Place in Best Use of Google Cloud @ UofT Hacks VIII",
     pic: "https://i.imgur.com/DwP3FLv.png",
     tech: ["React", "TypeScript"],
     links: [
@@ -45,7 +46,7 @@ const projects = [
   {
     name: "ResumeWords",
     description:
-      "ResumeWords is a tool that identifies keywords that will improve your chances of getting contacted for a job based on its posting!",
+      "ResumeWords is a tool that identifies keywords using machine learning, that will improve your chances of getting contacted for a job based on its posting!",
     pic: "https://i.imgur.com/qD6BgE3.png",
     tech: ["React", "TypeScript", "Docker"],
     links: [

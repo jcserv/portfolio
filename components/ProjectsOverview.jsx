@@ -16,7 +16,7 @@ import { colors } from "../theme";
 import LinkIconBar from "./LinkIconBar";
 import Tech from "./Tech";
 
-const Card = ({ name, description, links }) => {
+const Card = ({ name, subtitle, description, links }) => {
   const bg = useColorModeValue(colors.bg.light, colors.bg.dark);
 
   return (
@@ -31,9 +31,14 @@ const Card = ({ name, description, links }) => {
       mb={3}
       w="75%"
     >
-      <Heading as="h1" size="md" m={2} p={2} pt={6}>
+      <Heading as="h1" size="lg" m={2} p={2} pt={6}>
         {name}
       </Heading>
+      {subtitle && (
+        <Text as="strong" m={2} p={2} pb={6}>
+          {subtitle}
+        </Text>
+      )}
       <Text m={2} p={2} pb={6}>
         {description}
       </Text>
@@ -42,11 +47,24 @@ const Card = ({ name, description, links }) => {
   );
 };
 
-const ProjectContent = ({ alternate, name, description, pic, tech, links }) => {
+const ProjectContent = ({
+  alternate,
+  name,
+  subtitle,
+  description,
+  pic,
+  tech,
+  links,
+}) => {
   if (alternate) {
     return (
       <>
-        <Card name={name} description={description} links={links} />
+        <Card
+          name={name}
+          subtitle={subtitle}
+          description={description}
+          links={links}
+        />
         <Grid container direction="row" justify="center" spacing={2}>
           <Tech tech={tech} />
         </Grid>

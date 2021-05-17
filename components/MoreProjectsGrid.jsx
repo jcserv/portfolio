@@ -58,6 +58,10 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
 );
 
 const ProjectCard = ({ name, description, links, tech }) => {
+  const secondary = useColorModeValue(
+    colors.secondary.light,
+    colors.secondary.dark
+  );
   const bg = useColorModeValue(colors.bg.light, colors.bg.dark);
   return (
     <Box
@@ -81,7 +85,7 @@ const ProjectCard = ({ name, description, links, tech }) => {
           <Icon
             as={HiCode}
             boxSize="3em"
-            color="#1ca7d0"
+            color={secondary}
             m="auto"
             marginLeft="10px"
           />
@@ -132,23 +136,25 @@ const ProjectRow = ({ name, type, description, tech, links }) => (
 );
 
 const ProjectTable = ({ projs }) => (
-  <Fade style={{ overflowX: "auto" }}>
-    <Table size="md" w="100%">
-      <Thead>
-        <Tr>
-          <Th w="10%">Name</Th>
-          <Th w="10%">Type</Th>
-          <Th w="25%">Description</Th>
-          <Th w="20%">Technologies</Th>
-          <Th w="15%">Links</Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        {projs.map((project) => (
-          <ProjectRow key={project.name} {...project} />
-        ))}
-      </Tbody>
-    </Table>
+  <Fade>
+    <div style={{ overflowX: "auto" }}>
+      <Table size="md" w="100%">
+        <Thead>
+          <Tr>
+            <Th w="10%">Name</Th>
+            <Th w="10%">Type</Th>
+            <Th w="25%">Description</Th>
+            <Th w="20%">Technologies</Th>
+            <Th w="15%">Links</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {projs.map((project) => (
+            <ProjectRow key={project.name} {...project} />
+          ))}
+        </Tbody>
+      </Table>
+    </div>
   </Fade>
 );
 

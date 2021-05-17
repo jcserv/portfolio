@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier . --write",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "format": "prettier . --write && eslint . --fix"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.5",

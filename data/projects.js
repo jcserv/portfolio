@@ -3,7 +3,7 @@ const projects = [
     name: "PostureAI",
     description:
       "PostureAI is an AI powered posture improvement web app that helps you maintain healthy posture while working.",
-    subtitle: "1st Place in Best Use of Google Cloud @ UofT Hacks VIII",
+    subtitle: "1st Place in Best Use of GCP",
     pic: "https://i.imgur.com/DwP3FLv.png",
     tech: ["React", "TypeScript"],
     links: [

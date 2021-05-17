@@ -30,15 +30,14 @@ const Card = ({ name, subtitle, description, links }) => {
       m="auto"
       mb={3}
       w="75%"
+      textAlign="start"
     >
       <Heading as="h1" size="lg" m={2} p={2} pt={6}>
         {name}
       </Heading>
-      {subtitle && (
-        <Text as="strong" m={2} p={2} pb={6}>
-          {subtitle}
-        </Text>
-      )}
+      <Text hidden={!subtitle} size="sm" as="strong" m={2} p={2} pb={6}>
+        {subtitle}
+      </Text>
       <Text m={2} p={2} pb={6}>
         {description}
       </Text>

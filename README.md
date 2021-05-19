@@ -1,16 +1,20 @@
 ## 🚀 Portfolio V2.0
 
-This portfolio has been re-designed with responsiveness, accessibility, and cleaner code (now that I've got more experience) in mind.
+This portfolio has been re-designed with responsiveness, accessibility, and cleaner code in mind using Chakra-UI.
 See the previous portfolio [here](https://github.com/jcserv/portfoliov1)
 
 Changes:
 
-- Added dark mode
-- Added Eslint + CI checks
-- Removed sticky sidebar
-- Removed skills
-- Added more projects section
+- React-bootstrap -> Chakra-UI
+- Dark mode
+- Eslint + CI checks
+- More projects section
 - Simplified contact
+- Frontend only (can be easily hosted with Vercel, Github pages)
+
+Removed:
+- Sticky sidebar
+- Skills
 
 ## 💼 Prerequisites
 

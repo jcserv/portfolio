@@ -16,6 +16,8 @@ const SiteHead = ({ title }) => (
     <meta name="description" content="Jarrod Servilla - Portfolio" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#252934" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.jarrodservilla.com/" />
     <meta

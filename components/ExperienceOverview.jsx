@@ -60,9 +60,9 @@ const ExperienceDetails = ({ index }) => {
       </Grid>
       <Grid container item style={{ marginLeft: "12px" }}>
         {job.duration.map((duration) => (
-          <Text key={duration} mt={2}>
-            {duration}
-          </Text>
+          <Grid key={duration} container item>
+            <Text mt={2}>{duration}</Text>
+          </Grid>
         ))}
       </Grid>
       <Grid container item style={{ marginLeft: "12px", marginBottom: "12px" }}>

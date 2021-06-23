@@ -1,8 +1,19 @@
 const jobs = [
   {
+    workplace: "Citi",
+    position: "Summer Technology Analyst Intern",
+    duration: ["May 2021 - Present", "Jul 2020 - Aug 2020"],
+    description: [
+      "Migrated legacy infrastructure from monolithic architecture into microservices",
+      "Developed full stack data-entry applications using Angular & Java/Spring",
+      "Prototyped portfolio management service proposal with React",
+    ],
+    url: "https://www.citigroup.com/citi/",
+  },
+  {
     workplace: "Citylitics",
     position: "Full Stack & Data Developer Co-op",
-    duration: "Aug 2020 - April 2021",
+    duration: ["Aug 2020 - April 2021"],
     description: [
       "Re-architected querying engine using React, CSS, and Redux leading to 150% productivity increase",
       "Implemented RESTful APIs using Django to allow for storage of consumer data, leading to 30% increase in size of key dataset in just 90 days",
@@ -11,9 +22,20 @@ const jobs = [
     url: "https://citylitics.com/",
   },
   {
+    workplace: "CSSC",
+    position: "Director of Technology",
+    duration: ["May 2021 - Present"],
+    description: [
+      "Develop features for CSSC website providing useful tools and resources for students",
+      "Provide mentorship for students with technical projects",
+      "Create and host tech initiatives to educate & engage students on industry technologies",
+    ],
+    url: "https://cssc.utm.utoronto.ca/",
+  },
+  {
     workplace: "U of T",
     position: "Computer Science TA",
-    duration: "Jan 2020 - Present",
+    duration: ["Jan 2020 - Present"],
     description: [
       "Developed microservices assignment using Java backend APIs with a JavaScript/React frontend, built and deployed with Docker",
       "Provided technical mentorship for multiple full stack projects over a 4-month scrum developmentcycle",
@@ -21,20 +43,9 @@ const jobs = [
     ],
   },
   {
-    workplace: "Citi",
-    position: "Summer Technology Analyst Intern",
-    duration: "Jul 2020 - Aug 2020",
-    description: [
-      "Prototyped portfolio management service proposal with React",
-      "Designed user interface mock-ups for mobile ATM application in Figma",
-      "Transformed business requirements and customer experiences into tech-ready user stories",
-    ],
-    url: "https://www.citigroup.com/citi/",
-  },
-  {
     workplace: "PAL Lab",
     position: "Social Robotics Programmer",
-    duration: "May 2019 - Dec 2019",
+    duration: ["May 2019 - Dec 2019"],
     description: [
       "Implemented psychology experiments involving subject/robot engagement and user input leveraging Furhat API",
       "Developed a React web application for researchers to run robot actions",

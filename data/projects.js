@@ -25,40 +25,35 @@ const projects = [
     ],
   },
   {
-    name: "CollabCloud",
+    name: "UTM TA Application System",
     description:
-      "CollabCloud is a social networking platform built on top of Github’s API, allowing users to post software projects seeking collaborators, join projects, and find projects that would be best suited for their skillset and needs.",
-    pic: "https://i.imgur.com/O30bnh4.png",
-    tech: ["React", "JavaScript", "Node.js", "PostgreSQL"],
-    links: [
-      {
-        label: "Github",
-        icon: "github",
-        url: "https://github.com/collabcloud/project-collabcloud",
-      },
-      {
-        label: "Demo",
-        icon: "youtube",
-        url: "https://youtu.be/bPAOhb8r5Co",
-      },
-    ],
-  },
-  {
-    name: "ResumeWords",
-    description:
-      "ResumeWords is a tool that identifies keywords using machine learning, that will improve your chances of getting contacted for a job based on its posting!",
-    pic: "https://i.imgur.com/qD6BgE3.png",
-    tech: ["React", "TypeScript", "Docker"],
+      "UTAP is the central platform for all MCS TA postings @ UTM enabling students and instructors to apply for postings and manage applications.",
+    pic: "https://i.imgur.com/czGpJzt.png",
+    tech: ["React", "Node.js"],
     links: [
       {
         label: "Website",
         icon: "link",
-        url: "https://resume-words.com/",
+        url: "https://utap.utm.utoronto.ca/utap/",
+      },
+    ],
+  },
+  {
+    name: "ConnectU",
+    description:
+      "ConnectU is a platform for students to browse & upload academic group chats to stay connected during online school.",
+    pic: "https://i.imgur.com/Ym7MgQl.png",
+    tech: ["React", "GraphQL", "Node.js"],
+    links: [
+      {
+        label: "Website",
+        icon: "link",
+        url: "https://uoftconnectu.tech",
       },
       {
         label: "Github",
         icon: "github",
-        url: "https://github.com/ShahmeerShahid/ResumeWords",
+        url: "https://github.com/jcserv/connectu",
       },
     ],
   },
@@ -80,6 +75,76 @@ export const extraProjects = [
     ],
   },
   {
+    name: "ResumeWords",
+    type: "Personal",
+    description:
+      "A tool that identifies keywords in job postings using ML that will improve your chances of getting a job.",
+    tech: ["React", "TypeScript", "Docker"],
+    links: [
+      {
+        label: "Website",
+        icon: "link",
+        url: "https://resume-words.com/",
+      },
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/ShahmeerShahid/ResumeWords",
+      },
+    ],
+  },
+  {
+    name: "AnonBot",
+    type: "Personal",
+    description: "Discord bot for anonymous messaging, with 2100 messages sent",
+    tech: ["Node.js"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/white-van/WVAnonBot",
+      },
+    ],
+  },
+  {
+    name: "Citrade",
+    type: "Work",
+    description:
+      "Citrade is a proof-of-concept for a retail investment brokerage, equipped with an easy-to-use UI and detailed analytics.",
+    tech: ["React", "AWS"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/jcserv/citrade-frontend",
+      },
+      {
+        label: "Website",
+        icon: "link",
+        url: "https://main.d2mbmzkt6yj28g.amplifyapp.com/",
+      },
+    ],
+  },
+  {
+    name: "CollabCloud",
+    type: "School",
+    description:
+      "Social networking platform allowing users to find collaborators for software projects.",
+    tech: ["React", "Node.js", "PostgreSQL"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/collabcloud/project-collabcloud",
+      },
+      {
+        label: "Demo",
+        icon: "youtube",
+        url: "https://youtu.be/bPAOhb8r5Co",
+      },
+    ],
+  },
+  {
     name: "freeflo.io",
     type: "Hackathon",
     description:
@@ -95,19 +160,6 @@ export const extraProjects = [
         label: "Demo",
         icon: "youtube",
         url: "https://www.youtube.com/watch?v=pXDF2kgQGtk",
-      },
-    ],
-  },
-  {
-    name: "AnonBot",
-    type: "Personal",
-    description: "Discord bot for anonymous messaging, with 2100 messages sent",
-    tech: ["Node.js"],
-    links: [
-      {
-        label: "Github",
-        icon: "github",
-        url: "https://github.com/white-van/WVAnonBot",
       },
     ],
   },

@@ -13,6 +13,7 @@ Changes:
 - Frontend only (can be easily hosted with Vercel, Github pages)
 
 Removed:
+
 - Sticky sidebar
 - Skills
 

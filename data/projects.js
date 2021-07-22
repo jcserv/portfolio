@@ -4,7 +4,7 @@ const projects = [
     description:
       "PostureAI is an AI powered posture improvement web app that helps you maintain healthy posture while working.",
     subtitle: "1st Place in Best Use of GCP",
-    pic: "https://i.imgur.com/DwP3FLv.png",
+    pic: "/postureai.png",
     tech: ["React", "TypeScript"],
     links: [
       {
@@ -28,7 +28,7 @@ const projects = [
     name: "UTM TA Application System",
     description:
       "UTAP is the central platform for all MCS TA postings @ UTM enabling students and instructors to apply for postings and manage applications.",
-    pic: "https://i.imgur.com/czGpJzt.png",
+    pic: "/utap.png",
     tech: ["React", "Node.js"],
     links: [
       {
@@ -39,21 +39,21 @@ const projects = [
     ],
   },
   {
-    name: "ConnectU",
+    name: "ULinks",
     description:
-      "ConnectU is a platform for students to browse & upload academic group chats to stay connected during online school.",
-    pic: "https://i.imgur.com/Ym7MgQl.png",
+      "ULinks is a platform for students to browse & upload academic group chats to stay connected during online school.",
+    pic: "/ulinks.PNG",
     tech: ["React", "GraphQL", "Node.js"],
     links: [
       {
         label: "Website",
         icon: "link",
-        url: "https://uoftconnectu.tech",
+        url: "https://ulinks.io",
       },
       {
         label: "Github",
         icon: "github",
-        url: "https://github.com/jcserv/connectu",
+        url: "https://github.com/jcserv/ulinks",
       },
     ],
   },
@@ -122,6 +122,25 @@ export const extraProjects = [
         label: "Website",
         icon: "link",
         url: "https://main.d2mbmzkt6yj28g.amplifyapp.com/",
+      },
+    ],
+  },
+  {
+    name: "UTM CSSC Website",
+    type: "Work",
+    description:
+      "The CSSC Website is an open space for UTM CS students to ask questions, use academic tools, and get connected within the CS community.",
+    tech: ["Vue"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/utm-cssc/website",
+      },
+      {
+        label: "Website",
+        icon: "link",
+        url: "https://cssc.utm.utoronto.ca/",
       },
     ],
   },

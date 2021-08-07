@@ -1,26 +1,20 @@
 const projects = [
   {
-    name: "PostureAI",
+    name: "ULinks.io",
     description:
-      "PostureAI is an AI powered posture improvement web app that helps you maintain healthy posture while working.",
-    subtitle: "1st Place in Best Use of GCP",
-    pic: "/postureai.png",
-    tech: ["React", "TypeScript"],
+      "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school, with 1500+ users",
+    pic: "/ulinks.PNG",
+    tech: ["React", "GraphQL", "Node.js"],
     links: [
       {
         label: "Website",
         icon: "link",
-        url: "https://postureai.tech/",
+        url: "https://ulinks.io",
       },
       {
         label: "Github",
         icon: "github",
-        url: "https://github.com/jcserv/PostureAI",
-      },
-      {
-        label: "Devpost",
-        icon: "devpost",
-        url: "https://devpost.com/software/placeholder-9gjdst",
+        url: "https://github.com/jcserv/ulinks",
       },
     ],
   },
@@ -39,21 +33,27 @@ const projects = [
     ],
   },
   {
-    name: "ULinks",
+    name: "PostureAI",
     description:
-      "ULinks is a platform for students to browse & upload academic group chats to stay connected during online school.",
-    pic: "/ulinks.PNG",
-    tech: ["React", "GraphQL", "Node.js"],
+      "PostureAI is an AI powered posture improvement web app, used by 200 monthly active users, that helps you maintain healthy posture while working.",
+    subtitle: "1st Place in Best Use of GCP",
+    pic: "/postureai.png",
+    tech: ["React", "TypeScript"],
     links: [
       {
         label: "Website",
         icon: "link",
-        url: "https://ulinks.io",
+        url: "https://postureai.tech/",
       },
       {
         label: "Github",
         icon: "github",
-        url: "https://github.com/jcserv/ulinks",
+        url: "https://github.com/jcserv/PostureAI",
+      },
+      {
+        label: "Devpost",
+        icon: "devpost",
+        url: "https://devpost.com/software/placeholder-9gjdst",
       },
     ],
   },

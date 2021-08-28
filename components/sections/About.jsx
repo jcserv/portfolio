@@ -23,9 +23,17 @@ const Bio = ({ secondary }) => (
         at the University of Toronto Mississauga.
       </Text>
       <Text>
-        I&apos;m currently working at Citi Bank as a{" "}
+        I&apos;ve previously worked at{" "}
+        <a href="https://www.citigroup.com/citi/" target="_rel noopener">
+          CitiGroup
+        </a>{" "}
+        as a{" "}
         <strong style={{ color: secondary }}>Technology Analyst Intern</strong>,
-        and was previously at Citylitics Inc. as a{" "}
+        and was previously at{" "}
+        <a href="https://citylitics.com/" target="_rel noopener">
+          Citylitics Inc.
+        </a>{" "}
+        as a{" "}
         <strong style={{ color: secondary }}>
           Full Stack & Data Developer Intern
         </strong>{" "}
@@ -36,9 +44,7 @@ const Bio = ({ secondary }) => (
         <strong style={{ color: secondary }}>
           efficient full stack and mobile applications
         </strong>
-        . I have a{" "}
-        <strong style={{ color: secondary }}>passion for teaching</strong>, and
-        have worked as a TA in university and highschool CS courses. I&apos;m an{" "}
+        . I&apos;m also an{" "}
         <strong style={{ color: secondary }}>avid hackathon attendee</strong>{" "}
         and received numerous awards at hackathons with my amazing teams!
       </Text>

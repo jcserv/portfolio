@@ -7,6 +7,7 @@ Changes:
 
 - React-bootstrap -> Chakra-UI
 - Dark mode
+- Progressive Web App (PWA)
 - Eslint + CI checks
 - More projects section
 - Simplified contact

@@ -7,11 +7,6 @@ const projects = [
     tech: ["React", "GraphQL", "Node.js"],
     links: [
       {
-        label: "Website",
-        icon: "link",
-        url: "https://ulinks.io",
-      },
-      {
         label: "Github",
         icon: "github",
         url: "https://github.com/jcserv/ulinks",

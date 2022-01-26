@@ -16,27 +16,27 @@ const Bio = ({ secondary }) => (
   <GridItem>
     <VStack m="auto" w="75%" spacing="12px" pt="5%">
       <Text>
-        Hi, I&apos;m Jarrod! I am a fourth year{" "}
-        <strong style={{ color: secondary }}>
-          Computer Science Specialist
-        </strong>{" "}
-        at the University of Toronto Mississauga.
+        Hi, I&apos;m Jarrod! I am a{" "}
+        <strong style={{ color: secondary }}>full stack developer</strong> that
+        studied computer science and mathematics at the University of Toronto.
       </Text>
       <Text>
-        I&apos;m currently working at Citi Bank as a{" "}
-        <strong style={{ color: secondary }}>Technology Analyst Intern</strong>,
-        and was previously at Citylitics Inc. as a{" "}
+        I&apos;m currently working at SailPoint as a{" "}
+        <strong style={{ color: secondary }}>Software Engineer</strong> on the
+        Data Presentation team. Prior to that, I was at Citi Bank as a{" "}
+        <strong style={{ color: secondary }}>Software Developer Intern</strong>,
+        and at Citylitics Inc. as a{" "}
         <strong style={{ color: secondary }}>
-          Full Stack & Data Developer Intern
-        </strong>{" "}
-        for 9 months prior.
-      </Text>
-      <Text>
-        I enjoy designing & engineering{" "}
-        <strong style={{ color: secondary }}>
-          efficient full stack and mobile applications
+          Full Stack Developer Intern
         </strong>
-        . I have a{" "}
+        .
+      </Text>
+      <Text>
+        I enjoy creating{" "}
+        <strong style={{ color: secondary }}>
+          scalable & elegant web/mobile applications
+        </strong>{" "}
+        that have a real world impact. I also have a{" "}
         <strong style={{ color: secondary }}>passion for teaching</strong>, and
         have worked as a TA in university and highschool CS courses. I&apos;m an{" "}
         <strong style={{ color: secondary }}>avid hackathon attendee</strong>{" "}

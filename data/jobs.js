@@ -1,5 +1,17 @@
 const jobs = [
   {
+    workplace: "SailPoint",
+    position: "Software Engineer",
+    duration: ["Jan 2022 - Present"],
+    description: [
+      "Deliver efficient, maintainable, robust Java based microservices",
+      "Produce designs and rough estimates, and implement features based on product requirements",
+      "Collaborate with peers on designs, code reviews, and testing",
+      "Produce unit and end-to-end tests to improve code quality and maximize code coverage for new and existing features",
+    ],
+    url: "https://sailpoint.com/",
+  },
+  {
     workplace: "Citi",
     position: "Summer Technology Analyst Intern",
     duration: ["May 2021 - Present", "Jul 2020 - Aug 2020"],
@@ -22,20 +34,9 @@ const jobs = [
     url: "https://citylitics.com/",
   },
   {
-    workplace: "CSSC",
-    position: "Director of Technology",
-    duration: ["May 2021 - Present"],
-    description: [
-      "Develop features for CSSC website providing useful tools and resources for students",
-      "Provide mentorship for students with technical projects",
-      "Create and host tech initiatives to educate & engage students on industry technologies",
-    ],
-    url: "https://cssc.utm.utoronto.ca/",
-  },
-  {
     workplace: "U of T",
     position: "Computer Science TA",
-    duration: ["Jan 2020 - Present"],
+    duration: ["Jan 2020 - Dec 2021"],
     description: [
       "Developed microservices assignment using Java backend APIs with a JavaScript/React frontend, built and deployed with Docker",
       "Provided technical mentorship for multiple full stack projects over a 4-month scrum developmentcycle",

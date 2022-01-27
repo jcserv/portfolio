@@ -13,8 +13,8 @@ const jobs = [
   },
   {
     workplace: "Citi",
-    position: "Summer Technology Analyst Intern",
-    duration: ["May 2021 - Present", "Jul 2020 - Aug 2020"],
+    position: "Technology Analyst Intern",
+    duration: ["May 2021 - Aug 2021", "Jul 2020 - Aug 2020"],
     description: [
       "Migrated legacy infrastructure from monolithic architecture into microservices",
       "Developed full stack data-entry applications using Angular & Java/Spring",

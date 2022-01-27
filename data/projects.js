@@ -46,6 +46,11 @@ const projects = [
         url: "https://github.com/jcserv/PostureAI",
       },
       {
+        label: "Demo",
+        icon: "youtube",
+        url: "https://www.youtube.com/watch?v=SqUmP6npKYM",
+      },
+      {
         label: "Devpost",
         icon: "devpost",
         url: "https://devpost.com/software/placeholder-9gjdst",

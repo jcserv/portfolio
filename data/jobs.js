@@ -4,16 +4,15 @@ const jobs = [
     position: "Software Engineer",
     duration: ["Jan 2022 - Present"],
     description: [
-      "Deliver efficient, maintainable, robust Java based microservices",
+      "Deliver efficient, maintainable, robust Java & Go based microservices",
       "Produce designs and rough estimates, and implement features based on product requirements",
-      "Collaborate with peers on designs, code reviews, and testing",
       "Produce unit and end-to-end tests to improve code quality and maximize code coverage for new and existing features",
     ],
     url: "https://sailpoint.com/",
   },
   {
     workplace: "Citi",
-    position: "Technology Analyst Intern",
+    position: "Software Developer Intern",
     duration: ["May 2021 - Aug 2021", "Jul 2020 - Aug 2020"],
     description: [
       "Migrated legacy infrastructure from monolithic architecture into microservices",
@@ -24,12 +23,12 @@ const jobs = [
   },
   {
     workplace: "Citylitics",
-    position: "Full Stack & Data Developer Co-op",
+    position: "Software Developer Intern",
     duration: ["Aug 2020 - April 2021"],
     description: [
-      "Re-architected querying engine using React, CSS, and Redux leading to 150% productivity increase",
+      "Re-architected querying engine using React and Redux leading to 150% productivity increase",
       "Implemented RESTful APIs using Django to allow for storage of consumer data, leading to 30% increase in size of key dataset in just 90 days",
-      "Wrote tests verifying standard user flows and edge cases using JavaScript/Jest, increasing code coverage to 98%",
+      "Wrote tests verifying standard user flows and edge cases, increasing code coverage to 98%",
     ],
     url: "https://citylitics.com/",
   },

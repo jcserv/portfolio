@@ -2,6 +2,7 @@ import "../styles/globals.css";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
+import Script from "next/script";
 import { useRouter } from "next/router";
 import React from "react";
 
@@ -40,7 +41,7 @@ const SiteHead = ({ title }) => (
       content="Jarrod Servilla's personal portfolio"
     />
     <meta property="twitter:image" content="/logo512.png" />
-    <script
+    <Script
       async
       defer
       src="https://scripts.simpleanalyticscdn.com/latest.js"

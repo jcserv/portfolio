@@ -34,7 +34,7 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
     mt={4}
     direction="row"
     spacing="12px"
-    justify="center"
+    justifyContent="center"
     mb={10}
     float="right"
   >
@@ -90,7 +90,7 @@ const ProjectCard = ({ name, description, links, tech }) => {
             marginLeft="10px"
           />
         </Grid>
-        <Grid container item xs={6} justify="flex-end">
+        <Grid container item xs={6} justifyContent="flex-end">
           <LinkIconBar links={links} mr="24px" />
         </Grid>
       </Grid>
@@ -108,7 +108,7 @@ const ProjectCard = ({ name, description, links, tech }) => {
         container
         item
         direction="row"
-        justify="space-evenly"
+        justifyContent="space-evenly"
         style={{ marginBottom: "12px" }}
       >
         <Tech tech={tech} />
@@ -166,14 +166,14 @@ export default function MoreProjectsGrid() {
 
   return (
     <>
-      <Flex justify="flex-end" pl="15%" pr="15%" w="100vw">
+      <Flex justifyContent="flex-end" pl="15%" pr="15%" w="100vw">
         <DisplayBar
           showGridView={showGridView}
           setShowGridView={setShowGridView}
         />
       </Flex>
-      <Flex justify="center" w="100vw">
-        <Grid container item xs={12} sm={9} md={9} justify="center">
+      <Flex justifyContent="center" w="100vw">
+        <Grid container item xs={12} sm={9} md={9} justifyContent="center">
           {showGridView ? (
             projects.map((project) => (
               <ProjectCard key={project.name} {...project} />
@@ -183,7 +183,7 @@ export default function MoreProjectsGrid() {
           )}
         </Grid>
       </Flex>
-      <Flex justify="center" w="100vw">
+      <Flex justifyContent="center" w="100vw">
         <Button
           mt={6}
           leftIcon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}

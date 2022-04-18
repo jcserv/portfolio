@@ -18,6 +18,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
+  ignorePatterns: ["public/"],
   rules: {
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",

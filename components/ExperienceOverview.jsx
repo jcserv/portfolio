@@ -27,13 +27,7 @@ const ExperienceSelect = ({ expIndex, setIndex }) => (
 );
 
 const ExperienceButtons = ({ expIndex, setIndex }) => (
-  <Grid
-    container
-    item
-    spacing={2}
-    justifyContent="center"
-    style={{ margin: "auto" }}
-  >
+  <Grid container item spacing={2} justify="center" style={{ margin: "auto" }}>
     {jobs.map((job, index) => (
       <Grid container item key={`${job.workplace}-btn`}>
         <Button
@@ -95,14 +89,12 @@ export default function ExperienceOverview() {
       container
       item
       direction="row"
-      justifyContent="center"
+      justify="center"
       xs={9}
-      sm={6}
-      bgColor={bg}
+      sm={9}
       borderRadius="lg"
       borderWidth={bg === colors.bg.light ? "1px" : ""}
       rounded="md"
-      shadow="lg"
       style={{
         margin: "24px",
         marginTop: "3vh",
@@ -114,11 +106,11 @@ export default function ExperienceOverview() {
         container
         direction="column"
         item
-        xs={9}
+        xs={3}
         sm={6}
         md={2}
         alignItems="center"
-        justifyContent="flex-start"
+        justify="flex-start"
         style={{ marginTop: "24px", marginBottom: "24px", marginRight: "3vw" }}
       >
         {showSelect ? (

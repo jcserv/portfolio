@@ -1,6 +1,7 @@
 import {
   GridItem,
   Image,
+  Link,
   SimpleGrid,
   Text,
   useBreakpointValue,
@@ -16,31 +17,40 @@ const Bio = ({ secondary }) => (
   <GridItem>
     <VStack m="auto" w="75%" spacing="12px" pt="5%">
       <Text>
-        Hi, I&apos;m Jarrod! I am a{" "}
-        <strong style={{ color: secondary }}>full stack developer</strong> that
-        studied computer science and mathematics at the University of Toronto.
+        Hi, I&apos;m Jarrod! I studied computer science at the University of
+        Toronto, and I&apos;m currently working at{" "}
+        <Link href="https://www.sailpoint.com/" isExternal>
+          SailPoint
+        </Link>{" "}
+        as a <strong style={{ color: secondary }}>Software Engineer</strong> on
+        the Workflows team. Prior to that, I was at{" "}
+        <Link href="https://www.citigroup.com/citi/" isExternal>
+          Citigroup
+        </Link>{" "}
+        &{"  "}
+        <Link href="https://citylitics.com/" isExternal>
+          Citylitics
+        </Link>{" "}
+        as a{" "}
+        <strong style={{ color: secondary }}>Software Developer Intern</strong>.
       </Text>
       <Text>
-        I&apos;m currently working at SailPoint as a{" "}
-        <strong style={{ color: secondary }}>Software Engineer</strong> on the
-        Workflows team. Prior to that, I was at Citi Bank as a{" "}
-        <strong style={{ color: secondary }}>Software Developer Intern</strong>,
-        and at Citylitics Inc. as a{" "}
+        I enjoy creating scalable & elegant web/mobile applications that have a
+        real world impact. I&apos;m always learning new technologies, either
+        through{" "}
+        <Link href="https://devpost.com/jcserv" isExternal>
+          hackathons
+        </Link>{" "}
+        or studying - and recently became an{" "}
         <strong style={{ color: secondary }}>
-          Full Stack Developer Intern
+          <Link
+            href="https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url"
+            isExternal
+          >
+            AWS Certified Developer
+          </Link>
         </strong>
         .
-      </Text>
-      <Text>
-        I enjoy creating{" "}
-        <strong style={{ color: secondary }}>
-          scalable & elegant web/mobile applications
-        </strong>{" "}
-        that have a real world impact. I also have a{" "}
-        <strong style={{ color: secondary }}>passion for teaching</strong>, and
-        have worked as a TA in university and highschool CS courses. I&apos;m an{" "}
-        <strong style={{ color: secondary }}>avid hackathon attendee</strong>{" "}
-        and received numerous awards at hackathons with my amazing teams!
       </Text>
     </VStack>
   </GridItem>

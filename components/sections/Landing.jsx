@@ -4,8 +4,10 @@ import { BsChevronDown } from "react-icons/bs";
 import Jump from "react-reveal/Jump";
 import { Link } from "react-scroll";
 
+import links from "../../data/footerLinks";
 import styles from "../../styles/sections/Landing.module.css";
 import { colors } from "../../theme";
+import LinkIconBar from "../LinkIconBar";
 import SectionContainer from "../SectionContainer";
 
 export default function Landing() {
@@ -29,6 +31,18 @@ export default function Landing() {
 
   return (
     <SectionContainer id="landing" name="landing" headerText={header}>
+      <LinkIconBar links={links} />
+      {/* <Button
+        as={URL}
+        colorScheme={secondary}
+        variant="ghost"
+        size="lg"
+        mb="2"
+        href="/resume.pdf"
+        isExternal
+      >
+        Download resume
+      </Button> */}
       <Link
         activeClass="active"
         to="about"

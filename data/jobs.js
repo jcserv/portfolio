@@ -1,12 +1,13 @@
 const jobs = [
   {
     workplace: "SailPoint",
-    position: "Software Engineer",
+    position: "Software Engineer II",
     duration: ["Jan 2022 - Present"],
     description: [
-      "Deliver efficient, maintainable, robust Java & Go based microservices",
-      "Produce designs and rough estimates, and implement features based on product requirements",
-      "Produce unit and end-to-end tests to improve code quality and maximize code coverage for new and existing features",
+      "Delivered efficient, maintainable, robust Java and Go based microservices supporting IdentityNow - a multi-tenant, enterprise SaaS product hosted on the cloud",
+      "Collaborated with peers on designs, code reviews, and testing",
+      "Produced unit and end-to-end tests to improve code quality and maximize code coverage for new and existing features",
+      "Established SLOs for multiple services, implementing and re-augmenting thresholds to maximize actionability",
     ],
     url: "https://sailpoint.com/",
   },
@@ -15,8 +16,8 @@ const jobs = [
     position: "Software Developer Intern",
     duration: ["May 2021 - Aug 2021", "Jul 2020 - Aug 2020"],
     description: [
-      "Migrated legacy infrastructure from monolithic architecture into microservices",
-      "Developed full stack data-entry applications using Angular & Java/Spring",
+      "Migrated legacy infrastructure from monolithic architecture into microservices, resulting in a 50% incident decrease",
+      "Created internal dev tools using Angular and Java/Spring leading to a 33% efficiency increase",
       "Prototyped portfolio management service proposal with React",
     ],
     url: "https://www.citigroup.com/citi/",
@@ -34,7 +35,7 @@ const jobs = [
   },
   {
     workplace: "U of T",
-    position: "Computer Science TA",
+    position: "Head TA",
     duration: ["Jan 2020 - Dec 2021"],
     description: [
       "Developed microservices assignment using Java backend APIs with a JavaScript/React frontend, built and deployed with Docker",

@@ -1,8 +1,11 @@
-import { EmailIcon } from "@chakra-ui/icons";
+// import { EmailIcon } from "@chakra-ui/icons";
 import { Button, Flex, Link, Text } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
+
 import React from "react";
 
+import links from "../../data/contactLinks";
+import LinkIconBar from "../LinkIconBar";
 import SectionContainer from "../SectionContainer";
 
 export default function Contact() {
@@ -10,7 +13,7 @@ export default function Contact() {
     <SectionContainer
       id="contact"
       name="contact"
-      headerText="Contact Me"
+      headerText="Entre em Contato"
       useHeaderStyle
     >
       <Flex
@@ -24,21 +27,22 @@ export default function Contact() {
         pl={4}
         pr={4}
       >
-        <Text fontSize="xl" m="auto" mt={6}>
-          Whether it&apos;s a job opportunity, an invite to coffee,
+        <Text fontSize="xl" m="auto" mt={3}>
+          Seja uma oportunidade de trabalho, sugestões ou feedback, seu contato será bem vindo!
         </Text>
-        <Text fontSize="xl" m="auto">
-          or feedback on my portfolio, my inbox is open!
-        </Text>
-        <Button
+        {/* <Text fontSize="xl" m="auto">
+          
+        </Text> */}
+        <LinkIconBar mt={8} links={links} />
+        {/* <Button
           as={Link}
           leftIcon={<EmailIcon />}
-          href="mailto:jarrod.servilla@gmail.com"
+          href="mailto:filipelehmannp@gmail.com"
           m="auto"
           mt={6}
         >
-          Send Email
-        </Button>
+          Email
+        </Button> */}
       </Flex>
     </SectionContainer>
   );

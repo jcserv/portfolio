@@ -8,7 +8,7 @@ export default function Experience() {
     <SectionContainer
       id="experience"
       name="experience"
-      headerText="Experience"
+      headerText="Experiência"
       useHeaderStyle
     >
       <ExperienceOverview />

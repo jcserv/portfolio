@@ -20,11 +20,11 @@ export default function Landing() {
   const header = (
     <div className={styles.center}>
       <h1 className={styles.tagline} style={{ color: primary }}>
-        Hi, I&apos;m Jarrod Servilla,{" "}
+        Olá, eu sou Filipe Lehmann,{" "}
       </h1>
       <h1 className={styles.tagline} style={{ color: primary }}>
         {" "}
-        a <strong style={{ color: secondary }}>full stack developer.</strong>
+        um <strong style={{ color: secondary }}>desenvolvedor web.</strong>
       </h1>
     </div>
   );
@@ -50,14 +50,15 @@ export default function Landing() {
         smooth
         offset={-70}
         duration={500}
+				
       >
         <VStack>
           <Text
             as="strong"
-            _hover={{ color: secondary }}
+            _hover={{ color: secondary, cursor: 'pointer' }}
             className={styles.learn}
           >
-            Learn More
+            Saiba Mais
           </Text>
           <Jump forever duration={1500}>
             <BsChevronDown />

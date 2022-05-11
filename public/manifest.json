@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Jarrod Servilla - Full Stack Developer",
-  "short_name": "Jarrod Servilla",
-  "description": "Jarrod Servilla's portfolio",
+  "name": "Filipe Lehmann - Front End Developer",
+  "short_name": "Filipe Lehmann",
+  "description": "Filipe Lehmann's portfolio",
   "icons": [
     {
       "src": "/logo192.png",

@@ -8,7 +8,7 @@ export default function MoreProjects() {
     <SectionContainer
       id="projects"
       name="projects"
-      headerText="Featured Projects"
+      headerText="Projetos em Destaque"
       useHeaderStyle
     >
       <ProjectsOverview />

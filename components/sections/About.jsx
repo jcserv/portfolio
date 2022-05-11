@@ -12,60 +12,81 @@ import React from "react";
 
 import { colors } from "../../theme";
 import SectionContainer from "../SectionContainer";
+import styles from "../../styles/sections/Landing.module.css";
+import { Link as LinkScroll } from "react-scroll";
 
 const Bio = ({ secondary }) => (
-  <GridItem>
-    <VStack m="auto" w="75%" spacing="12px" pt="5%">
+  <GridItem className={styles.grid}>
+    <VStack
+      style={{ textAlign: "justify" }}
+      m="auto"
+      w="75%"
+      spacing="12px"
+      pt="5%"
+    >
+      <Text>Quero ser uma ponte entre as pessoas e a tecnologia.</Text>
       <Text>
-        Hi, I&apos;m Jarrod! I studied computer science at the University of
-        Toronto, and I&apos;m currently working at{" "}
-        <Link href="https://www.sailpoint.com/" isExternal>
-          SailPoint
-        </Link>{" "}
-        as a <strong style={{ color: secondary }}>Software Engineer II</strong>{" "}
-        on the Platform Workflows team. Prior to that, I was at{" "}
-        <Link href="https://www.citigroup.com/citi/" isExternal>
-          Citigroup
-        </Link>{" "}
-        &{"  "}
-        <Link href="https://citylitics.com/" isExternal>
-          Citylitics
-        </Link>{" "}
-        as a{" "}
-        <strong style={{ color: secondary }}>Software Developer Intern</strong>.
+        Sou um desenvolvedor bem organizado, solucionador de problemas,
+        independente e com atenção aos detalhes.
       </Text>
       <Text>
-        I enjoy creating scalable & elegant web/mobile applications that have a
-        real world impact. I&apos;m always learning new technologies, either
-        through{" "}
-        <Link href="https://devpost.com/jcserv" isExternal>
-          hackathons
-        </Link>{" "}
-        or studying - and recently became an{" "}
+        Estou me formando em{" "}
+        <strong style={{ color: secondary }}>Engenharia de Computação</strong>{" "}
+        pelo{" "}
+        <Link
+          href="https://www.bambui.ifmg.edu.br/portal/"
+          style={{ color: secondary }}
+          isExternal
+        >
+          IFMG
+        </Link>
+        {" "}
+        e em busca de novas experiências. Em minha trajetória como desenvolvedor
+        fui{" "}
         <strong style={{ color: secondary }}>
-          <Link
-            href="https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url"
-            isExternal
-          >
-            AWS Certified Developer
-          </Link>
-        </strong>
-        .
+          Estagiário em Desenvolvimento Web
+        </strong>{" "}
+        na{" "}
+        <Link
+          href="https://www.guaranisistemas.com.br/"
+          style={{ color: secondary }}
+          isExternal
+        >
+          Guarani Sistemas
+        </Link>{" "}
+        e fiz diversos projetos pessoais e acadêmicos.
       </Text>
+      <LinkScroll
+        to="contact"
+        spy
+        smooth
+        offset={-50}
+        duration={1500}
+        activeClass="active"
+        style={{ fontSize: "14px"}}
+      >
+        <Text
+          as="strong"
+          className={`${styles.learn}`}
+          _hover={{ cursor: "pointer", color: secondary }}
+        >
+          Me chame para um projeto.
+        </Text>
+      </LinkScroll>
     </VStack>
   </GridItem>
 );
 
 const Headshot = () => (
-  <GridItem>
+  <GridItem className={styles.grid}>
     <Image
       m="auto"
       src="/me.jpg"
-      alt="Jarrod Servilla"
+      alt="Filipe Lehmann"
       zIndex={1}
       className="image"
       onClick={() => {
-        window.open("http://linkedin.com/in/jarrod-servilla");
+        window.open("http://linkedin.com/in/filipe-lehmann-pereira/");
       }}
     />
   </GridItem>
@@ -82,7 +103,7 @@ export default function About() {
       id="about"
       name="about"
       headerMt="-5%"
-      headerText="About Me"
+      headerText="Sobre Mim"
       useHeaderStyle
     >
       <SimpleGrid

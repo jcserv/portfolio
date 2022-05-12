@@ -1,10 +1,11 @@
 ## 📋 Portfolio
 
-This portfolio is a work based on the one of [Jarrod Servilla](https://github.com/jcserv) inspired by other developers - [Acknowledgements](#-acknowledgements).
+This portfolio is a work and expansion on the one by [Jarrod Servilla](https://github.com/jcserv), inspired by other developers - [Acknowledgements](#-acknowledgements).
 
 ## 🔧🛠️Changes:
 
 - [x] General section changes
+- [ ] Carousel for displaying certificates
 - [ ] Addition of different palettes for Chakra UI themes
 - [ ] Localization with i18n internationalization framework
 

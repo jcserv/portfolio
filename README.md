@@ -1,6 +1,6 @@
 ## 📋 Portfolio
 
-This portfolio is a work based on the one of [Jarrod Servilla](https://github.com/jcserv) inspired by other developers - [Acknowledgements](-acknowledgements).
+This portfolio is a work based on the one of [Jarrod Servilla](https://github.com/jcserv) inspired by other developers - [Acknowledgements](#-acknowledgements).
 
 ## 🔧🛠️Changes:
 

@@ -1,49 +1,31 @@
-## 🚀 Portfolio V2.0
+## 📋 Portfolio
 
-This portfolio has been re-designed with responsiveness, accessibility, and cleaner code in mind using Chakra-UI.
-See the previous portfolio [here](https://github.com/jcserv/portfoliov1)
+This portfolio is a work based on the one of [Jarrod Servilla](https://github.com/jcserv) inspired by other developers - [Acknowledgements](-acknowledgements).
 
-Changes:
+## 🔧🛠️Changes:
 
-- React-bootstrap -> Chakra-UI
-- Dark mode
-- Progressive Web App (PWA)
-- Eslint + CI checks
-- More projects section
-- Simplified contact
-- Frontend only (can be easily hosted with Vercel, Github pages)
-
-Removed:
-
-- Sticky sidebar
-- Skills
+- [x] General section changes
+- [ ] Addition of different palettes for Chakra UI themes
+- [ ] Localization with i18n internationalization framework
 
 ## 💼 Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - Yarn
 
-## ⚙️ Installing
+## ⛏️ Built With
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Chakra-UI](https://chakra-ui.com/)
+
+## ⚙️ Installation
 
 1. Clone the latest code on the master branch
 2. Install dependencies
    - `yarn`
 3. Run the web server!
    - `yarn dev`
-
-## 🎈 Usage
-
-- Navigate to http://localhost:3000 on your browser
-
-## 💫 Deployment
-
-Import your project into Vercel. It will now have automated deployments on push.
-
-## ⛏️ Built With
-
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Chakra-UI](https://chakra-ui.com/)
 
 ## 📗 Acknowledgements
 

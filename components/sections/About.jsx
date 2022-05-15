@@ -9,11 +9,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link as LinkScroll } from "react-scroll";
 
+import styles from "../../styles/sections/Landing.module.css";
 import { colors } from "../../theme";
 import SectionContainer from "../SectionContainer";
-import styles from "../../styles/sections/Landing.module.css";
-import { Link as LinkScroll } from "react-scroll";
 
 const Bio = ({ secondary }) => (
   <GridItem className={styles.grid}>

@@ -1,7 +1,6 @@
 // import { EmailIcon } from "@chakra-ui/icons";
 import { Flex, Text } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
-
 import React from "react";
 
 import links from "../../data/contactLinks";

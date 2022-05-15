@@ -7,16 +7,13 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BiLink } from "react-icons/bi";
-import { FaDev, FaLinkedin, FaYoutube, FaTelegram } from "react-icons/fa";
-import { IoMdDocument } from "react-icons/io";
+import { FaDev, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa";
+import { IoLogoWhatsapp, IoMdDocument } from "react-icons/io";
+import { IoLogoFigma } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { VscGithubInverted } from "react-icons/vsc";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { IoLogoFigma } from "react-icons/io5";
 
 import { colors } from "../theme";
-
-// import styles from "../styles/components/SectionContainer.module.css";
 
 const icons = {
   github: VscGithubInverted,
@@ -70,7 +67,7 @@ const LinkIconBar = ({ links, color, onHoverColor, ...props }) => {
       spacing="22px"
       justify="center"
       mb={10}
-      transform={"scale(1.2)"}
+      transform="scale(1.2)"
       {...props}
     >
       {links.map((link, index) => (

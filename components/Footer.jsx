@@ -2,13 +2,13 @@
 import { Box, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
-import { colors } from "../theme";
 import Jump from "react-reveal/Jump";
 import { animateScroll as scroll } from "react-scroll";
 
 import links from "../data/footerLinks";
-import LinkIconBar from "./LinkIconBar";
 import styles from "../styles/sections/Footer.module.css";
+import { colors } from "../theme";
+import LinkIconBar from "./LinkIconBar";
 
 export default function Footer() {
   const secondary = useColorModeValue(

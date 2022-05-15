@@ -59,7 +59,7 @@ export default function Landing() {
           >
             Saiba Mais
           </Text>
-          <VStack >
+          <VStack>
             <Jump forever duration={1500}>
               <BsChevronDown />
             </Jump>

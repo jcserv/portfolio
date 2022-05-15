@@ -33,12 +33,11 @@ const icons = {
 
 const LinkIcon = ({ index, color, onHoverColor, url, label, icon }) => (
   <Tooltip label={label} aria-label={`${label}-tooltip`} key={`link-${index}`}>
-    <div style={{ cursor: (!url ? "not-allowed" : "pointer") }}>
+    <div style={{ cursor: !url ? "not-allowed" : "pointer" }}>
       <Link
         aria-label={`Open link to ${url}`}
         display="inline-block"
         href={url}
-        // href={!url ? url : null}
         disabled={!url}
         _disabled={{
           opacity: 0.5,

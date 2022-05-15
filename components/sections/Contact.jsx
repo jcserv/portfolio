@@ -1,5 +1,5 @@
 // import { EmailIcon } from "@chakra-ui/icons";
-import { Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
 
 import React from "react";
@@ -28,7 +28,8 @@ export default function Contact() {
         pr={4}
       >
         <Text fontSize="xl" m="auto" mt={3}>
-          Seja uma oportunidade de trabalho, sugestões ou feedback, seu contato será bem vindo!
+          Seja uma oportunidade de trabalho, sugestões ou feedback, seu contato
+          será bem vindo!
         </Text>
         {/* <Text fontSize="xl" m="auto">
           

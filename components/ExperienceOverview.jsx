@@ -40,7 +40,6 @@ const ExperienceButtons = ({ expIndex, setIndex }) => (
           isActive={expIndex === index}
           isFullWidth
           onClick={() => setIndex(index)}
-					
         >
           {job.workplace}
         </Button>
@@ -72,7 +71,15 @@ const ExperienceDetails = ({ index }) => {
           </Grid>
         ))}
       </Grid>
-      <Grid container item style={{ marginLeft: "12px", marginBottom: "12px", textAlign: "justify" }}>
+      <Grid
+        container
+        item
+        style={{
+          marginLeft: "12px",
+          marginBottom: "12px",
+          textAlign: "justify",
+        }}
+      >
         <UnorderedList mt={2}>
           {job.description.map((desc) => (
             <ListItem key={desc}>{desc}</ListItem>

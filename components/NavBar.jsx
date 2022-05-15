@@ -25,19 +25,19 @@ import { colors } from "../theme";
 const navBtns = [
   {
     label: "Sobre",
-		section: "About",
+    section: "About",
   },
   {
     label: "Experiência",
-		section: "Experience",
+    section: "Experience",
   },
   {
     label: "Projetos",
-		section: "Projects",
+    section: "Projects",
   },
   {
     label: "Contato",
-		section: "Contact",
+    section: "Contact",
   },
   // {
   //   label: "Blog",

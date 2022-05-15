@@ -2,7 +2,7 @@
 
 This portfolio is a work and expansion on the one by [Jarrod Servilla](https://github.com/jcserv), inspired by other developers - [Acknowledgements](#-acknowledgements).
 
-## 🔧🛠️Changes:
+## 🛠️Changes:
 
 - [x] General section changes
 - [ ] Carousel for displaying certificates

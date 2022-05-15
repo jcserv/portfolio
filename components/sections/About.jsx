@@ -39,8 +39,7 @@ const Bio = ({ secondary }) => (
           isExternal
         >
           IFMG
-        </Link>
-        {" "}
+        </Link>{" "}
         e em busca de novas experiências. Em minha trajetória como desenvolvedor
         fui{" "}
         <strong style={{ color: secondary }}>
@@ -63,7 +62,7 @@ const Bio = ({ secondary }) => (
         offset={-50}
         duration={1500}
         activeClass="active"
-        style={{ fontSize: "14px"}}
+        style={{ fontSize: "14px", opacity: 0.7 }}
       >
         <Text
           as="strong"

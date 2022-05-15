@@ -50,19 +50,20 @@ export default function Landing() {
         smooth
         offset={-70}
         duration={500}
-				
       >
         <VStack>
           <Text
             as="strong"
-            _hover={{ color: secondary, cursor: 'pointer' }}
+            _hover={{ color: secondary, cursor: "pointer" }}
             className={styles.learn}
           >
             Saiba Mais
           </Text>
-          <Jump forever duration={1500}>
-            <BsChevronDown />
-          </Jump>
+          <VStack >
+            <Jump forever duration={1500}>
+              <BsChevronDown />
+            </Jump>
+          </VStack>
         </VStack>
       </Link>
     </SectionContainer>

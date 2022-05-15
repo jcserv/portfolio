@@ -18,3 +18,12 @@
   justify-content: center;
   align-items: center;
 }
+
+/* .block::after {
+  position: absolute;
+  left: 2px;
+  content: "";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+} */

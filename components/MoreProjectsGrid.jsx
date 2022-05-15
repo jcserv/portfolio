@@ -38,7 +38,7 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
     mb={10}
     float="right"
   >
-    <Tooltip label="Grid View">
+    <Tooltip label="Exibição em Blocos">
       <IconButton
         aria-label="Display Grid View"
         icon={<BsGridFill />}
@@ -46,7 +46,7 @@ const DisplayBar = ({ showGridView, setShowGridView }) => (
         onClick={() => setShowGridView(true)}
       />
     </Tooltip>
-    <Tooltip label="List View">
+    <Tooltip label="Exibição em Lista">
       <IconButton
         aria-label="Display List View"
         icon={<FaListUl />}
@@ -189,7 +189,7 @@ export default function MoreProjectsGrid() {
           leftIcon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          {`Show ${isExpanded ? "Less" : "More"}`}
+          {`Mostrar ${isExpanded ? "Menos" : "Mais"}`}
         </Button>
       </Flex>
     </>

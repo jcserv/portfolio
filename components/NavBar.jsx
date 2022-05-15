@@ -24,27 +24,31 @@ import { colors } from "../theme";
 
 const navBtns = [
   {
-    label: "About",
+    label: "Sobre",
+		section: "About",
   },
   {
-    label: "Experience",
+    label: "Experiência",
+		section: "Experience",
   },
   {
-    label: "Projects",
+    label: "Projetos",
+		section: "Projects",
   },
   {
-    label: "Contact",
+    label: "Contato",
+		section: "Contact",
   },
-  {
-    label: "Blog",
-    href: "https://jarrod-servilla.medium.com/",
-  },
+  // {
+  //   label: "Blog",
+  //   href: "https://google.com/",
+  // },
 ];
 
 const Logo = () => {
   const logo = useColorModeValue("/logo.png", "/logo-dark.png");
   return (
-    <Box m="2">
+    <Box m="2" cursor="pointer">
       <img
         alt=""
         src={logo}
@@ -73,7 +77,7 @@ const NavButtons = ({ size, onClose }) => {
         </Link>
       ) : (
         <ScrollLink
-          to={btn.label.toLowerCase()}
+          to={btn.section.toLowerCase()}
           href={btn.href}
           spy
           smooth

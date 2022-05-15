@@ -38,7 +38,7 @@ const Card = ({ name, subtitle, description, links }) => {
       <Text hidden={!subtitle} size="sm" as="strong" m={2} p={2} pb={6}>
         {subtitle}
       </Text>
-      <Text m={2} p={2} pb={6}>
+      <Text m={2} p={2} pb={6} textAlign='justify'>
         {description}
       </Text>
       <LinkIconBar links={links} float="right" mt={0} mr={4} mb={4} />

@@ -12,8 +12,11 @@ import { IoMdDocument } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { VscGithubInverted } from "react-icons/vsc";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoFigma } from "react-icons/io5";
 
 import { colors } from "../theme";
+
+// import styles from "../styles/components/SectionContainer.module.css";
 
 const icons = {
   github: VscGithubInverted,
@@ -23,25 +26,35 @@ const icons = {
   document: IoMdDocument,
   youtube: FaYoutube,
   link: BiLink,
-	whatsapp: IoLogoWhatsapp,
-	telegram: FaTelegram,
+  whatsapp: IoLogoWhatsapp,
+  telegram: FaTelegram,
+  figma: IoLogoFigma,
 };
 
 const LinkIcon = ({ index, color, onHoverColor, url, label, icon }) => (
   <Tooltip label={label} aria-label={`${label}-tooltip`} key={`link-${index}`}>
-    <Link
-      aria-label={`Open link to ${url}`}
-      display="inline-block"
-      href={url}
-      isExternal
-    >
-      <Icon
-        as={icons[icon]}
-        fontSize="xl"
-        color={color}
-        _hover={{ color: onHoverColor }}
-      />
-    </Link>
+    <div style={{ cursor: (!url ? "not-allowed" : "pointer") }}>
+      <Link
+        aria-label={`Open link to ${url}`}
+        display="inline-block"
+        href={url}
+        // href={!url ? url : null}
+        disabled={!url}
+        _disabled={{
+          opacity: 0.5,
+          textDecoration: "none",
+          pointerEvents: "none",
+        }}
+        isExternal
+      >
+        <Icon
+          as={icons[icon]}
+          fontSize="xl"
+          color={color}
+          _hover={{ color: onHoverColor }}
+        />
+      </Link>
+    </div>
   </Tooltip>
 );
 
@@ -58,7 +71,7 @@ const LinkIconBar = ({ links, color, onHoverColor, ...props }) => {
       spacing="22px"
       justify="center"
       mb={10}
-			transform={"scale(1.2)"}
+      transform={"scale(1.2)"}
       {...props}
     >
       {links.map((link, index) => (

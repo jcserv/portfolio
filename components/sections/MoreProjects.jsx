@@ -8,7 +8,7 @@ export default function MoreProjects() {
     <SectionContainer
       id="more-projects"
       name="more-projects"
-      headerText="More Projects"
+      headerText="Mais Projetos"
       useHeaderStyle
     >
       <MoreProjectsGrid />

@@ -1,0 +1,4 @@
+.reverse {
+  transform: rotate(180deg);
+  margin-bottom: 32px;
+}

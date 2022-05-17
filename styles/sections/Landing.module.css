@@ -10,12 +10,6 @@
   width: 55%;
 	margin: auto;
 }
-@media only screen and (max-width: 600px) {
-	.center {
-		width: 80%;
-		font-size: 12px;
-	}
-}
 
 .learn {
   font-style: bold;
@@ -30,9 +24,19 @@
 }
 
 .tagline {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .blue {
   color: "#19aad5";
+}
+
+@media only screen and (max-width: 600px) {
+	.center {
+		width: 80%;
+		font-size: 1.5rem;
+	}
+	.tagline{
+		font-size: 1.5rem;
+	}
 }

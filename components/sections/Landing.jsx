@@ -20,17 +20,23 @@ export default function Landing() {
   const header = (
     <div className={styles.center}>
       <h1 className={styles.tagline} style={{ color: primary }}>
-        Olá, eu sou Filipe Lehmann,{" "}
+        Olá, eu sou Filipe Lehmann,
+        {/* {" "}
       </h1>
-      <h1 className={styles.tagline} style={{ color: primary }}>
-        {" "}
+      <h1 className={styles.tagline} style={{ color: primary }}> */}{" "}
         um <strong style={{ color: secondary }}>desenvolvedor web.</strong>
       </h1>
     </div>
   );
 
   return (
-    <SectionContainer id="landing" name="landing" headerText={header}>
+    <SectionContainer
+      id="landing"
+      name="landing"
+      display="flex"
+      justify="center"
+      headerText={header}
+    >
       <LinkIconBar links={links} />
       {/* <Button
         as={URL}

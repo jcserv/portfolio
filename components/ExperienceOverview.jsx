@@ -14,6 +14,7 @@ import { Grid } from "@material-ui/core";
 import React, { useState } from "react";
 
 import jobs from "../data/jobs";
+import styles from "../styles/components/ExperienceOverview.module.css";
 import { colors } from "../theme";
 
 const ExperienceSelect = ({ expIndex, setIndex }) => (
@@ -74,9 +75,10 @@ const ExperienceDetails = ({ index }) => {
       <Grid
         container
         item
+        className={styles.grid_exp}
         style={{
           marginLeft: "12px",
-          marginBottom: "12px",
+          // marginBottom: "12px",
           textAlign: "justify",
         }}
       >
@@ -104,15 +106,15 @@ export default function ExperienceOverview() {
       item
       direction="row"
       justifyContent="center"
-      xs={9}
+      xs={10}
       sm={9}
+      md={8}
       borderRadius="lg"
       borderWidth={bg === colors.bg.light ? "1px" : ""}
       rounded="md"
       style={{
         margin: "24px",
         marginTop: "3vh",
-        width: "75vw",
         height: "60vh",
       }}
     >
@@ -138,7 +140,12 @@ export default function ExperienceOverview() {
         item
         xs={9}
         sm={6}
-        style={{ marginTop: "24px", marginBottom: "24px", marginLeft: "12px" }}
+        style={{
+          marginTop: "24px",
+          marginBottom: "24px",
+          marginLeft: "12px",
+          paddingBottom: "12px",
+        }}
       >
         <ExperienceDetails index={index} />
       </Grid>

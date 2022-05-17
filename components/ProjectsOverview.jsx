@@ -26,7 +26,7 @@ const Card = ({ name, subtitle, description, links }) => {
       borderWidth={bg === colors.bg.light ? "1px" : ""}
       rounded="md"
       shadow="lg"
-      mt={0}
+      mt={20}
       m="auto"
       mb={3}
       w="75%"
@@ -87,14 +87,14 @@ const ProjectContent = ({
 
 const Project = ({ index, shouldAlternate, ...props }) => (
   <Fade>
-    <Grid container direction="row" style={{ height: "70vh" }}>
-      <Grid container item xs={12} sm={6}>
+    <Grid container direction="row">
+      <Grid container item xs={12} sm={6} className="projects-correction">
         <ProjectContent
           alternate={shouldAlternate ? index % 2 === 0 : false}
           {...props}
         />
       </Grid>
-      <Grid container item xs={12} sm={6}>
+      <Grid container item xs={12} sm={6} className="projects-correction">
         <ProjectContent
           alternate={shouldAlternate ? index % 2 === 1 : true}
           {...props}

@@ -1,0 +1,12 @@
+/* .grid_exp{
+  margin-left: 12px;
+  margin-bottom: 12px;
+  text-align: justify;
+} */
+
+@media only screen and (max-width: 600px){
+	.grid_exp{
+		margin-left: 0 !important;
+		text-align: center;
+	}
+}

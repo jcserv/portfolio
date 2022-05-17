@@ -16,6 +16,12 @@ a {
   box-sizing: border-box;
 }
 
+@media only screen and (max-width: 600px) {
+  .projects-correction{
+		margin-top: 24px !important;
+  }
+}
+
 .image {
   box-shadow: -5px 5px 10px #888888;
   transition: all 0.2s ease-in-out;

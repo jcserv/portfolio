@@ -2,7 +2,7 @@ const projects = [
   {
     name: "Issue Tracker",
     description:
-      "Issue tracker é um projeto em desenvolvimento que propõe fazer o rastreamento de tarefas para equipes de desenvolvimento. Como ponto de partida, foi produzido um arquivo de Especificação de Requisitos de Software (SRS) e um Backlog de Produto para guiar Sprints semanais. Utilizará Stack MERN.",
+      "Issue tracker é um projeto que propõe fazer o rastreamento de tarefas para equipes de desenvolvimento. Como ponto de partida, foi produzido um arquivo de Especificação de Requisitos de Software (SRS) e um Backlog de Produto para guiar Sprints semanais. Utilizará Stack MERN.",
     subtitle: "(Em desenvolvimento!)",
     pic: "/issue_tracker.jpg",
     tech: ["MongoDB", "Express", "React", "Node.js"],

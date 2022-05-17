@@ -1,7 +1,12 @@
 .header {
   font-size: 2.5em;
   color: "#19aad5";
-  margin-top: 2vh;
+  margin-top: 20vh;
+}
+@media only screen and (max-width: 600px){
+	.header{
+		font-size: 2em;
+	}
 }
 
 .container {

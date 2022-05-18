@@ -5,7 +5,7 @@ This portfolio is a work and expansion on the one by [Jarrod Servilla](https://g
 ## 🛠️Changes:
 
 - [x] General section changes
-- [x] Mobile layout fixes and adaptations
+- [x] Important mobile layout fixes
 - [ ] Carousel for displaying certificates
 - [ ] Addition of different palettes for Chakra UI themes
 - [ ] Localization with i18n internationalization framework

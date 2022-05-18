@@ -1,4 +1,3 @@
-
 .grid {
   display: flex;
   align-items: center;
@@ -7,8 +6,9 @@
 .center {
   text-align: center;
   padding-bottom: 50px;
-  width: 55%;
-	margin: auto;
+  width: 58%;
+  margin: auto;
+  font-size: 2.3em;
 }
 
 .learn {
@@ -19,24 +19,20 @@
 }
 
 .learn:hover {
-  font-size: 1.25em;
   transform: scale(1.1);
 }
 
-.tagline {
+/* .tagline {
   font-size: 2em;
-}
+} */
 
 .blue {
   color: "#19aad5";
 }
 
 @media only screen and (max-width: 600px) {
-	.center {
-		width: 80%;
-		font-size: 1.5rem;
-	}
-	.tagline{
-		font-size: 1.5rem;
-	}
+  .center {
+    width: 80%;
+    font-size: 1.5rem;
+  }
 }

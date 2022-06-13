@@ -87,10 +87,10 @@ const ProjectContent = ({
 
 const Project = ({ index, shouldAlternate, ...props }) => (
   <Fade>
-    <Grid container direction="row">
+    <Grid container direction="row" >
       <Grid container item xs={12} sm={6} className="projects-correction">
         <ProjectContent
-          alternate={shouldAlternate ? index % 2 === 0 : false}
+          alternate={shouldAlternate ? index % 2 === 0 : false} 
           {...props}
         />
       </Grid>

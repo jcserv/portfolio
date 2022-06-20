@@ -73,11 +73,12 @@ const ProjectContent = ({
   return (
     <Image
       m="auto"
-      w="85%"
       p="auto"
+      // w="85%"
       src={pic}
       alt={`${name} picture`}
       className="image"
+			maxHeight='90%'
       onClick={() => {
         window.open(links[0].url);
       }}
@@ -87,14 +88,14 @@ const ProjectContent = ({
 
 const Project = ({ index, shouldAlternate, ...props }) => (
   <Fade>
-    <Grid container direction="row" >
-      <Grid container item xs={12} sm={6} className="projects-correction">
+    <Grid container direction="row">
+      <Grid container item xs={12} sm={6} className='projects-correction'>
         <ProjectContent
-          alternate={shouldAlternate ? index % 2 === 0 : false} 
+          alternate={shouldAlternate ? index % 2 === 0 : false}
           {...props}
         />
       </Grid>
-      <Grid container item xs={12} sm={6} className="projects-correction">
+      <Grid container item xs={12} sm={6} className='projects-correction'>
         <ProjectContent
           alternate={shouldAlternate ? index % 2 === 1 : true}
           {...props}

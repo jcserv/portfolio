@@ -16,9 +16,9 @@ a {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
-  .projects-correction{
-		margin-top: 24px !important;
+@media only screen and (max-width: 770px) {
+  .projects-correction {
+    margin-top: 24px !important;
   }
 }
 

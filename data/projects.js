@@ -20,28 +20,9 @@ const projects = [
 		],
 	},
 	{
-		name: "Playlister",
-		description:
-			"Playlister é um criador de playlists web que disponibiliza e compartilha as entradas entre os usuários. Possui autenticação, autorização, banco de dados e hospedagem via Firebase.",
-		pic: "/playlister.jpg",
-		tech: ["Vue.js", "Firebase", "Node.js"],
-		links: [
-			{
-				label: "Website",
-				icon: "link",
-				url: "https://playlist-vue-project-a4e60.web.app/",
-			},
-			{
-				label: "Github",
-				icon: "github",
-				url: "https://github.com/LehmannPi/playlist-creator-vue",
-			},
-		],
-	},
-	{
 		name: "Desafio ACME Inc.",
 		description:
-			"Aplicativo web para exibir os produtos da empresa fictícia Acme Inc. O aplicativo exibe 15 itens, de maneira responsiva, com imagens, descrições e valores gerados aleatoriamente a partir de bases de dados internas ou a partir de APIs.",
+			"Aplicativo web, feito como desafio de front-end, para exibir os produtos da empresa fictícia Acme Inc. O aplicativo exibe 15 itens, de maneira responsiva, com imagens, descrições e valores gerados aleatoriamente a partir de bases de dados internas ou a partir de APIs.",
 		pic: "/acme.png",
 		tech: ["React.js", "Chakra-UI", "Front-end Challenge"],
 		links: [
@@ -73,6 +54,25 @@ const projects = [
 				label: "Github",
 				icon: "github",
 				url: "https://github.com/LehmannPi/ip-adress-tracker/tree/develop",
+			},
+		],
+	},
+	{
+		name: "Playlister",
+		description:
+			"Playlister é um criador de playlists, que disponibiliza e compartilha as entradas entre os usuários. Possui autenticação, autorização, banco de dados e hospedagem via Firebase. O projeto é uma prova de conceito e não permite armazenamento de formatos em áudio.",
+		pic: "/playlister.jpg",
+		tech: ["Vue.js", "Firebase", "Node.js"],
+		links: [
+			{
+				label: "Website",
+				icon: "link",
+				url: "https://playlist-vue-project-a4e60.web.app/",
+			},
+			{
+				label: "Github",
+				icon: "github",
+				url: "https://github.com/LehmannPi/playlist-creator-vue",
 			},
 		],
 	},

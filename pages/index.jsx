@@ -2,6 +2,7 @@ import React from "react";
 
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
+// import Certificates from "../components/sections/Certificates";
 import Experience from "../components/sections/Experience";
 import Landing from "../components/sections/Landing";
 import MoreProjects from "../components/sections/MoreProjects";
@@ -16,6 +17,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <MoreProjects />
+      {/* <Certificates /> */}
       <Contact />
     </div>
   );

@@ -20,7 +20,7 @@ const SiteHead = ({ title }) => (
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#252934" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.jarrodservilla.com/" />
+    <meta property="og:url" content="https://filipelehmann.vercel.app/" />
     <meta property="og:title" content="Filipe Lehmann - Front End Developer" />
     <meta
       property="og:description"

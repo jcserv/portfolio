@@ -1,8 +1,18 @@
-import { Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+  Text,
+  useColorModeValue,
+  VStack,
+  ButtonGroup,
+  Button,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Jump from "react-reveal/Jump";
 import { Link } from "react-scroll";
+
+import { emphasisStrong } from "../../utils/highlighting";
+import { checkLocale } from "../../utils/checkLanguage";
 
 import links from "../../data/footerLinks";
 import styles from "../../styles/sections/Landing.module.css";
@@ -16,15 +26,18 @@ export default function Landing() {
     colors.secondary.light,
     colors.secondary.dark
   );
+  const router = useRouter();
+  const { locale } = router;
+  // console.log(locale);
+  const t = checkLocale(locale);
+  // console.log(t.landing);
 
   const header = (
     <div className={styles.center}>
       <h1 className={styles.tagline} style={{ color: primary }}>
-        Olá, eu sou Filipe Lehmann,
-        {/* {" "}
-      </h1>
-      <h1 className={styles.tagline} style={{ color: primary }}> */}{" "}
-        um <strong style={{ color: secondary }}>desenvolvedor web.</strong>
+        <h1 className={styles.tagline} style={{ color: primary }}>
+          {emphasisStrong(t.landing.title, t.landing.strong)}
+        </h1>
       </h1>
     </div>
   );
@@ -38,17 +51,7 @@ export default function Landing() {
       headerText={header}
     >
       <LinkIconBar links={links} />
-      {/* <Button
-        as={URL}
-        colorScheme={secondary}
-        variant="ghost"
-        size="lg"
-        mb="2"
-        href="/resume.pdf"
-        isExternal
-      >
-        Download resume
-      </Button> */}
+
       <Link
         activeClass="active"
         to="about"
@@ -63,7 +66,7 @@ export default function Landing() {
             _hover={{ color: secondary, cursor: "pointer" }}
             className={styles.learn}
           >
-            Saiba Mais
+            {t.landing.about}
           </Text>
           <VStack>
             <Jump forever duration={1500}>

@@ -9,6 +9,7 @@ import MoreProjects from "../components/sections/MoreProjects";
 import Projects from "../components/sections/Projects";
 import styles from "../styles/Home.module.css";
 
+
 export default function Home() {
   return (
     <div className={styles.container}>

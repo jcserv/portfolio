@@ -1,0 +1,19 @@
+{
+	"resume": "Lebenslauf",
+	"landing": {
+		"title": "Hallo, ich bin Filipe Lehmann, ein Webentwickler.",
+		"strong": "Webentwickler",
+		"about": "Lern Mehr"
+	},
+	"about": {
+		"title": "About Me",
+		"effect": "I want to be a bridge between people and technology.",
+		"myself": "I love to solve problems in a well organized, independent way, with attention to details.",
+		"main": "I'm majoring in Computer Engineering at IFMG and looking for new experiences. In my trajectory as a developer, I was a Web Development Intern at Guarani Sistemas and did several personal and academic projects.",
+		"cta": "Invite me for a project.",
+		"strong": {
+			"1": "Engenharia de Computação",
+			"2": "Estagiário em Desenvolvimento Web"
+		}
+	}
+}

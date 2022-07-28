@@ -11,11 +11,14 @@ import {
 import React from "react";
 import { Link as LinkScroll } from "react-scroll";
 
+import { checkLocale } from "../../utils/checkLanguage";
+
 import styles from "../../styles/sections/Landing.module.css";
 import { colors } from "../../theme";
 import SectionContainer from "../SectionContainer";
+import { useRouter } from "next/router";
 
-const Bio = ({ secondary }) => (
+const Bio = ({ secondary, t }) => (
   <GridItem className={styles.grid}>
     <VStack
       style={{ textAlign: "justify" }}
@@ -24,11 +27,8 @@ const Bio = ({ secondary }) => (
       spacing="12px"
       pt="5%"
     >
-      <Text>Quero ser uma ponte entre as pessoas e a tecnologia.</Text>
-      <Text>
-        Sou um desenvolvedor bem organizado, solucionador de problemas,
-        independente e com atenção aos detalhes.
-      </Text>
+      <Text>{t.about.effect}</Text>
+      <Text>{t.about.myself}</Text>
       <Text>
         Estou me formando em{" "}
         <strong style={{ color: secondary }}>Engenharia de Computação</strong>{" "}
@@ -69,7 +69,7 @@ const Bio = ({ secondary }) => (
           className={`${styles.learn}`}
           _hover={{ cursor: "pointer", color: secondary }}
         >
-          Me chame para um projeto.
+          {t.about.cta}
         </Text>
       </LinkScroll>
     </VStack>
@@ -97,6 +97,10 @@ export default function About() {
     colors.secondary.light,
     colors.secondary.dark
   );
+  const router = useRouter();
+  const { locale } = router;
+  const t = checkLocale(locale);
+
   return (
     <SectionContainer
       id="about"
@@ -113,8 +117,8 @@ export default function About() {
         columns={[1, null, 2]}
         justifyContent="center"
       >
-        {shouldAlternate ? <Bio secondary={secondary} /> : <Headshot />}
-        {shouldAlternate ? <Headshot /> : <Bio secondary={secondary} />}
+        {shouldAlternate ? <Bio secondary={secondary} t={t} /> : <Headshot />}
+        {shouldAlternate ? <Headshot /> : <Bio secondary={secondary} t={t} />}
       </SimpleGrid>
     </SectionContainer>
   );

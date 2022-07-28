@@ -8,6 +8,7 @@ import {
   DrawerOverlay,
   IconButton,
   Link,
+  Select,
   Spacer,
   Stack,
   Tooltip,
@@ -16,11 +17,15 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
+
 import { FaMoon, FaSun } from "react-icons/fa";
+import { AiFillFlag } from "react-icons/ai";
+
 import { animateScroll as scroll, Link as ScrollLink } from "react-scroll";
 import Sticky from "react-stickynode";
 
 import { colors } from "../theme";
+import { useRouter } from "next/router";
 
 const navBtns = [
   {
@@ -93,6 +98,34 @@ const NavButtons = ({ size, onClose }) => {
   return <>{btns}</>;
 };
 
+// * Recebe a constante local - não variavel, constante
+const LanguageSelector = (localization) => {
+  return (
+    <Box>
+      <Tooltip
+        label={`Switch languages`} // TODO put custom tooltip by const 'local'
+        // aria-label={`Toggle ${nextMode} mode`}
+      >
+        <Select
+          icon={<AiFillFlag />}
+          variant="ghost"
+          fontWeight={"bold"}
+          color={"current"}
+          height="24px"
+          cursor={"pointer"}
+          bg="transparent"
+          onChange={localization.localization.function}
+          defaultValue={localization.localization.language}
+        >
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+        </Select>
+      </Tooltip>
+    </Box>
+  );
+};
+
 const ColorModeButton = ({ mr }) => {
   const { toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
@@ -116,20 +149,21 @@ const ColorModeButton = ({ mr }) => {
   );
 };
 
-const MenuLinks = ({ onClose }) => (
+const MenuLinks = ({ onClose, localization }) => (
   <Stack
-    display={{ base: "none", sm: "none", md: "block" }}
+    display={{ base: "none", sm: "none", md: "flex" }}
     width={{ sm: "full", md: "auto" }}
-    spacing="24px"
+    spacing="16px"
     direction={["column", "row", "row", "row"]}
     alignItems="center"
   >
+    <LanguageSelector localization={localization} />
     <NavButtons size="sm" onClose={onClose} />
     <ColorModeButton mr="12px" />
   </Stack>
 );
 
-const NavMenu = ({ isOpen, onClose }) => (
+const NavMenu = ({ isOpen, onClose, localization }) => (
   <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
     <DrawerOverlay>
       <DrawerContent>
@@ -141,6 +175,7 @@ const NavMenu = ({ isOpen, onClose }) => (
             spacing="24px"
             mt="20vh"
           >
+            <LanguageSelector localization={localization} />
             <NavButtons size="lg" onClose={onClose} />
             <ColorModeButton />
           </Stack>
@@ -151,6 +186,13 @@ const NavMenu = ({ isOpen, onClose }) => (
 );
 
 export default function Navbar() {
+  const router = useRouter();
+  const { locale } = router;
+  const changeLanguage = (e) => {
+    const lang = e.target.value; // console.log("TROCA", lang);
+    router.push(router.pathname, lang);
+  };
+  const localization = { language: locale, function: changeLanguage };
   const primary = useColorModeValue(colors.primary.light, colors.primary.dark);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -166,8 +208,12 @@ export default function Navbar() {
       >
         <Logo />
         <Spacer />
-        <MenuLinks onClose={onClose} />
-        <NavMenu isOpen={isOpen} onClose={onClose} />
+        <MenuLinks onClose={onClose} localization={localization} />
+        <NavMenu
+          isOpen={isOpen}
+          onClose={onClose}
+          localization={localization}
+        />
         <MenuToggle isOpen={isOpen} onOpen={onOpen} />
       </Stack>
     </Sticky>

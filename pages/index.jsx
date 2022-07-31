@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 import About from "../components/sections/About";
@@ -8,16 +9,19 @@ import Landing from "../components/sections/Landing";
 import MoreProjects from "../components/sections/MoreProjects";
 import Projects from "../components/sections/Projects";
 import styles from "../styles/Home.module.css";
-
+import checkLocale from "../utils/checkLanguage";
 
 export default function Home() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = checkLocale(locale);
   return (
     <div className={styles.container}>
       <Landing />
       <About />
-      <Experience />
-      <Projects />
-      <MoreProjects />
+      <Experience locale={locale} t={t} />
+      <Projects t={t} />
+      <MoreProjects t={t}/>
       {/* <Certificates /> */}
       <Contact />
     </div>

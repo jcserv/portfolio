@@ -74,7 +74,6 @@ const ProjectContent = ({
     <Image
       m="auto"
       p="auto"
-      // w="85%"
       src={pic}
       alt={`${name} picture`}
       className="image"

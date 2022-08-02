@@ -3,7 +3,7 @@ import React from "react";
 import MoreProjectsGrid from "../MoreProjectsGrid";
 import SectionContainer from "../SectionContainer";
 
-export default function MoreProjects() {
+export default function MoreProjects({ t }) {
   return (
     <SectionContainer
       id="more-projects"

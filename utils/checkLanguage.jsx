@@ -9,3 +9,5 @@ export function checkLocale(locale) {
     return pt;
   }
 }
+
+module.exports = checkLocale;

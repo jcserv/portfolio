@@ -11,14 +11,11 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 import jobs from "../data/jobs";
 import styles from "../styles/components/ExperienceOverview.module.css";
 import { colors } from "../theme";
-
-// ! ALTERAR LINGUAGEM NA CHAMADA AO jobs
 
 const ExperienceSelect = ({ expIndex, setIndex, locale }) => (
   <Select value={expIndex} onChange={(e) => setIndex(e.target.value)}>
@@ -54,10 +51,6 @@ const ExperienceButtons = ({ expIndex, setIndex, locale }) => (
 
 const ExperienceDetails = ({ index, locale }) => {
   const job = jobs[locale][index];
-  // console.log(jobs[locale]);
-  // console.log(locale);
-  // console.log(index);
-  // console.log(job);
   const secondary = useColorModeValue(
     colors.secondary.light,
     colors.secondary.dark
@@ -98,16 +91,13 @@ const ExperienceDetails = ({ index, locale }) => {
   );
 };
 
-export default function ExperienceOverview() {
+export default function ExperienceOverview({ locale }) {
   const [index, setIndex] = useState(0);
   const showSelect = useBreakpointValue({
     base: false,
     lg: true,
   });
   const bg = useColorModeValue(colors.bg.light, colors.bg.dark);
-
-  const router = useRouter();
-  const { locale } = router;
 
   return (
     <Flex

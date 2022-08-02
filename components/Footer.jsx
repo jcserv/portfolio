@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import { Box, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Jump from "react-reveal/Jump";
@@ -8,6 +9,7 @@ import { animateScroll as scroll } from "react-scroll";
 import links from "../data/footerLinks";
 import styles from "../styles/sections/Footer.module.css";
 import { colors } from "../theme";
+import checkLocale from "../utils/checkLanguage";
 import LinkIconBar from "./LinkIconBar";
 
 export default function Footer() {
@@ -15,6 +17,10 @@ export default function Footer() {
     colors.secondary.light,
     colors.secondary.dark
   );
+
+  const router = useRouter();
+  const { locale } = router;
+  const t = checkLocale(locale);
 
   return (
     <Box as="footer" mt={12} height="100%" textAlign="center" className="app">
@@ -33,7 +39,7 @@ export default function Footer() {
             transition: "all 0.2s ease-in-out",
           }}
         >
-          Voltar para o topo{" "}
+          {t.footer.cta}
         </Text>
       </Box>
       <LinkIconBar links={links} />

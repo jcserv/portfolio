@@ -2,22 +2,32 @@ import { colors } from "../theme";
 import { useColorMode } from "@chakra-ui/react";
 
 export const emphasisStrong = (sentence, strong) => {
-  // TODO
-	// ! Melhor opção para resolução em uma função é "Array de objetos ao invés de 'strong"
   const { colorMode } = useColorMode();
-  console.log(colorMode);
-  const aux = sentence.split(strong);
-  return (
-    <div>
-      {aux[0]}
-      <strong
-        color={
-          colorMode === "light" ? colors.secondary.light : colors.secondary.dark
-        }
-      >
-        {strong}
-      </strong>
-      {aux[1]}
-    </div>
-  );
+  var highlight = [];
+  const regex = Array.isArray(strong)
+    ? RegExp(strong.join("|"))
+    : RegExp(strong);
+  const normal = sentence.split(regex);
+  Array.isArray(strong) ? (highlight = strong) : (highlight = [strong]);
+  const items = [];
+  items.push(normal[0]);
+  for (let i = 1; i < normal.length; i++) {
+    items.push(
+      <>
+        <strong
+          style={{
+            color:
+              colorMode === "light"
+                ? colors.secondary.light
+                : colors.secondary.dark,
+          }}
+        >
+          {highlight[i - 1]}
+        </strong>
+        {normal[i]}
+      </>
+    );
+  }
+
+  return <>{items}</>;
 };

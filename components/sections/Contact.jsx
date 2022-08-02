@@ -1,18 +1,23 @@
 // import { EmailIcon } from "@chakra-ui/icons";
 import { Flex, Text } from "@chakra-ui/react";
 import { Grid } from "@material-ui/core";
+import { useRouter } from "next/router";
 import React from "react";
 
 import links from "../../data/contactLinks";
+import checkLocale from "../../utils/checkLanguage";
 import LinkIconBar from "../LinkIconBar";
 import SectionContainer from "../SectionContainer";
 
 export default function Contact() {
+  const router = useRouter();
+  const { locale } = router;
+  const t = checkLocale(locale);
   return (
     <SectionContainer
       id="contact"
       name="contact"
-      headerText="Entre em Contato"
+      headerText={t.contact.title}
       useHeaderStyle
     >
       <Flex
@@ -27,8 +32,7 @@ export default function Contact() {
         pr={4}
       >
         <Text fontSize="xl" m="auto" mt={3}>
-          Seja uma oportunidade de trabalho, sugestões ou feedback, seu contato
-          será bem vindo!
+          {t.contact.main}
         </Text>
         {/* <Text fontSize="xl" m="auto">
           

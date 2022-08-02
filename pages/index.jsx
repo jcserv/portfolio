@@ -18,10 +18,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Landing />
-      <About />
-      <Experience locale={locale} t={t} />
-      <Projects t={t} />
-      <MoreProjects t={t}/>
+      <About translationFile={t} />
+      <Experience locale={locale} translationFile={t} />
+      <Projects translationFile={t} />
+      <MoreProjects translationFile={t} />
       {/* <Certificates /> */}
       <Contact />
     </div>

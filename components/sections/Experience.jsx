@@ -3,15 +3,15 @@ import React from "react";
 import ExperienceOverview from "../ExperienceOverview";
 import SectionContainer from "../SectionContainer";
 
-export default function Experience() {
+export default function Experience({ locale, translationFile }) {
   return (
     <SectionContainer
       id="experience"
       name="experience"
-      headerText="Experiência"
+      headerText={translationFile.experience.title}
       useHeaderStyle
     >
-      <ExperienceOverview />
+      <ExperienceOverview locale={locale} />
     </SectionContainer>
   );
 }

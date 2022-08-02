@@ -3,15 +3,15 @@ import React from "react";
 import ProjectsOverview from "../ProjectsOverview";
 import SectionContainer from "../SectionContainer";
 
-export default function MoreProjects() {
+export default function Projects({ translationFile }) {
   return (
     <SectionContainer
       id="projects"
       name="projects"
-      headerText="Projetos em Destaque"
+      headerText={translationFile.projects.title}
       useHeaderStyle
     >
-      <ProjectsOverview />
+      <ProjectsOverview translationFile={translationFile} />
     </SectionContainer>
   );
 }

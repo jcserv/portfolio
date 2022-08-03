@@ -17,7 +17,7 @@ export default function Home() {
   const t = checkLocale(locale);
   return (
     <div className={styles.container}>
-      <Landing />
+      <Landing translationFile={t} />
       <About translationFile={t} />
       <Experience locale={locale} translationFile={t} />
       <Projects translationFile={t} />

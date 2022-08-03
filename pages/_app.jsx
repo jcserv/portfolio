@@ -6,10 +6,10 @@ import { useRouter } from "next/router";
 // import Script from "next/script";
 import React from "react";
 
-
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import theme from "../theme";
+import checkLocale from "../utils/checkLanguage";
 
 const SiteHead = ({ title }) => (
   <Head>
@@ -38,14 +38,19 @@ const SiteHead = ({ title }) => (
   </Head>
 );
 
-const PageWrapper = ({ children, title }) => (
-  <div className="container">
-    <SiteHead title={title} />
-    <NavBar />
-    <main className="main">{children}</main>
-    <Footer />
-  </div>
-);
+const PageWrapper = ({ children, title }) => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = checkLocale(locale);
+  return (
+    <div className="container">
+      <SiteHead title={title} />
+      <NavBar locale={locale} router={router} translationFile={t} />
+      <main className="main">{children}</main>
+      <Footer translationFile={t} />
+    </div>
+  );
+};
 
 function App({ Component, pageProps }) {
   const { pathname } = useRouter();

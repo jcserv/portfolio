@@ -1,18 +1,17 @@
 import { Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Jump from "react-reveal/Jump";
 import { Link } from "react-scroll";
 
-import { emphasisStrong } from "../../utils/highlighting";
-
 // import links from "../../data/footerLinks";
 import styles from "../../styles/sections/Landing.module.css";
 import { colors } from "../../theme";
+import checkLocale from "../../utils/checkLanguage";
+import emphasisStrong from "../../utils/highlighting";
 import LinkIconBar from "../LinkIconBar";
 import SectionContainer from "../SectionContainer";
-import { useRouter } from "next/router";
-import checkLocale from "../../utils/checkLanguage";
 
 export default function Landing() {
   const primary = useColorModeValue(colors.primary.dark, colors.primary.light);
@@ -23,10 +22,10 @@ export default function Landing() {
   const router = useRouter();
   const { locale } = router;
   const t = checkLocale(locale);
-  const de_width = locale === "de" ? styles.center_de : "";
+  const deWidth = locale === "de" ? styles.center_de : "";
 
   const header = (
-    <div className={`${styles.center} ${de_width}`}>
+    <div className={`${styles.center} ${deWidth}`}>
       <h1 className={styles.tagline} style={{ color: primary }}>
         <h1 className={styles.tagline} style={{ color: primary }}>
           {emphasisStrong(t.landing.title, t.landing.strong)}

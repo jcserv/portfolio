@@ -11,12 +11,10 @@ import {
 import React from "react";
 import { Link as LinkScroll } from "react-scroll";
 
-import { emphasisStrong } from "../../utils/highlighting";
-import checkLocale from "../../utils/checkLanguage";
 import styles from "../../styles/sections/Landing.module.css";
 import { colors } from "../../theme";
+import emphasisStrong from "../../utils/highlighting";
 import SectionContainer from "../SectionContainer";
-import { useRouter } from "next/router";
 
 const Bio = ({ secondary, translationFile }) => (
   <GridItem className={styles.grid}>

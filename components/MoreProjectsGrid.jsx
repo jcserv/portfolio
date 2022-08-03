@@ -24,7 +24,7 @@ import { FaListUl } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
 import Fade from "react-reveal/Fade";
 
-import { extraProjects } from "../data/projects";
+// import { extraProjects } from "../data/projects";
 import { colors } from "../theme";
 import LinkIconBar from "./LinkIconBar";
 import Tech from "./Tech";
@@ -158,11 +158,13 @@ const ProjectTable = ({ projs }) => (
   </Fade>
 );
 
-export default function MoreProjectsGrid() {
+export default function MoreProjectsGrid({ translationFile }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showGridView, setShowGridView] = useState(true);
 
-  const projects = isExpanded ? extraProjects : extraProjects.slice(0, 3);
+  const projects = isExpanded
+    ? translationFile.moreProjects.list
+    : translationFile.moreProjects.list.slice(0, 3);
 
   return (
     <>

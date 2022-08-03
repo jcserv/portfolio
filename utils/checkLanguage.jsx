@@ -1,13 +1,13 @@
-import { pt, en, de } from "../locale/locale";
+import { de, en, pt } from "../locale/locale";
 
-export function checkLocale(locale) {
+export default function checkLocale(locale) {
   if (locale === "en") {
     return en;
-  } else if (locale === "de") {
-    return de;
-  } else {
-    return pt;
   }
+  if (locale === "de") {
+    return de;
+  }
+  return pt;
 }
 
 module.exports = checkLocale;

@@ -18,12 +18,13 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  ignorePatterns: ["public/"],
+  ignorePatterns: ["public/", "sketches.jsx"],
   rules: {
     "jsx-a11y/no-noninteractive-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "react/prop-types": "off",
     "react/no-array-index-key": "off",
+    "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "no-console": "warn",
@@ -35,7 +36,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.{js,jsx}"],
+      files: ["**/*.{js,jsx}", "**/*.spec.js", "**/*.spec.jsx"],
+      env: {
+        jest: true,
+      },
       rules: {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",

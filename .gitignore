@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-/hooks
 
 Certificates.jsx
 CertificatesCarousel.jsx

@@ -3,15 +3,15 @@ import React from "react";
 import MoreProjectsGrid from "../MoreProjectsGrid";
 import SectionContainer from "../SectionContainer";
 
-export default function MoreProjects({ t }) {
+export default function MoreProjects({ translationFile }) {
   return (
     <SectionContainer
       id="more-projects"
       name="more-projects"
-      headerText="Mais Projetos"
+      headerText={translationFile.moreProjects.title}
       useHeaderStyle
     >
-      <MoreProjectsGrid />
+      <MoreProjectsGrid translationFile={translationFile} />
     </SectionContainer>
   );
 }

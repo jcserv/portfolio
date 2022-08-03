@@ -1,17 +1,23 @@
-import { colors } from "../theme";
 import { useColorMode } from "@chakra-ui/react";
 
-export const emphasisStrong = (sentence, strong) => {
+import { colors } from "../theme";
+
+function emphasisStrong(sentence, strong) {
   const { colorMode } = useColorMode();
-  var highlight = [];
+  let highlight;
   const regex = Array.isArray(strong)
     ? RegExp(strong.join("|"))
     : RegExp(strong);
   const normal = sentence.split(regex);
-  Array.isArray(strong) ? (highlight = strong) : (highlight = [strong]);
+  if (Array.isArray(strong)) {
+    highlight = strong;
+  } else {
+    highlight = [strong];
+  }
+  // isStrong ? (highlight = strong) : (highlight = [strong]);
   const items = [];
   items.push(normal[0]);
-  for (let i = 1; i < normal.length; i++) {
+  for (let i = 1; i < normal.length; i + 1) {
     items.push(
       <>
         <strong
@@ -30,4 +36,6 @@ export const emphasisStrong = (sentence, strong) => {
   }
 
   return <>{items}</>;
-};
+}
+
+export default emphasisStrong;

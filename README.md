@@ -7,8 +7,7 @@ This portfolio is a work and expansion on the one by [Jarrod Servilla](https://g
 - [x] General section changes
 - [x] Important mobile layout fixes
 - [ ] Carousel for displaying certificates
-- [ ] Addition of different palettes for Chakra UI themes
-- [ ] Localization with i18n internationalization framework
+- [x] Internationalization with Next.js built in i18n support
 
 ## 💼 Prerequisites
 

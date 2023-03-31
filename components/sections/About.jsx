@@ -23,7 +23,14 @@ const Bio = ({ secondary }) => (
           SailPoint
         </Link>{" "}
         as a <strong style={{ color: secondary }}>Software Engineer II</strong>{" "}
-        on the Platform Workflows team. Prior to that, I was at{" "}
+        on the{" "}
+        <Link
+          href="https://www.sailpoint.com/products/integrations/workflows/"
+          isExternal
+        >
+          Platform Workflows team
+        </Link>
+        . Prior to that, I worked at{" "}
         <Link href="https://www.citigroup.com/citi/" isExternal>
           Citigroup
         </Link>{" "}
@@ -41,7 +48,7 @@ const Bio = ({ secondary }) => (
         <Link href="https://devpost.com/jcserv" isExternal>
           hackathons
         </Link>{" "}
-        or studying - and recently became an{" "}
+        or self-study - and recently became an{" "}
         <strong style={{ color: secondary }}>
           <Link
             href="https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url"

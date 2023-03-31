@@ -16,7 +16,7 @@ const projects = [
   {
     name: "UTM TA Application System",
     description:
-      "UTAP is the central platform for all MCS TA postings @ UTM enabling students and instructors to apply for postings and manage applications.",
+      "UTAP is the official platform for all MCS TA postings @ UTM enabling students and instructors to apply for postings and manage applications.",
     pic: "/utap.png",
     tech: ["React", "Node.js"],
     links: [

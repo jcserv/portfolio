@@ -41,7 +41,7 @@ const SiteHead = ({ title }) => (
       content="Jarrod Servilla's personal portfolio"
     />
     <meta property="twitter:image" content="/logo512.png" />
-    <Script
+    <script
       async
       defer
       src="https://scripts.simpleanalyticscdn.com/latest.js"

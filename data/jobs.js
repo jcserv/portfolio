@@ -1,7 +1,7 @@
 const jobs = [
   {
     workplace: "SailPoint",
-    position: "Software Engineer II",
+    position: "Senior Software Engineer",
     duration: ["Jan 2022 - Present"],
     description: [
       "Developed large-scale features for Workflows, a low-code automation platform built with Go, resulting in increased usage of SailPoint APIs",

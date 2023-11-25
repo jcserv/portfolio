@@ -25,7 +25,7 @@
     "glob-parent": "6.0.2",
     "next": "12.1.0",
     "next-pwa": "^5.2.21",
-    "postcss": "8.2.13",
+    "postcss": "8.4.31",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",

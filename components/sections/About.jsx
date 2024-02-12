@@ -22,7 +22,8 @@ const Bio = ({ secondary }) => (
         <Link href="https://www.sailpoint.com/" isExternal>
           SailPoint
         </Link>{" "}
-        as a <strong style={{ color: secondary }}>Software Engineer II</strong>{" "}
+        as a{" "}
+        <strong style={{ color: secondary }}>Senior Software Engineer</strong>{" "}
         on the{" "}
         <Link
           href="https://www.sailpoint.com/products/integrations/workflows/"

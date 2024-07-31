@@ -3,7 +3,6 @@ import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Script from "next/script";
 import React from "react";
 
 import Footer from "../components/Footer";

@@ -19,28 +19,27 @@ const Bio = ({ secondary }) => (
       <Text>
         Hi, I&apos;m Jarrod! I studied computer science at the University of
         Toronto, and I&apos;m currently working at{" "}
+        <Link href="getdbt.com/" isExternal>
+          dbt Labs
+        </Link>{" "}
+        as a <strong style={{ color: secondary }}>Software Engineer</strong> on
+        the{" "}
+        <Link href="https://www.getdbt.com/product/dbt-explorer" isExternal>
+          Metadata team
+        </Link>
+        . Prior to that, I&apos;ve worked at{" "}
         <Link href="https://www.sailpoint.com/" isExternal>
           SailPoint
-        </Link>{" "}
-        as a{" "}
-        <strong style={{ color: secondary }}>Senior Software Engineer</strong>{" "}
-        on the{" "}
-        <Link
-          href="https://www.sailpoint.com/products/integrations/workflows/"
-          isExternal
-        >
-          Platform Workflows team
         </Link>
-        . Prior to that, I worked at{" "}
+        ,{" "}
         <Link href="https://www.citigroup.com/citi/" isExternal>
           Citigroup
-        </Link>{" "}
-        &{"  "}
+        </Link>
+        , and {"  "}
         <Link href="https://citylitics.com/" isExternal>
           Citylitics
         </Link>{" "}
-        as a{" "}
-        <strong style={{ color: secondary }}>Software Developer Intern</strong>.
+        as a <strong style={{ color: secondary }}>Software Developer</strong>.
       </Text>
       <Text>
         I enjoy creating scalable & elegant web/mobile applications that have a

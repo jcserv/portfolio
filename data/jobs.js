@@ -1,8 +1,19 @@
 const jobs = [
   {
+    workplace: "dbt Labs",
+    position: "Software Engineer",
+    duration: ["Aug 2024 - Present"],
+    description: [
+      "Implemented features for dbt Explorer using React, Django, and GraphQL",
+      "Collaborated closely with engineers and product managers to understand requirements and build quality solutions",
+      "Participated in code reviews and provide constructive feedback to maintain code quality",
+    ],
+    url: "https://getdbt.com/",
+  },
+  {
     workplace: "SailPoint",
     position: "Senior Software Engineer",
-    duration: ["Jan 2022 - Present"],
+    duration: ["Jan 2022 - Jul 2024"],
     description: [
       "Developed large-scale features for Workflows, a low-code automation platform built with Go, resulting in increased usage of SailPoint APIs",
       "Re-architected execution flow to improve DynamoDB read/write patterns, leading to 38% increased throughput and 53% cost savings",

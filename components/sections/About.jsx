@@ -19,7 +19,7 @@ const Bio = ({ secondary }) => (
       <Text>
         Hi, I&apos;m Jarrod! I studied computer science at the University of
         Toronto, and I&apos;m currently working at{" "}
-        <Link href="getdbt.com/" isExternal>
+        <Link href="https://www.getdbt.com/" isExternal>
           dbt Labs
         </Link>{" "}
         as a <strong style={{ color: secondary }}>Software Engineer</strong> on

@@ -1,5 +1,7 @@
 ## 🚀 Portfolio V2.0
 
+![visitors](https://img.shields.io/endpoint?url=https://vu-mi.com/api/v1/views?id=jcserv/portfolio)
+
 This portfolio has been re-designed with responsiveness, accessibility, and cleaner code in mind using Chakra-UI.
 See the previous portfolio [here](https://github.com/jcserv/portfoliov1)
 

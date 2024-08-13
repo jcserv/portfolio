@@ -36,11 +36,6 @@ const projects = [
     tech: ["React", "TypeScript"],
     links: [
       {
-        label: "Website",
-        icon: "link",
-        url: "https://postureai.tech/",
-      },
-      {
         label: "Github",
         icon: "github",
         url: "https://github.com/jcserv/PostureAI",
@@ -60,6 +55,33 @@ const projects = [
 ];
 
 export const extraProjects = [
+  {
+    name: "vu-mi",
+    type: "Personal",
+    description:
+      "A very over-engineered serverless application enabling users to add visitor count badges to their Github profile.",
+    tech: ["Python", "AWS", "DynamoDB", "SQS"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/jcserv/vu-mi",
+      },
+    ],
+  },
+  {
+    name: "mjurl",
+    type: "Personal",
+    description: "A simple URL Shortening service implemented in Go",
+    tech: ["Go", "PostgreSQL"],
+    links: [
+      {
+        label: "Github",
+        icon: "github",
+        url: "https://github.com/jcserv/mjurl",
+      },
+    ],
+  },
   {
     name: "SQL Automarker",
     type: "Research",
@@ -96,7 +118,8 @@ export const extraProjects = [
   {
     name: "AnonBot",
     type: "Personal",
-    description: "Discord bot for anonymous messaging, with 2100 messages sent",
+    description:
+      "Discord bot for anonymous messaging, with 10 000+ messages sent",
     tech: ["Node.js"],
     links: [
       {

@@ -79,6 +79,8 @@ const ProjectCard = ({ name, description, links, tech }) => {
       shadow="lg"
       textAlign="start"
       style={{ margin: "24px" }}
+      display="flex"
+      justifyContent="space-between"
     >
       <Grid container item direction="row">
         <Grid container item xs={6}>
@@ -99,7 +101,7 @@ const ProjectCard = ({ name, description, links, tech }) => {
           {name}
         </Heading>
       </Grid>
-      <Grid container item direction="row">
+      <Grid container item direction="row" flexGrow={1}>
         <Text fontSize="md" m={2} p={1}>
           {description}
         </Text>

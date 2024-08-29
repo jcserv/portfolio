@@ -33,7 +33,7 @@
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.8.1",
     "react-stickynode": "^3.0.5",
-    "webpack": "4.46.0"
+    "webpack": "5.94.0"
   },
   "devDependencies": {
     "eslint": "^7.19.0",

@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
         {stars}
       </div>
       <div className="flex justify-center items-center">
-        <p onClick={() => scrollToSection("landing")}>
+        <p onClick={() => scrollToSection("landing")} className="mb-2">
           🚀 Click me to scroll to the top! 🚀
         </p>
       </div>

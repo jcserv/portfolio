@@ -60,7 +60,7 @@ export const Projects: React.FC = () => {
         <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
           Featured Projects
         </h1>
-        <FeaturedProjects projects={projects.slice(0, 3)} />
+        <FeaturedProjects projects={projects.slice(0, 4)} />
       </div>
     </section>
   );
@@ -73,7 +73,7 @@ type ProjectsDisplayProps = {
 const FeaturedProjects: React.FC<ProjectsDisplayProps> = ({
   projects,
 }: ProjectsDisplayProps) => (
-  <div className="space-y-48">
+  <div className="space-y-36">
     {projects.map((project, idx) => (
       <ProjectCard key={idx} {...project} reverse={idx % 2 === 0} />
     ))}

@@ -30,7 +30,7 @@ export const StyledLink = ({ href, children, className }: LinkProps) => (
   <a
     target="_blank"
     href={href}
-    className={cn("text-[#1ca7d0] hover:underline", className)}
+    className={cn("text-[#1ca7d0] underline", className)}
     rel="noreferrer"
   >
     {children}

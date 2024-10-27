@@ -38,7 +38,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
       className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
     />,
   ],
-  ["link", <Link key="link" />],
+  ["link", <Link key="link" aria-label="Link to Project" className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />],
 ]);
 
 type ProjectLink = {

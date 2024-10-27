@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
 
   useEffect(() => {
     fetch("https://api.github.com/repos/jcserv/portfolio")
-      .then((response) => response.json()) // Converting the response to a JSON object
+      .then((response) => response.json())
       .then((data) => {
         setForks(data.forks);
         setStars(data.stargazers_count);

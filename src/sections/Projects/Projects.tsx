@@ -6,6 +6,10 @@ import { Card } from "@/components/ui/card";
 import projects from "@/assets/projects.json";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { IconButton } from "@/components/Link";
+import { ContinueIndicator } from "@/components/ContinueIndicator";
+import { cn } from "@/lib/utils";
+
+const FEATURED_PROJECTS_COUNT = 4;
 
 type LinkType = "github" | "youtube" | "devpost" | "link";
 
@@ -57,10 +61,10 @@ export const Projects: React.FC = () => {
       className="flex justify-center items-center px-4 py-20 h-full"
     >
       <div className="w-full">
-        <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
+        <h1 className="mb-8 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
           Featured Projects
         </h1>
-        <FeaturedProjects projects={projects.slice(0, 4)} />
+        <FeaturedProjects projects={projects.slice(0, FEATURED_PROJECTS_COUNT)} />
       </div>
     </section>
   );
@@ -73,9 +77,24 @@ type ProjectsDisplayProps = {
 const FeaturedProjects: React.FC<ProjectsDisplayProps> = ({
   projects,
 }: ProjectsDisplayProps) => (
-  <div className="space-y-36">
+  <div>
     {projects.map((project, idx) => (
-      <ProjectCard key={idx} {...project} reverse={idx % 2 === 0} />
+      <section
+        id={`project-${idx}`}
+        key={idx}
+        className={cn(
+          {
+            "flex flex-col justify-center": idx !== 0,
+            "h-[100vh]": idx !== 0 && idx !== FEATURED_PROJECTS_COUNT - 1,
+            "h-[65vh]": idx === FEATURED_PROJECTS_COUNT - 1,
+          })}
+      >
+        <ProjectCard {...project} reverse={idx % 2 === 0} />
+        {idx !== (FEATURED_PROJECTS_COUNT - 1) && <ContinueIndicator
+          nextSection={`project-${idx + 1}`}
+          className="flex justify-center"
+        />}
+      </section>
     ))}
   </div>
 );
@@ -125,8 +144,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <img
       src={pic}
       alt={name}
-      className="shadow-lg rounded-lg max-w-full h-auto cursor-pointer standout-image"
       onClick={() => window.open(links[0].url, "_blank")}
+      className="shadow-lg rounded-lg max-w-full h-auto cursor-pointer standout-image"
     />
   );
 

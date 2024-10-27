@@ -14,6 +14,7 @@ export const ContinueIndicator: React.FC<ContinueIndicatorProps> = ({
   <div className={className}>
     <Button variant="ghost" onClick={() => scrollToSection(nextSection)}>
       <ChevronDown
+        aria-label="Continue to next section"
         className="w-8 h-8 animate-bounce hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
         onClick={() => scrollToSection("about")}
       />

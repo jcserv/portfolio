@@ -18,6 +18,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     "github",
     <Github
       key="github"
+      aria-label="Github Repository"
       className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
     />,
   ],
@@ -25,6 +26,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     "youtube",
     <Youtube
       key="youtube"
+      aria-label="YouTube Demo"
       className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
     />,
   ],
@@ -32,6 +34,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     "devpost",
     <SiDevpost
       key="devpost"
+      aria-label="Devpost Project Page"
       className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
     />,
   ],

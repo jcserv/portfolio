@@ -41,7 +41,7 @@ export const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex justify-center items-center px-4 h-[60vh] min-h-screen"
+      className="flex justify-center items-center px-4 h-[60vh] min-h-screen page-section"
     >
       <div className="w-full max-w-4xl">
         <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
@@ -69,7 +69,7 @@ export const About: React.FC = () => {
             <p>
               I enjoy creating scalable & elegant systems that have a real world
               impact. I&apos;m always learning new technologies, either through
-              attending events or self-study.
+              attending events or self-study (check out the certs below!).
             </p>
             <br />
             <CertificatesBar />

@@ -94,7 +94,7 @@ export const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="flex justify-center items-center px-4 h-[60vh] min-h-screen"
+      className="flex justify-center items-center px-4 h-[60vh] min-h-screen page-section"
     >
       <div className="w-full max-w-4xl">
         <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">

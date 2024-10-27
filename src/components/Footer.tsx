@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
 
   useEffect(() => {
     fetch("https://api.github.com/repos/jcserv/portfolio")
-      .then((response) => response.json()) // Converting the response to a JSON object
+      .then((response) => response.json())
       .then((data) => {
         setForks(data.forks);
         setStars(data.stargazers_count);
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
         <GitFork className="mx-2 w-4" /> {forks} <Star className="mx-2 w-4" />{" "}
         {stars}
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center pb-8">
         <p onClick={() => scrollToSection("landing")}>
           🚀 Click me to scroll to the top! 🚀
         </p>

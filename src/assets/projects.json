@@ -1,8 +1,21 @@
 [
   {
+    "name": "UofT TA Application System (UTAP)",
+    "description": "UTAP is the official platform for all MCS TA postings @ UTM enabling students to apply for postings and instructors to manage applications.",
+    "pic": "/utap.png",
+    "tech": ["React", "Node.js", "PostgreSQL"],
+    "links": [
+      {
+        "label": "Website",
+        "icon": "link",
+        "url": "https://utap.utm.utoronto.ca/utap/"
+      }
+    ]
+  },
+  {
     "name": "ULinks.io",
     "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
-    "pic": "/ulinks.png",
+    "pic": "/ulinks-preview.png",
     "tech": ["React", "GraphQL", "Node.js"],
     "links": [
       {
@@ -13,21 +26,26 @@
     ]
   },
   {
-    "name": "UTM TA Application System",
-    "description": "UTAP is the official platform for all MCS TA postings @ UTM enabling students and instructors to apply for postings and manage applications.",
-    "pic": "/utap.png",
-    "tech": ["React", "Node.js"],
+    "name": "ResumeWords",
+    "description": "ResumeWords is an AI powered resume optimization tool that helps applicants tailor their resumes to postings by identifying keywords in job postings.",
+    "pic": "/resumewords.png",
+    "tech": ["React"],
     "links": [
       {
         "label": "Website",
         "icon": "link",
-        "url": "https://utap.utm.utoronto.ca/utap/"
+        "url": "https://www.resume-words.com/"
+      },
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/ShahmeerShahid/ResumeWords"
       }
     ]
   },
   {
     "name": "PostureAI",
-    "description": "PostureAI is an AI powered posture improvement web app, used by 200 monthly active users, that helps you maintain healthy posture while working.",
+    "description": "PostureAI is an AI powered posture improvement web app, used by over 200+ users, that helps you maintain healthy posture while working.",
     "subtitle": "1st Place in Best Use of GCP",
     "pic": "/postureai.png",
     "tech": ["React", "TypeScript"],

@@ -3,7 +3,7 @@ import { SocialsBar } from "@/components/SocialsBar";
 
 export const Landing: React.FC = () => {
   return (
-    <section id="landing">
+    <section id="landing" className="page-section">
       <div className="h-[79vh] flex flex-col items-center justify-center space-y-8">
         <div className="text-center">
           <h1 className="scroll-m-20 text-4xl">

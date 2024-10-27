@@ -12,21 +12,21 @@ const socials: Social[] = [
   {
     label: "Github",
     icon: (
-      <Github className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
+      <Github aria-label="Github Profile" className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
     ),
     url: "https://github.com/jcserv",
   },
   {
     label: "LinkedIn",
     icon: (
-      <Linkedin className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
+      <Linkedin aria-label="LinkedIn Profile" className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
     ),
     url: "https://linkedin.com/in/jarrod-servilla",
   },
   {
     label: "Resume",
     icon: (
-      <File className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
+      <File aria-label="Jarrod Servilla's Resume" className="w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />
     ),
     url: "/resume.pdf",
   },

@@ -30,8 +30,8 @@ export const Footer: React.FC = () => {
         <GitFork className="mx-2 w-4" /> {forks} <Star className="mx-2 w-4" />{" "}
         {stars}
       </div>
-      <div className="flex justify-center items-center">
-        <p onClick={() => scrollToSection("landing")} className="mb-2">
+      <div className="flex justify-center items-center pb-8">
+        <p onClick={() => scrollToSection("landing")}>
           🚀 Click me to scroll to the top! 🚀
         </p>
       </div>

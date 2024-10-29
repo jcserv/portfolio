@@ -67,7 +67,7 @@ const experiences: Experience[] = [
     url: "https://citylitics.com/",
   },
   {
-    workplace: "U of T",
+    workplace: "University of Toronto",
     position: "Head TA",
     duration: ["Jan 2020 - Dec 2021"],
     description: [

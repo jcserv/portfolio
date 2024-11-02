@@ -13,6 +13,11 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { cn, scrollToSection } from "@/lib/utils";
+import { experienceToContent } from "@/types/experience";
+import { projectsToContent } from "@/types/project";
+import experience from "@/assets/experience.json";
+import projects from "@/assets/projects.json";
+
 
 type SectionCommand = {
   label: string;
@@ -44,32 +49,27 @@ const sections: SectionCommand[] = [
   },
   {
     label: "Experience",
-    content: [
-      // TODO: Import experience.json, and format into this string array
-      "",
-    ],
+    content: experienceToContent(experience),
     value: "experience",
     icon: <Briefcase className="mr-2 h-4 w-4" />,
     shortcut: "F3",
   },
   {
     label: "Projects",
-    content: [
-      // TODO: Import projects.json, and format into this string array
-      "UofT TA Application System (UTAP): UTAP is the official platform for all MCS TA postings @ UTM enabling students to apply for postings and instructors to manage applications. Technologies: React, Node.js, PostgreSQL",
-      "ULinks.io: ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school. Technologies: React, GraphQL, Node.js",
-    ],
+    content: projectsToContent(projects),
     value: "projects",
     icon: <Wand className="mr-2 h-4 w-4" />,
     shortcut: "F4",
   },
 ];
 
+// TODO: Add ability to ask natural language questions
 export const CommandBar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
 
   // TODO: Include other search items like Github, LinkedIn, etc.
+  // TODO: Include experience and project content in search that links to the respective sections with ?activeTab=<x>
   const [searchResults, setSearchResults] = React.useState<
     FuseResult<SectionCommand>[]
   >([]);

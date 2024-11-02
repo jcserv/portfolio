@@ -7,10 +7,11 @@
 >
 > Want to build from (almost) scratch, with all the boring stuff configured? Check out this [starter template](https://github.com/jcserv/react-vite-shadcn-template).
 
-This portfolio has been re-designed with responsiveness & accessibility in mind, and to try out some new libraries.
+This portfolio has been rewritten in TypeScript, revamped with responsiveness & accessibility in mind, and to try out some new libraries.
 
 Changes from V2.0:
 
+- 🏙️ TypeScript
 - ⌨️ Keyboard navigation
 - 🗞️ Added a certificates section under about
 - 😎 Updated with the latest trendy UI libraries (shadcn, tailwindcss, vite)
@@ -63,7 +64,6 @@ The design of the site was heavily influenced by a lot of awesome portfolios out
 TODO:
 
 - Improve search
-- Setup analytics
 
 (still on the fence about re-adding...)
 

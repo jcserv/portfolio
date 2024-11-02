@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { IconButton } from "@/components/Link";
 import { ContinueIndicator } from "@/components/ContinueIndicator";
 import { cn } from "@/lib/utils";
+import { Project } from "@/types/project";
 
 const FEATURED_PROJECTS_COUNT = 4;
 
@@ -40,22 +41,6 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
   ],
   ["link", <Link key="link" aria-label="Link to Project" className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />],
 ]);
-
-type ProjectLink = {
-  label: string;
-  icon: string;
-  url: string;
-};
-
-type Project = {
-  name: string;
-  tech: string[];
-  links: ProjectLink[];
-  type?: string;
-  description?: string;
-  subtitle?: string;
-  pic?: string;
-};
 
 export const Projects: React.FC = () => {
   return (

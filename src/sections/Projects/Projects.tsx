@@ -8,6 +8,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { IconButton } from "@/components/Link";
 import { ContinueIndicator } from "@/components/ContinueIndicator";
 import { cn } from "@/lib/utils";
+import { Project } from "@/types/project";
 
 const FEATURED_PROJECTS_COUNT = 4;
 
@@ -41,22 +42,6 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
   ["link", <Link key="link" aria-label="Link to Project" className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />],
 ]);
 
-type ProjectLink = {
-  label: string;
-  icon: string;
-  url: string;
-};
-
-type Project = {
-  name: string;
-  tech: string[];
-  links: ProjectLink[];
-  type?: string;
-  description?: string;
-  subtitle?: string;
-  pic?: string;
-};
-
 export const Projects: React.FC = () => {
   return (
     <section
@@ -86,17 +71,26 @@ const FeaturedProjects: React.FC<ProjectsDisplayProps> = ({
         id={`project-${idx}`}
         key={idx}
         className={cn(
+          "relative",
           {
             "flex flex-col justify-center": idx !== 0,
-            "h-[100vh]": idx !== 0 && idx !== FEATURED_PROJECTS_COUNT - 1,
-            "h-[65vh]": idx === FEATURED_PROJECTS_COUNT - 1,
+            "min-h-[85vh]": idx !== 0 && idx !== FEATURED_PROJECTS_COUNT - 1,
+            "min-h-[65vh]": idx === FEATURED_PROJECTS_COUNT - 1,
+            "mt-24": idx === 0,
+            "mt-12": idx !== 0,
           })}
       >
+        <div className="flex flex-col h-full">
         <ProjectCard {...project} reverse={idx % 2 === 0} />
-        {idx !== (FEATURED_PROJECTS_COUNT - 1) && <ContinueIndicator
-          nextSection={`project-${idx + 1}`}
-          className="flex justify-center"
-        />}
+        {idx !== (FEATURED_PROJECTS_COUNT - 1) && (
+          <div className="mt-auto pt-16">
+            <ContinueIndicator
+              nextSection={`project-${idx + 1}`}
+              className="flex justify-center"
+            />
+          </div>
+        )}
+        </div>
       </section>
     ))}
   </div>
@@ -113,7 +107,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   reverse,
 }: ProjectCardProps) => {
   const card = (
-    <Card className="flex flex-col justify-between p-6 h-1/2 max-md:h-full">
+    <Card className="flex flex-col justify-between p-6 h-1/2 max-md:h-auto"> 
       <div>
         <h3 className="scroll-m-20 mb-4 font-semibold text-2xl tracking-tight">
           {name}
@@ -153,7 +147,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   );
 
   return (
-    <div className="flex md:flex-row flex-col gap-8 mx-4 h-[60vh]">
+    <div className="flex md:flex-row flex-col gap-8 mx-4 h-[60vh] max-md:h-auto">
       <div
         className={`flex-1 justify-center items-center ${reverse ? "md:order-2" : "md:order-1"} order-1 self-center`}
       >

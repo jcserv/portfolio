@@ -1,6 +1,6 @@
 import React from "react";
 import Fuse, { FuseResult } from "fuse.js";
-import {  Briefcase, CloudCog, DoorOpen, User, Wand } from "lucide-react";
+import {  Briefcase, CloudCog, DoorOpen, Hammer, User, Wand } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { cn, scrollToSection } from "@/lib/utils";
-import { projectsToContent } from "@/types/project";
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
 import { SearchItem } from "@/types/searchItem";
@@ -40,19 +39,28 @@ const sections: SearchItem[] = [
   },
   {
     label: "Experience",
-    content: [], // experienceToContent(experience),
+    content: [],
     value: "experience",
     icon: <Briefcase className="mr-2 h-4 w-4" />,
     shortcut: "F3",
   },
   {
     label: "Projects",
-    content: projectsToContent(projects.slice(0, 4)),
+    content: [],
     value: "projects",
     icon: <Wand className="mr-2 h-4 w-4" />,
     shortcut: "F4",
   },
 ];
+
+const projs = projects.slice(0, 4).map((proj, index) => {
+  return {
+    label: "Projects",
+    content: [proj.description],
+    value: `project-${index}`,
+    icon: <Hammer className="mr-2 h-4 w-4" />,
+  };
+});
 
 // TODO: Add ability to ask natural language questions
 export const CommandBar: React.FC = () => {
@@ -79,7 +87,7 @@ export const CommandBar: React.FC = () => {
     };
   });
 
-  const fuse = new Fuse(sections.concat(experiences), {
+  const fuse = new Fuse(sections.concat(experiences).concat(projs), {
     includeScore: true,
     includeMatches: true,
     ignoreFieldNorm: true,

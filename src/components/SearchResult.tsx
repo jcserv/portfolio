@@ -16,10 +16,17 @@ export const Section: React.FC<SectionProps> = ({
   shortcut,
   matches,
   setOpen,
+  customOnSelect,
 }: SectionProps) => (
   <CommandItem
     value={value}
     onSelect={() => {
+      if (customOnSelect) {
+        customOnSelect();
+        setTimeout(() => setOpen(false), 450);
+        return;
+      }
+
       scrollToSection(value);
       setTimeout(() => setOpen(false), 450);
     }}
@@ -78,6 +85,6 @@ export const Section: React.FC<SectionProps> = ({
         </span>
       )}
     </div>
-    <CommandShortcut>{shortcut}</CommandShortcut>
+    {shortcut && <CommandShortcut>{shortcut}</CommandShortcut>}
   </CommandItem>
 );

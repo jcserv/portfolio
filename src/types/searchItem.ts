@@ -3,5 +3,6 @@ export type SearchItem = {
   content: string[];
   value: string;
   icon: JSX.Element;
-  shortcut: string;
+  shortcut?: string;
+  customOnSelect?: () => void;
 };

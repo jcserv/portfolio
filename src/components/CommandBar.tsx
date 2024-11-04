@@ -1,6 +1,6 @@
 import React from "react";
 import Fuse, { FuseResult } from "fuse.js";
-import { Briefcase, DoorOpen, User, Wand } from "lucide-react";
+import {  Briefcase, CloudCog, DoorOpen, User, Wand } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { cn, scrollToSection } from "@/lib/utils";
-import { experienceToContent } from "@/types/experience";
 import { projectsToContent } from "@/types/project";
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
 import { SearchItem } from "@/types/searchItem";
 import { Section } from "./SearchResult";
+import { useActiveExp } from "@/context/ActiveExpProvider";
 
 const sections: SearchItem[] = [
   {
@@ -40,7 +40,7 @@ const sections: SearchItem[] = [
   },
   {
     label: "Experience",
-    content: experienceToContent(experience),
+    content: [], // experienceToContent(experience),
     value: "experience",
     icon: <Briefcase className="mr-2 h-4 w-4" />,
     shortcut: "F3",
@@ -58,6 +58,7 @@ const sections: SearchItem[] = [
 export const CommandBar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
   const [query, setQuery] = React.useState("");
+  const { setActiveExp } = useActiveExp();
 
   // TODO: Include other search items like Github, LinkedIn, etc.
   // TODO: Include experience and project content in search that links to the respective sections with ?activeTab=<x>
@@ -65,10 +66,25 @@ export const CommandBar: React.FC = () => {
     FuseResult<SearchItem>[]
   >([]);
 
-  const fuse = new Fuse(sections, {
+  const experiences: SearchItem[] = experience.map((exp, index) => {
+    return {
+      label: "Experience",
+      content: [exp.workplace, ...exp.description],
+      value: `experience-${index}`,
+      icon: <CloudCog className="mr-2 h-4 w-4" />,
+      customOnSelect: () => {
+        scrollToSection("experience");
+        setActiveExp(`${index}`)
+      },
+    };
+  });
+
+  const fuse = new Fuse(sections.concat(experiences), {
     includeScore: true,
     includeMatches: true,
     ignoreFieldNorm: true,
+    shouldSort: true,
+    minMatchCharLength: 3,
     keys: ["label", "content"],
   });
 
@@ -93,7 +109,7 @@ export const CommandBar: React.FC = () => {
   }, []);
 
   React.useEffect(() => {
-    const results = fuse.search(query);
+    const results = fuse.search(query).filter((result) => result.score! < 0.6);
     setSearchResults(results);
   }, [query]);
 

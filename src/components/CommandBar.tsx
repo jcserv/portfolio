@@ -1,6 +1,13 @@
 import React from "react";
 import Fuse, { FuseResult } from "fuse.js";
-import {  Briefcase, CloudCog, DoorOpen, Hammer, User, Wand } from "lucide-react";
+import {
+  Briefcase,
+  CloudCog,
+  DoorOpen,
+  Hammer,
+  User,
+  Wand,
+} from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
@@ -10,12 +17,13 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/SearchResult";
+import { useActiveExp } from "@/context/ActiveExpProvider";
 import { cn, scrollToSection } from "@/lib/utils";
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
+import { getSocials } from "@/assets/socials";
 import { SearchItem } from "@/types/searchItem";
-import { Section } from "./SearchResult";
-import { useActiveExp } from "@/context/ActiveExpProvider";
 
 const sections: SearchItem[] = [
   {
@@ -31,7 +39,7 @@ const sections: SearchItem[] = [
       "I studied computer science at the University of Toronto",
       "working at dbt Labs as a Software Engineer, working on dbt Explorer.",
       "I've worked at SailPoint, Citigroup, and Citylitics.",
-      "Certifications: AWS Certified Developer, DataDog Fundamentals, PagerDuty Incident Responder, dbt Fundamentals"
+      "Certifications: AWS Certified Developer, DataDog Fundamentals, PagerDuty Incident Responder, dbt Fundamentals",
     ],
     value: "about",
     icon: <User className="mr-2 h-4 w-4" />,
@@ -53,12 +61,24 @@ const sections: SearchItem[] = [
   },
 ];
 
-const projs = projects.slice(0, 4).map((proj, index) => {
+const projs: SearchItem[] = projects.slice(0, 4).map((proj, index) => {
   return {
     label: "Projects",
     content: [proj.description],
     value: `project-${index}`,
     icon: <Hammer className="mr-2 h-4 w-4" />,
+  };
+});
+
+const socs: SearchItem[] = getSocials("mr-2 h-4 w-4").map((soc, index) => {
+  return {
+    label: soc.label,
+    content: [],
+    value: `social-${index}`,
+    icon: soc.icon,
+    customOnSelect: () => {
+      window.open(soc.url, "_blank");
+    },
   };
 });
 
@@ -68,8 +88,6 @@ export const CommandBar: React.FC = () => {
   const [query, setQuery] = React.useState("");
   const { setActiveExp } = useActiveExp();
 
-  // TODO: Include other search items like Github, LinkedIn, etc.
-  // TODO: Include experience and project content in search that links to the respective sections with ?activeTab=<x>
   const [searchResults, setSearchResults] = React.useState<
     FuseResult<SearchItem>[]
   >([]);
@@ -82,19 +100,26 @@ export const CommandBar: React.FC = () => {
       icon: <CloudCog className="mr-2 h-4 w-4" />,
       customOnSelect: () => {
         scrollToSection("experience");
-        setActiveExp(`${index}`)
+        setActiveExp(`${index}`);
       },
     };
   });
 
-  const fuse = new Fuse(sections.concat(experiences).concat(projs), {
-    includeScore: true,
-    includeMatches: true,
-    ignoreFieldNorm: true,
-    shouldSort: true,
-    minMatchCharLength: 3,
-    keys: ["label", "content"],
-  });
+  const searchInput = React.useMemo(() => {
+    return sections.concat(experiences).concat(projs).concat(socs);
+  }, [sections, experiences, projs, socs]);
+
+  const fuse = new Fuse(
+    searchInput,
+    {
+      includeScore: true,
+      includeMatches: true,
+      ignoreFieldNorm: true,
+      shouldSort: true,
+      minMatchCharLength: 3,
+      keys: ["label", "content"],
+    }
+  );
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -175,4 +200,3 @@ export const CommandBar: React.FC = () => {
     </>
   );
 };
-

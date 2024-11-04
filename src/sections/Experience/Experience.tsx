@@ -13,10 +13,11 @@ import {
 } from "@/components/ui/select";
 import experiences from "@/assets/experience.json";
 import { Experience } from "@/types/experience";
+import { useActiveExp } from "@/context/ActiveExpProvider";
 
 export const ExperienceSection: React.FC = () => {
-  // TODO: Use query param activeTab to set the current experience so that its linkable from command bar
-  const [currExperience, setCurrExperience] = React.useState<number>(0);
+  const { activeExp, setActiveExp } = useActiveExp();
+
   return (
     <section
       id="experience"
@@ -32,8 +33,8 @@ export const ExperienceSection: React.FC = () => {
             {experiences.map((exp: Experience, idx) => (
               <Button
                 key={`${exp.workplace}`}
-                onClick={() => setCurrExperience(idx)}
-                className={`w-2/3 ${currExperience === idx ? "bg-[#1ca7d0] dark:bg-[#90cdf4]" : ""}`}
+                onClick={() => setActiveExp(`${idx}`)}
+                className={`w-2/3 ${activeExp === `${idx}` ? "bg-[#1ca7d0] dark:bg-[#90cdf4]" : ""}`}
               >
                 {exp.workplace}
               </Button>
@@ -41,8 +42,8 @@ export const ExperienceSection: React.FC = () => {
           </div>
           <div className="flex justify-center md:hidden w-full">
             <Select
-              value={`${currExperience}`}
-              onValueChange={(value) => setCurrExperience(+value)}
+              value={`${activeExp}`}
+              onValueChange={(value) => setActiveExp(value)}
             >
               <SelectTrigger className="mb-8 w-1/2">
                 <SelectValue placeholder="View past roles" />
@@ -60,22 +61,22 @@ export const ExperienceSection: React.FC = () => {
           </div>
           <div className="flex flex-col justify-start w-full md:w-1/2 h-full overflow-y-auto self-center">
             <h3 className="scroll-m-20 mb-1 font-semibold text-2xl text-left tracking-tight">
-              {experiences[currExperience].position} @{" "}
-              {experiences[currExperience].url ? (
-                <StyledLink href={experiences[currExperience].url}>
-                  {experiences[currExperience].workplace}
+              {experiences[+activeExp].position} @{" "}
+              {experiences[+activeExp].url ? (
+                <StyledLink href={experiences[+activeExp].url || "#"}>
+                  {experiences[+activeExp].workplace}
                 </StyledLink>
               ) : (
-                experiences[currExperience].workplace
+                experiences[+activeExp].workplace
               )}
             </h3>
-            {experiences[currExperience].duration.map((dur, idx) => (
+            {experiences[+activeExp].duration.map((dur, idx) => (
               <p key={`duration-${idx}`} className="text-left">
                 {dur}
               </p>
             ))}
             <ul className="mt-1">
-              {experiences[currExperience].description.map((desc, idx) => (
+              {experiences[+activeExp].description.map((desc, idx) => (
                 <li key={`desc-point-${idx}`} className="text-left">
                   • {desc}
                 </li>

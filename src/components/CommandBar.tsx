@@ -56,7 +56,7 @@ const sections: SectionCommand[] = [
   },
   {
     label: "Projects",
-    content: projectsToContent(projects),
+    content: projectsToContent(projects.slice(0, 4)),
     value: "projects",
     icon: <Wand className="mr-2 h-4 w-4" />,
     shortcut: "F4",

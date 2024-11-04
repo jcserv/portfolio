@@ -13,13 +13,10 @@ import {
 } from "@/components/ui/select";
 import experiences from "@/assets/experience.json";
 import { Experience } from "@/types/experience";
-import { useQueryParams } from "@/hooks/queryParams";
+import { useActiveExp } from "@/context/ActiveExpProvider";
 
 export const ExperienceSection: React.FC = () => {
-  const [activeExp, setActiveExp] = useQueryParams({
-    param: "activeExp",
-    options: experiences.map((_, idx) => `${idx}`),
-  });
+  const { activeExp, setActiveExp } = useActiveExp();
 
   return (
     <section

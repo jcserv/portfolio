@@ -1,15 +1,13 @@
 import React from "react";
-import Fuse, { FuseResult, FuseResultMatch } from "fuse.js";
+import Fuse, { FuseResult } from "fuse.js";
 import { Briefcase, DoorOpen, User, Wand } from "lucide-react";
 import {
   CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
-  CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { cn, scrollToSection } from "@/lib/utils";
@@ -17,17 +15,10 @@ import { experienceToContent } from "@/types/experience";
 import { projectsToContent } from "@/types/project";
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
+import { SearchItem } from "@/types/searchItem";
+import { Section } from "./SearchResult";
 
-
-type SectionCommand = {
-  label: string;
-  content: string[];
-  value: string;
-  icon: JSX.Element;
-  shortcut: string;
-};
-
-const sections: SectionCommand[] = [
+const sections: SearchItem[] = [
   {
     label: "Landing",
     content: [],
@@ -71,7 +62,7 @@ export const CommandBar: React.FC = () => {
   // TODO: Include other search items like Github, LinkedIn, etc.
   // TODO: Include experience and project content in search that links to the respective sections with ?activeTab=<x>
   const [searchResults, setSearchResults] = React.useState<
-    FuseResult<SectionCommand>[]
+    FuseResult<SearchItem>[]
   >([]);
 
   const fuse = new Fuse(sections, {
@@ -161,80 +152,3 @@ export const CommandBar: React.FC = () => {
   );
 };
 
-type SectionProps = SectionCommand & {
-  matches?: readonly FuseResultMatch[] | undefined;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const Section: React.FC<SectionProps> = ({
-  label,
-  value,
-  icon,
-  shortcut,
-  matches,
-  setOpen,
-}: SectionProps) => (
-  <CommandItem
-    value={value}
-    onSelect={() => {
-      scrollToSection(value);
-      setTimeout(() => setOpen(false), 450);
-    }}
-  >
-    {icon}
-    <div className="flex flex-col">
-      <span>{label}</span>
-      {(matches ?? []).length > 0 && (
-        <span className="flex items-center gap-2 text-sm text-muted-foreground truncate">
-          Includes:
-          {matches?.slice(0, 1).map((match, idx) => {
-            const getNWords = (str: string, n: number, fromEnd = false) => {
-              if (!str) return "";
-              const words = str.trim().split(/\s+/);
-              const selectedWords = fromEnd
-                ? words.slice(Math.max(words.length - n, 0))
-                : words.slice(0, n);
-              return selectedWords.join(" ");
-            };
-
-            // The best match will be the one with the greatest difference
-            const bestMatch = match.indices.reduce((acc, curr) => {
-              const matchLength = curr[1] - curr[0];
-              return matchLength > acc[1] - acc[0] ? curr : acc;
-            });
-
-            const beforeMatch = match.value?.slice(0, bestMatch[0]) || "";
-            const highlightedMatch =
-              match.value?.slice(bestMatch[0], bestMatch[1] + 1) || "";
-            const afterMatch = match.value?.slice(bestMatch[1] + 1) || "";
-
-            // Get 3 words before and after
-            const truncatedBefore = getNWords(beforeMatch, 3, true);
-            const truncatedAfter = getNWords(afterMatch, 3);
-
-            return (
-              <span key={idx} className="flex items-center gap-1 truncate">
-                {truncatedBefore && (
-                  <span>
-                    {beforeMatch.length > truncatedBefore.length ? "..." : ""}
-                    {truncatedBefore}
-                  </span>
-                )}
-                <span className="bg-yellow-200 text-black px-1 rounded">
-                  {highlightedMatch}
-                </span>
-                {truncatedAfter && (
-                  <span>
-                    {truncatedAfter}
-                    {afterMatch.length > truncatedAfter.length ? "..." : ""}
-                  </span>
-                )}
-              </span>
-            );
-          })}
-        </span>
-      )}
-    </div>
-    <CommandShortcut>{shortcut}</CommandShortcut>
-  </CommandItem>
-);

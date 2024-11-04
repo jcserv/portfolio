@@ -17,6 +17,12 @@ export function useQueryParams<TOption extends string>({
 
     const [activeOption, setActiveOption] = React.useState<TOption>(searchParams.get(param) as TOption || defaultOption);
     return React.useMemo(() => {
-        return [activeOption, setActiveOption] as const;
+        const setActiveOptionFn = (option: TOption) => {
+            setActiveOption(option);
+            const url = new URL(window.location.href);
+            url.searchParams.set(param, option);
+            window.history.pushState(null, '', url.toString());
+        };
+        return [activeOption, setActiveOptionFn] as const;
     }, [activeOption, setActiveOption]);
 }

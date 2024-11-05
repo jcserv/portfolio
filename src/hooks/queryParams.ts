@@ -1,4 +1,3 @@
-import { useLocation } from "@tanstack/react-router";
 import React from "react";
 
 type QueryParam<TOption extends string> = {
@@ -12,7 +11,7 @@ export function useQueryParams<TOption extends string>({
 }: QueryParam<TOption>) {
     const defaultOption = options[0];
     
-    const { search } = useLocation();
+    const search = window.location.search;
     const searchParams = new URLSearchParams(search);
 
     const [activeOption, setActiveOption] = React.useState<TOption>(searchParams.get(param) as TOption || defaultOption);

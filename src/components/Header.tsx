@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" aria-label="Open menu dropdown button">
               <Menu />
             </Button>
           </DropdownMenuTrigger>
@@ -81,6 +81,9 @@ export const Header: React.FC = () => {
                   {btn.label}
                 </DropdownMenuItem>
               ))}
+              <DropdownMenuItem>
+                <ModeToggle />
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

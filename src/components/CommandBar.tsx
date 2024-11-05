@@ -73,7 +73,7 @@ const projs: SearchItem[] = projects.slice(0, 4).map((proj, index) => {
 const socs: SearchItem[] = getSocials("mr-2 h-4 w-4").map((soc, index) => {
   return {
     label: soc.label,
-    content: [],
+    content: soc.content ?? [],
     value: `social-${index}`,
     icon: soc.icon,
     customOnSelect: () => {

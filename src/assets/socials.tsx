@@ -30,5 +30,11 @@ export const getSocials = (className: string) => [
       />
     ),
     url: "/resume.pdf",
+    content: [
+      "Go, Python, Java, JavaScript, TypeScript, HTML, CSS",
+      "React, Django, GraphQL, Angular, Express, NextJS, Spring",
+      "PostgreSQL, DynamoDB, S3, MongoDB, Neo4j",
+      "Git, AWS, Docker, Kafka, Prometheus, Grafana, Temporal",
+    ]
   },
 ]

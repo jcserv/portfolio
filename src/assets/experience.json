@@ -3,7 +3,7 @@
     "workplace": "dbt Labs",
     "position": "Software Engineer",
     "duration": ["Aug 2024 - Present"],
-    "tech": ["React", "Django", "GraphQL", "TypeScript", "AWS"],
+    "tech": ["React", "Django", "GraphQL", "Python", "TypeScript", "RabbitMQ"],
     "description": [
       "Developed and maintained customer-facing features for dbt Explorer using React, Django, and GraphQL to enhance user experience and product capabilities",
       "Collaborated closely with engineers and product managers to understand requirements and build quality solutions",
@@ -15,7 +15,7 @@
     "workplace": "SailPoint",
     "position": "Senior Software Engineer",
     "duration": ["Jan 2022 - Jul 2024"],
-    "tech": ["Go", "Angular", "AWS", "DynamoDB", "S3"],
+    "tech": ["Go", "Temporal", "AWS", "Kafka", "DynamoDB", "S3", "Angular"],
     "description": [
       "Developed large-scale features for Workflows, a low-code automation platform built with Go, resulting in increased usage of SailPoint APIs",
       "Re-architected execution flow to improve DynamoDB read/write patterns, leading to 38% increased throughput and 53% cost savings",
@@ -40,7 +40,7 @@
     "workplace": "Citylitics",
     "position": "Software Developer Intern",
     "duration": ["Aug 2020 - April 2021"],
-    "tech": ["Django", "React", "JavaScript", "Redux"],
+    "tech": ["Django", "React", "Python", "JavaScript", "Redux"],
     "description": [
       "Overhauled querying engine by developing highly requested features using React and Redux, improving lead generation efficiency by 150%",
       "Implemented RESTful APIs using Django to allow for storage of consumer data, generating a 30% increase in size of key dataset in just 90 days",

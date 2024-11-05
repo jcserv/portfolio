@@ -30,10 +30,13 @@ export const Section: React.FC<SectionProps> = ({
       scrollToSection(value);
       setTimeout(() => setOpen(false), 450);
     }}
+    className="flex items-center gap-3"
   >
-    {icon}
-    <div className="flex flex-col">
-      <span>{label}</span>
+    <div className="flex-shrink-0 w-5 h-5">
+      {icon}
+    </div>
+    <div className="flex flex-col min-w-0 flex-1">
+      <span className="truncate">{label}</span>
       {(matches ?? []).length > 0 && (
         <span className="flex items-center gap-2 text-sm text-muted-foreground truncate">
           Includes:
@@ -47,7 +50,6 @@ export const Section: React.FC<SectionProps> = ({
               return selectedWords.join(" ");
             };
 
-            // The best match will be the one with the greatest difference
             const bestMatch = match.indices.reduce((acc, curr) => {
               const matchLength = curr[1] - curr[0];
               return matchLength > acc[1] - acc[0] ? curr : acc;
@@ -58,23 +60,22 @@ export const Section: React.FC<SectionProps> = ({
               match.value?.slice(bestMatch[0], bestMatch[1] + 1) || "";
             const afterMatch = match.value?.slice(bestMatch[1] + 1) || "";
 
-            // Get 3 words before and after
-            const truncatedBefore = getNWords(beforeMatch, 3, true);
-            const truncatedAfter = getNWords(afterMatch, 3);
+            const truncatedBefore = getNWords(beforeMatch, 2, true);
+            const truncatedAfter = getNWords(afterMatch, 2);
 
             return (
-              <span key={idx} className="flex items-center gap-1 truncate">
+              <span key={idx} className="flex items-center gap-1 min-w-0">
                 {truncatedBefore && (
-                  <span>
+                  <span className="truncate">
                     {beforeMatch.length > truncatedBefore.length ? "..." : ""}
                     {truncatedBefore}
                   </span>
                 )}
-                <span className="bg-yellow-200 text-black px-1 rounded">
+                <span className="bg-yellow-200 text-black px-1 rounded flex-shrink-0">
                   {highlightedMatch}
                 </span>
                 {truncatedAfter && (
-                  <span>
+                  <span className="truncate">
                     {truncatedAfter}
                     {afterMatch.length > truncatedAfter.length ? "..." : ""}
                   </span>
@@ -85,6 +86,6 @@ export const Section: React.FC<SectionProps> = ({
         </span>
       )}
     </div>
-    {shortcut && <CommandShortcut>{shortcut}</CommandShortcut>}
+    {shortcut && <CommandShortcut className="flex-shrink-0">{shortcut}</CommandShortcut>}
   </CommandItem>
 );

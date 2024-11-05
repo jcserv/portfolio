@@ -12,6 +12,7 @@ This portfolio has been rewritten in TypeScript, revamped with responsiveness & 
 Changes from V2.0:
 
 - 🏙️ TypeScript
+- 🔍 Search bar, powered by Fuse.js
 - ⌨️ Keyboard navigation
 - 🗞️ Added a certificates section under about
 - 😎 Updated with the latest trendy UI libraries (shadcn, tailwindcss, vite)
@@ -60,10 +61,6 @@ The design of the site was heavily influenced by a lot of awesome portfolios out
 - Jacek Jeznach (link is dead)
 
 ## Problems for Future Jarrod
-
-TODO:
-
-- Improve search
 
 (still on the fence about re-adding...)
 

@@ -63,8 +63,8 @@ const sections: SearchItem[] = [
 
 const projs: SearchItem[] = projects.slice(0, 4).map((proj, index) => {
   return {
-    label: "Projects",
-    content: [proj.description],
+    label: proj.name,
+    content: [proj.description, proj.tech.join(", ")],
     value: `project-${index}`,
     icon: <Hammer className="mr-2 h-4 w-4" />,
   };
@@ -94,8 +94,8 @@ export const CommandBar: React.FC = () => {
 
   const experiences: SearchItem[] = experience.map((exp, index) => {
     return {
-      label: "Experience",
-      content: [exp.workplace, ...exp.description],
+      label: `${exp.position} @ ${exp.workplace}`,
+      content: [exp.workplace, ...exp.description, exp.tech.join(", ")],
       value: `experience-${index}`,
       icon: <CloudCog className="mr-2 h-4 w-4" />,
       customOnSelect: () => {
@@ -116,7 +116,8 @@ export const CommandBar: React.FC = () => {
       includeMatches: true,
       ignoreFieldNorm: true,
       shouldSort: true,
-      minMatchCharLength: 3,
+      minMatchCharLength: 2,
+      threshold: 0.4,
       keys: ["label", "content"],
     }
   );

@@ -134,6 +134,7 @@ export const CommandBar: React.FC = () => {
           e.preventDefault();
           scrollToSection(section.value);
           setOpen(false);
+          setQuery("");
         }
       });
     };
@@ -181,6 +182,7 @@ export const CommandBar: React.FC = () => {
                   {...result.item}
                   matches={result.matches}
                   setOpen={setOpen}
+                  setQuery={setQuery}
                 />
               ))}
               <CommandSeparator />
@@ -189,7 +191,7 @@ export const CommandBar: React.FC = () => {
           {query.length === 0 && (
             <CommandGroup heading="Sections">
               {sections.map((section) => (
-                <Section key={section.value} {...section} setOpen={setOpen} />
+                <Section key={section.value} {...section} setOpen={setOpen} setQuery={setQuery}/>
               ))}
             </CommandGroup>
           )}

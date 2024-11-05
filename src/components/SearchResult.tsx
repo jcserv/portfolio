@@ -7,6 +7,7 @@ import { SearchItem } from "@/types/searchItem";
 type SectionProps = SearchItem & {
   matches?: readonly FuseResultMatch[] | undefined;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export const Section: React.FC<SectionProps> = ({
@@ -16,6 +17,7 @@ export const Section: React.FC<SectionProps> = ({
   shortcut,
   matches,
   setOpen,
+  setQuery,
   customOnSelect,
 }: SectionProps) => (
   <CommandItem
@@ -24,11 +26,13 @@ export const Section: React.FC<SectionProps> = ({
       if (customOnSelect) {
         customOnSelect();
         setTimeout(() => setOpen(false), 450);
+        setTimeout(() => setQuery(""), 1000);
         return;
       }
 
       scrollToSection(value);
       setTimeout(() => setOpen(false), 450);
+      setTimeout(() => setQuery(""), 1000);
     }}
     className="flex items-center gap-3"
   >

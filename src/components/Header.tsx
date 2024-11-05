@@ -1,5 +1,4 @@
 import { Menu } from "lucide-react";
-import { Link } from "@tanstack/react-router";
 import { Link as ScrollLink } from "react-scroll";
 
 import { scrollToSection } from "@/lib/utils";

@@ -1,18 +1,20 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ActiveExpProvider } from "@/context/ActiveExpProvider";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { Analytics } from "@vercel/analytics/react";
+import "./index.css";
+import { Index } from "./routes";
 
-export const Route = createRootRoute({
-  component: () => (
-    <>
+export default function App() {
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <ActiveExpProvider>
         <Header />
-        <Outlet />
+        <Index />
         <Footer />
         <Analytics />
       </ActiveExpProvider>
-    </>
-  ),
-});
+    </ThemeProvider>
+  );
+}

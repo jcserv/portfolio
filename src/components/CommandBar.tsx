@@ -175,7 +175,7 @@ export const CommandBar: React.FC = () => {
         />
         <CommandList inputMode="search">
           {query.length > 0 && (
-            <CommandGroup heading="Search results">
+            <CommandGroup heading={`Search results - ${searchResults.length} total`}>
               {searchResults.map((result) => (
                 <Section
                   key={result.item.value}

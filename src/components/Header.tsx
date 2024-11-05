@@ -81,6 +81,9 @@ export const Header: React.FC = () => {
                   {btn.label}
                 </DropdownMenuItem>
               ))}
+              <DropdownMenuItem>
+                <ModeToggle />
+              </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>

@@ -3,8 +3,9 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ActiveExpProvider } from "@/context/ActiveExpProvider";
 import { Analytics } from "@vercel/analytics/react";
-import "./index.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Index } from "./routes";
+import "./index.css";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Index />
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </ActiveExpProvider>
     </ThemeProvider>
   );

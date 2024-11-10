@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { GitFork, Star } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+
 import { analyticsEvents, captureEvent } from "@/lib/analytics";
+import { scrollToSection } from "@/lib/utils";
 
 export const Footer: React.FC = () => {
   const [forks, setForks] = useState<number>(0);

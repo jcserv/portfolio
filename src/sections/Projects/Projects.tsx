@@ -3,13 +3,14 @@ import { Github, Youtube, Link } from "lucide-react";
 import { SiDevpost } from "react-icons/si";
 
 import { Card } from "@/components/ui/card";
-import projects from "@/assets/projects.json";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { IconButton } from "@/components/Link";
 import { ContinueIndicator } from "@/components/ContinueIndicator";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types/project";
-import { analyticsEvents, captureEvent } from "@/lib/analytics";
+
+import projects from "@/assets/projects.json";
 
 const FEATURED_PROJECTS_COUNT = 4;
 

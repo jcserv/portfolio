@@ -1,5 +1,6 @@
 import React from "react";
 import { FuseResultMatch } from "fuse.js";
+
 import { CommandItem, CommandShortcut } from "@/components/ui/command";
 import { scrollToSection } from "@/lib/utils";
 import { SearchItem } from "@/types/searchItem";

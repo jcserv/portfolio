@@ -1,9 +1,6 @@
 import { Menu } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 
-import { scrollToSection } from "@/lib/utils";
-import { CommandBar } from "@/components/CommandBar";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,7 +9,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { CommandBar } from "@/components/CommandBar";
+import { ModeToggle } from "@/components/mode-toggle";
 import { analyticsEvents, captureEvent } from "@/lib/analytics";
+import { scrollToSection } from "@/lib/utils";
 
 type Link = {
   label: string;

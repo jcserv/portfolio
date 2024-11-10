@@ -1,6 +1,7 @@
+import React from 'react'
+
 import { scrollToSection } from '@/lib/utils'
 import { Landing, About, Experience, Projects } from '@/sections'
-import React from 'react'
 
 const sections = [
   { key: 'F1', value: 'landing' },

@@ -1,7 +1,8 @@
 import { FaAws } from "react-icons/fa";
 import { SiPagerduty, SiDatadog, SiDbt } from "react-icons/si";
+
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { IconButton } from "./Link";
+import { IconButton } from "@/components/Link";
 import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 export const CertificatesBar: React.FC = () => {

@@ -1,5 +1,7 @@
-import { useQueryParams } from "@/hooks/queryParams";
 import { createContext, useContext, useMemo } from "react";
+
+import { useQueryParams } from "@/hooks/queryParams";
+
 import experiences from "@/assets/experience.json";
 
 type ActiveExp = {

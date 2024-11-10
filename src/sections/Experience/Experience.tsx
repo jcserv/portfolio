@@ -1,8 +1,6 @@
 import React from "react";
 
-import { ContinueIndicator } from "@/components/ContinueIndicator";
 import { Button } from "@/components/ui/button";
-import { StyledLink } from "@/components/Link";
 import {
   Select,
   SelectContent,
@@ -11,9 +9,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import experiences from "@/assets/experience.json";
-import { Experience } from "@/types/experience";
+import { ContinueIndicator } from "@/components/ContinueIndicator";
+import { StyledLink } from "@/components/Link";
 import { useActiveExp } from "@/context/ActiveExpProvider";
+import { Experience } from "@/types/experience";
+
+import experiences from "@/assets/experience.json";
 
 export const ExperienceSection: React.FC = () => {
   const { activeExp, setActiveExp } = useActiveExp();

@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils";
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
 import { captureEvent, analyticsEvents } from "@/lib/analytics";
+import { cn } from "@/lib/utils";
 
 type LinkProps = {
   href: string;

@@ -1,7 +1,8 @@
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { IconButton } from "@/components/Link";
-import { getSocials } from "@/assets/socials";
 import { analyticsEvents, captureEvent } from "@/lib/analytics";
+
+import { getSocials } from "@/assets/socials";
 
 export const SocialsBar: React.FC = () => {
   const socials = getSocials(

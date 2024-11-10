@@ -8,6 +8,8 @@ import {
   User,
   Wand,
 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 import {
   CommandDialog,
   CommandEmpty,
@@ -16,15 +18,15 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { Button } from "@/components/ui/button";
 import { Section } from "@/components/SearchResult";
 import { useActiveExp } from "@/context/ActiveExpProvider";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 import { cn, scrollToSection } from "@/lib/utils";
+import { SearchItem } from "@/types/searchItem";
+
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
 import { getSocials } from "@/assets/socials";
-import { SearchItem } from "@/types/searchItem";
-import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 const sections: SearchItem[] = [
   {

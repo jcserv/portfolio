@@ -1,14 +1,16 @@
-import { CertificatesBar } from "@/components/CertificatesBar";
-import { ContinueIndicator } from "@/components/ContinueIndicator";
-import { Link } from "@/components/Link";
+import React from "react";
+
+
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
+  TooltipProvider,
 } from "@/components/ui/tooltip";
+import { CertificatesBar } from "@/components/CertificatesBar";
+import { ContinueIndicator } from "@/components/ContinueIndicator";
+import { Link } from "@/components/Link";
 import { analyticsEvents, captureEvent } from "@/lib/analytics";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
-import React from "react";
 
 type Image = {
   src: string;

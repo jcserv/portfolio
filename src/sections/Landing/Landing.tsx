@@ -18,7 +18,7 @@ export const Landing: React.FC = () => {
           </h1>
         </div>
         <SocialsBar />
-        <ContinueIndicator nextSection="about" />
+        <ContinueIndicator currSection="landing" nextSection="about" />
       </div>
     </section>
   );

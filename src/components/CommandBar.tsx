@@ -24,6 +24,7 @@ import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
 import { getSocials } from "@/assets/socials";
 import { SearchItem } from "@/types/searchItem";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 const sections: SearchItem[] = [
   {
@@ -138,7 +139,6 @@ export const CommandBar: React.FC = () => {
         }
       });
     };
-
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
@@ -146,6 +146,7 @@ export const CommandBar: React.FC = () => {
   React.useEffect(() => {
     const results = fuse.search(query).filter((result) => result.score! < 0.6);
     setSearchResults(results);
+    captureEvent(analyticsEvents.SEARCH, { query, results: results.length });
   }, [query]);
 
   return (

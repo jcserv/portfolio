@@ -9,6 +9,7 @@ import { IconButton } from "@/components/Link";
 import { ContinueIndicator } from "@/components/ContinueIndicator";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types/project";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 const FEATURED_PROJECTS_COUNT = 4;
 
@@ -39,7 +40,14 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
       className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
     />,
   ],
-  ["link", <Link key="link" aria-label="Link to Project" className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]" />],
+  [
+    "link",
+    <Link
+      key="link"
+      aria-label="Link to Project"
+      className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+    />,
+  ],
 ]);
 
 export const Projects: React.FC = () => {
@@ -52,7 +60,9 @@ export const Projects: React.FC = () => {
         <h1 className="mb-8 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
           Featured Projects
         </h1>
-        <FeaturedProjects projects={projects.slice(0, FEATURED_PROJECTS_COUNT)} />
+        <FeaturedProjects
+          projects={projects.slice(0, FEATURED_PROJECTS_COUNT)}
+        />
       </div>
     </section>
   );
@@ -70,26 +80,25 @@ const FeaturedProjects: React.FC<ProjectsDisplayProps> = ({
       <section
         id={`project-${idx}`}
         key={idx}
-        className={cn(
-          "relative",
-          {
-            "flex flex-col justify-center": idx !== 0,
-            "min-h-[85vh]": idx !== 0 && idx !== FEATURED_PROJECTS_COUNT - 1,
-            "min-h-[65vh]": idx === FEATURED_PROJECTS_COUNT - 1,
-            "mt-24": idx === 0,
-            "mt-12": idx !== 0,
-          })}
+        className={cn("relative", {
+          "flex flex-col justify-center": idx !== 0,
+          "min-h-[85vh]": idx !== 0 && idx !== FEATURED_PROJECTS_COUNT - 1,
+          "min-h-[65vh]": idx === FEATURED_PROJECTS_COUNT - 1,
+          "mt-24": idx === 0,
+          "mt-12": idx !== 0,
+        })}
       >
         <div className="flex flex-col h-full">
-        <ProjectCard {...project} reverse={idx % 2 === 0} />
-        {idx !== (FEATURED_PROJECTS_COUNT - 1) && (
-          <div className="mt-auto pt-16">
-            <ContinueIndicator
-              nextSection={`project-${idx + 1}`}
-              className="flex justify-center"
-            />
-          </div>
-        )}
+          <ProjectCard {...project} reverse={idx % 2 === 0} />
+          {idx !== FEATURED_PROJECTS_COUNT - 1 && (
+            <div className="mt-auto pt-16">
+              <ContinueIndicator
+                currSection={`project-${idx}`}
+                nextSection={`project-${idx + 1}`}
+                className="flex justify-center"
+              />
+            </div>
+          )}
         </div>
       </section>
     ))}
@@ -107,7 +116,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   reverse,
 }: ProjectCardProps) => {
   const card = (
-    <Card className="flex flex-col justify-between p-6 h-1/2 max-md:h-auto"> 
+    <Card className="flex flex-col justify-between p-6 h-1/2 max-md:h-auto">
       <div>
         <h3 className="scroll-m-20 mb-4 font-semibold text-2xl tracking-tight">
           {name}
@@ -127,7 +136,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="flex gap-2">
           <TooltipProvider>
             {links.map((link, idx) => (
-              <IconButton key={idx} href={link.url} tooltip={link.label}>
+              <IconButton
+                key={idx}
+                href={link.url}
+                tooltip={link.label}
+                onClick={() =>
+                  captureEvent(analyticsEvents.CLICK_BUTTON, {
+                    type: "project-link",
+                    target: link.url,
+                  })
+                }
+              >
                 {linkIcons.get(link.icon as LinkType) ?? null}
               </IconButton>
             ))}
@@ -141,7 +160,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <img
       src={pic}
       alt={name}
-      onClick={() => window.open(links[0].url, "_blank")}
+      onClick={() => { 
+        captureEvent(analyticsEvents.CLICK_IMAGE, {
+          target: `project-pic-${name}`,
+        })
+        window.open(links[0].url, "_blank");
+      }}
       className="shadow-lg rounded-lg max-w-full h-auto cursor-pointer standout-image"
     />
   );
@@ -149,12 +173,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="flex md:flex-row flex-col gap-8 mx-4 h-[60vh] max-md:h-auto">
       <div
-        className={`flex-1 justify-center items-center ${reverse ? "md:order-2" : "md:order-1"} order-1 self-center`}
+        className={`flex-1 justify-center items-center ${
+          reverse ? "md:order-2" : "md:order-1"
+        } order-1 self-center`}
       >
         {image}
       </div>
       <div
-        className={`flex flex-1 justify-center items-center ${reverse ? "md:order-1" : "md:order-2"} order-2`}
+        className={`flex flex-1 justify-center items-center ${
+          reverse ? "md:order-1" : "md:order-2"
+        } order-2`}
       >
         {card}
       </div>

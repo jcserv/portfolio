@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GitFork, Star } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 export const Footer: React.FC = () => {
   const [forks, setForks] = useState<number>(0);
@@ -22,6 +23,12 @@ export const Footer: React.FC = () => {
         <a
           href="https://github.com/jcserv/portfolio"
           className="m-2 hover:underline"
+          onClick={() =>
+            captureEvent(analyticsEvents.CLICK_LINK, {
+              origin: "footer",
+              target: "https://github.com/jcserv/portfolio",
+            })
+          }
         >
           Made with 💙 (and React) by Jarrod Servilla
         </a>
@@ -31,7 +38,15 @@ export const Footer: React.FC = () => {
         {stars}
       </div>
       <div className="flex justify-center items-center pb-8">
-        <p onClick={() => scrollToSection("landing")}>
+        <p
+          onClick={() => {
+            captureEvent(analyticsEvents.SCROLL_NEXT, {
+              origin: "footer",
+              target: "landing",
+            });
+            scrollToSection("landing");
+          }}
+        >
           🚀 Click me to scroll to the top! 🚀
         </p>
       </div>

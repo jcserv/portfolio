@@ -6,6 +6,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import React from "react";
 
@@ -36,7 +37,10 @@ const images: Image[] = [
 export const About: React.FC = () => {
   const [currImage, setCurrImage] = React.useState(0);
   const [isTooltipOpen, setIsTooltipOpen] = React.useState(false);
-  const handleClick = () => setCurrImage((currImage + 1) % images.length);
+  const handleClick = () => { 
+    captureEvent(analyticsEvents.CLICK_IMAGE, { target: `about-pic-${currImage}`});
+    setCurrImage((currImage + 1) % images.length);
+  }
 
   return (
     <section
@@ -97,6 +101,7 @@ export const About: React.FC = () => {
           </div>
         </div>
         <ContinueIndicator
+          currSection="about"
           nextSection="experience"
           className="flex justify-center pt-8"
         />

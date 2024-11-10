@@ -12,6 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { analyticsEvents, captureEvent } from "@/lib/analytics";
 
 type Link = {
   label: string;
@@ -39,7 +40,13 @@ export const Header: React.FC = () => {
           width="60"
           height="60"
           className="cursor-pointer"
-          onClick={() => scrollToSection("landing")}
+          onClick={() => {
+            captureEvent(analyticsEvents.SCROLL_NEXT, {
+              origin: "logo",
+              target: "landing",
+            });
+            scrollToSection("landing");
+          }}
         />
       </div>
 
@@ -58,6 +65,12 @@ export const Header: React.FC = () => {
               offset={-70}
               duration={500}
               className="hover:underline cursor-pointer"
+              onClick={() =>
+                captureEvent(analyticsEvents.SCROLL_NEXT, {
+                  origin: "header",
+                  target: btn.label.toLowerCase(),
+                })
+              }
             >
               {btn.label}
             </ScrollLink>
@@ -66,7 +79,11 @@ export const Header: React.FC = () => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="md:hidden">
-            <Button variant="outline" size="icon" aria-label="Open menu dropdown button">
+            <Button
+              variant="outline"
+              size="icon"
+              aria-label="Open menu dropdown button"
+            >
               <Menu />
             </Button>
           </DropdownMenuTrigger>

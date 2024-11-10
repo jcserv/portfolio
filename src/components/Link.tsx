@@ -4,6 +4,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
+import { captureEvent, analyticsEvents } from "@/lib/analytics";
 
 type LinkProps = {
   href: string;
@@ -18,9 +19,13 @@ export const Link = ({ href, children, className }: LinkProps) => (
     href={href}
     className={cn(
       "hover:text-[#1ca7d0] dark:hover:text-[#90cdf4] underline",
-      className,
+      className
     )}
     rel="noreferrer"
+    onClick={() => captureEvent(analyticsEvents.CLICK_LINK, {
+      origin: "about", // TODO: hard coded
+      target: href,
+    })}
   >
     {children}
   </a>
@@ -32,15 +37,29 @@ export const StyledLink = ({ href, children, className }: LinkProps) => (
     href={href}
     className={cn("text-[#1ca7d0] underline", className)}
     rel="noreferrer"
+    onClick={() => captureEvent(analyticsEvents.CLICK_LINK, {
+      origin: "experience", // TODO: hard coded
+      target: href,
+    })}
   >
     {children}
   </a>
 );
 
 /** Must be used within a TooltipProvider */
-export const IconButton = ({ href, children, tooltip }: LinkProps) => (
+export const IconButton = ({
+  href,
+  children,
+  tooltip,
+  onClick,
+}: LinkProps & { onClick: () => void }) => (
   <Tooltip>
-    <TooltipTrigger onClick={() => window.open(href, "_blank")}>
+    <TooltipTrigger
+      onClick={() => {
+        onClick();
+        window.open(href, "_blank");
+      }}
+    >
       {children}
     </TooltipTrigger>
     <TooltipContent>{tooltip}</TooltipContent>

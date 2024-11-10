@@ -27,6 +27,7 @@
     "cmdk": "1.0.0",
     "fuse.js": "^7.0.0",
     "lucide-react": "^0.162.0",
+    "posthog-js": "^1.181.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",

@@ -86,6 +86,7 @@ export const ExperienceSection: React.FC = () => {
           </div>
         </div>
         <ContinueIndicator
+          currSection="experience"
           nextSection="projects"
           className="flex justify-center pt-8"
         />

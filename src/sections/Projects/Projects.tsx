@@ -110,6 +110,7 @@ type ProjectCardProps = Project & { reverse: boolean };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
+  subtitle,
   tech,
   links,
   description,
@@ -122,6 +123,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="scroll-m-20 mb-4 font-semibold text-2xl tracking-tight">
           {name}
         </h3>
+        {subtitle && (
+          <h4 className="mb-4 font-semibold text-md text-[#1ca7d0] dark:text-[#90cdf4]">
+            {subtitle}
+          </h4>
+        )}
         <p className="mb-6 leading-7">{description}</p>
       </div>
       <div className="flex justify-between items-end">
@@ -161,10 +167,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <img
       src={pic}
       alt={name}
-      onClick={() => { 
+      onClick={() => {
         captureEvent(analyticsEvents.CLICK_IMAGE, {
           target: `project-pic-${name}`,
-        })
+        });
         window.open(links[0].url, "_blank");
       }}
       className="shadow-lg rounded-lg max-w-full h-auto cursor-pointer standout-image"

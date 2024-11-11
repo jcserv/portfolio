@@ -31,15 +31,26 @@
     ]
   },
   {
-    "name": "ULinks.io",
-    "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
-    "pic": "/ulinks-preview.webp",
-    "tech": ["React", "GraphQL", "Node.js"],
+    "name": "PostureAI",
+    "description": "PostureAI is an AI powered posture improvement web app, used by over 200+ users, that helps you maintain healthy posture while working.",
+    "subtitle": "1st Place in Best Use of GCP @ UofTHacks VIII",
+    "pic": "/postureai.webp",
+    "tech": ["React", "TypeScript"],
     "links": [
       {
         "label": "Github",
         "icon": "github",
-        "url": "https://github.com/jcserv/ulinks"
+        "url": "https://github.com/jcserv/PostureAI"
+      },
+      {
+        "label": "Demo",
+        "icon": "youtube",
+        "url": "https://www.youtube.com/watch?v=SqUmP6npKYM"
+      },
+      {
+        "label": "Devpost",
+        "icon": "devpost",
+        "url": "https://devpost.com/software/placeholder-9gjdst"
       }
     ]
   },
@@ -62,26 +73,15 @@
     ]
   },
   {
-    "name": "PostureAI",
-    "description": "PostureAI is an AI powered posture improvement web app, used by over 200+ users, that helps you maintain healthy posture while working.",
-    "subtitle": "1st Place in Best Use of GCP",
-    "pic": "/postureai.webp",
-    "tech": ["React", "TypeScript"],
+    "name": "ULinks.io",
+    "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
+    "pic": "/ulinks-preview.webp",
+    "tech": ["React", "GraphQL", "Node.js"],
     "links": [
       {
         "label": "Github",
         "icon": "github",
-        "url": "https://github.com/jcserv/PostureAI"
-      },
-      {
-        "label": "Demo",
-        "icon": "youtube",
-        "url": "https://www.youtube.com/watch?v=SqUmP6npKYM"
-      },
-      {
-        "label": "Devpost",
-        "icon": "devpost",
-        "url": "https://devpost.com/software/placeholder-9gjdst"
+        "url": "https://github.com/jcserv/ulinks"
       }
     ]
   },

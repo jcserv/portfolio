@@ -1,8 +1,26 @@
 [
   {
+    "name": "Bling My Deck",
+    "description": "Bling My Deck is a site that allows Magic: The Gathering players to find the most expensive version of their pet decks ✨",
+    "pic": "/blingmydeck.webp",
+    "tech": ["React", "TypeScript", "Tailwind", "ShadCN"],
+    "links": [
+      {
+        "label": "Website",
+        "icon": "link",
+        "url": "https://bling-my-deck.vercel.app/"
+      },
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/bling-my-deck"
+      }
+    ]
+  },
+  {
     "name": "UofT TA Application System (UTAP)",
     "description": "UTAP is the official platform for all MCS TA postings @ UTM enabling students to apply for postings and instructors to manage applications.",
-    "pic": "/utap.png",
+    "pic": "/utap.webp",
     "tech": ["React", "Node.js", "PostgreSQL"],
     "links": [
       {
@@ -15,7 +33,7 @@
   {
     "name": "ULinks.io",
     "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
-    "pic": "/ulinks-preview.png",
+    "pic": "/ulinks-preview.webp",
     "tech": ["React", "GraphQL", "Node.js"],
     "links": [
       {
@@ -28,7 +46,7 @@
   {
     "name": "ResumeWords",
     "description": "ResumeWords is an AI powered resume optimization tool that helps applicants tailor their resumes to postings by identifying keywords in job postings.",
-    "pic": "/resumewords.png",
+    "pic": "/resumewords.webp",
     "tech": ["React"],
     "links": [
       {
@@ -47,7 +65,7 @@
     "name": "PostureAI",
     "description": "PostureAI is an AI powered posture improvement web app, used by over 200+ users, that helps you maintain healthy posture while working.",
     "subtitle": "1st Place in Best Use of GCP",
-    "pic": "/postureai.png",
+    "pic": "/postureai.webp",
     "tech": ["React", "TypeScript"],
     "links": [
       {

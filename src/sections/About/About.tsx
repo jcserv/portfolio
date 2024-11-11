@@ -20,17 +20,17 @@ type Image = {
 
 const images: Image[] = [
   {
-    src: "/me.jpg",
+    src: "/me.webp",
     alt: "A professional picture of Jarrod Servilla, standing in front of a large window with the Toronto cityscape in the background",
     tooltip: "Click me to see a cute cat!",
   },
   {
-    src: "/us.jpg",
+    src: "/us.webp",
     alt: "A very cute picture of Jarrod and his wife Fatz",
     tooltip: "Once more..",
   },
   {
-    src: "/yumi.png",
+    src: "/yumi.webp",
     alt: "A cute, white cat, sitting in a small box on the floor next to some plushies",
     tooltip: "If I fits, I sits",
   },

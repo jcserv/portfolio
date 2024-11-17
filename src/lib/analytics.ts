@@ -17,6 +17,7 @@ export const analyticsEvents = {
     CLICK_BUTTON: 'click_button',
     CLICK_IMAGE: 'click_image',
     CLICK_LINK: 'click_link',
+    HOVER: 'hover',
     SCROLL_NEXT: 'scroll_next',
     SEARCH: 'search',
 } as const;

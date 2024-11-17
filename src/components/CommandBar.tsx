@@ -27,6 +27,7 @@ import { SearchItem } from "@/types/searchItem";
 import experience from "@/assets/experience.json";
 import projects from "@/assets/projects.json";
 import { getSocials } from "@/assets/socials";
+import { AskAIToggle } from "./AskAIToggle";
 
 const sections: SearchItem[] = [
   {
@@ -112,18 +113,15 @@ export const CommandBar: React.FC = () => {
     return sections.concat(experiences).concat(projs).concat(socs);
   }, [sections, experiences, projs, socs]);
 
-  const fuse = new Fuse(
-    searchInput,
-    {
-      includeScore: true,
-      includeMatches: true,
-      ignoreFieldNorm: true,
-      shouldSort: true,
-      minMatchCharLength: 2,
-      threshold: 0.4,
-      keys: ["label", "content"],
-    }
-  );
+  const fuse = new Fuse(searchInput, {
+    includeScore: true,
+    includeMatches: true,
+    ignoreFieldNorm: true,
+    shouldSort: true,
+    minMatchCharLength: 2,
+    threshold: 0.4,
+    keys: ["label", "content"],
+  });
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -156,14 +154,17 @@ export const CommandBar: React.FC = () => {
       <Button
         variant="outline"
         className={cn(
-          "relative h-10 justify-start rounded-[0.5rem] bg-muted/50 text-base font-normal text-muted-foreground shadow-none sm:pr-40 md:w-64 lg:w-80 xl:w-96"
+          "relative h-10 justify-start rounded-[0.5rem] bg-muted/50 text-base font-normal text-muted-foreground shadow-none sm:pr-12 md:w-64 lg:w-80 xl:w-96"
         )}
         onClick={() => setOpen(true)}
       >
         <span className="inline-flex">Search</span>
-        <kbd className="pointer-events-none absolute right-[0.5rem] top-[0.5rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-          <span className="text-xs">⌘</span>K
-        </kbd>
+        <div className="absolute right-[0.3rem] top-1/2 -translate-y-1/2 flex items-center gap-2">
+          <AskAIToggle />
+          <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+            <span className="text-xs">⌘</span>K
+          </kbd>
+        </div>
       </Button>
       <CommandDialog
         open={open}
@@ -178,7 +179,9 @@ export const CommandBar: React.FC = () => {
         />
         <CommandList inputMode="search">
           {query.length > 0 && (
-            <CommandGroup heading={`Search results - ${searchResults.length} total`}>
+            <CommandGroup
+              heading={`Search results - ${searchResults.length} total`}
+            >
               {searchResults.map((result) => (
                 <Section
                   key={result.item.value}
@@ -194,7 +197,12 @@ export const CommandBar: React.FC = () => {
           {query.length === 0 && (
             <CommandGroup heading="Sections">
               {sections.map((section) => (
-                <Section key={section.value} {...section} setOpen={setOpen} setQuery={setQuery}/>
+                <Section
+                  key={section.value}
+                  {...section}
+                  setOpen={setOpen}
+                  setQuery={setQuery}
+                />
               ))}
             </CommandGroup>
           )}

@@ -12,7 +12,7 @@ export const Landing: React.FC = () => {
           <br />
           <h1 className="scroll-m-20 text-4xl">
             I&apos;m a{" "}
-            <strong className="text-[#1ca7d0] dark:text-[#90cdf4]">
+            <strong className="text-main dark:text-alt">
               full stack developer.
             </strong>
           </h1>

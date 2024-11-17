@@ -22,7 +22,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     <Github
       key="github"
       aria-label="Github Repository"
-      className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+      className="hover:text-main dark:hover:text-alt"
     />,
   ],
   [
@@ -30,7 +30,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     <Youtube
       key="youtube"
       aria-label="YouTube Demo"
-      className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+      className="hover:text-main dark:hover:text-alt"
     />,
   ],
   [
@@ -38,7 +38,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     <SiDevpost
       key="devpost"
       aria-label="Devpost Project Page"
-      className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+      className="hover:text-main dark:hover:text-alt"
     />,
   ],
   [
@@ -46,7 +46,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
     <Link
       key="link"
       aria-label="Link to Project"
-      className="hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+      className="hover:text-main dark:hover:text-alt"
     />,
   ],
 ]);
@@ -58,7 +58,7 @@ export const Projects: React.FC = () => {
       className="flex justify-center items-center px-4 py-20 h-full"
     >
       <div className="w-full">
-        <h1 className="mb-8 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
+        <h1 className="mb-8 font-semibold text-main text-4xl text-center dark:text-alt">
           Featured Projects
         </h1>
         <FeaturedProjects
@@ -124,7 +124,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {name}
         </h3>
         {subtitle && (
-          <h4 className="mb-4 font-semibold text-md text-[#1ca7d0] dark:text-[#90cdf4]">
+          <h4 className="mb-4 font-semibold text-md text-main dark:text-alt">
             {subtitle}
           </h4>
         )}

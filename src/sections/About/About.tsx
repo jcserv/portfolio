@@ -50,7 +50,7 @@ export const About: React.FC = () => {
       className="flex justify-center items-center px-4 h-[60vh] min-h-screen page-section"
     >
       <div className="w-full max-w-4xl">
-        <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
+        <h1 className="mb-20 font-semibold text-main text-4xl text-center dark:text-alt">
           About Me
         </h1>
         <div className="flex md:flex-row flex-col-reverse items-center md:items-start gap-8">
@@ -59,7 +59,7 @@ export const About: React.FC = () => {
               Howdy! 🤠 I studied computer science at the University
               of Toronto, and I&apos;m currently working at{" "}
               <Link href="https://www.getdbt.com/">dbt Labs</Link> as a{" "}
-              <strong className="text-[#1ca7d0] dark:text-[#90cdf4]">
+              <strong className="text-main dark:text-alt">
                 Software Engineer
               </strong>
               , working on{" "}

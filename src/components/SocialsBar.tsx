@@ -6,7 +6,7 @@ import { getSocials } from "@/assets/socials";
 
 export const SocialsBar: React.FC = () => {
   const socials = getSocials(
-    "w-6 h-6 hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+    "w-6 h-6 hover:text-main dark:hover:text-alt"
   );
   return (
     <TooltipProvider>

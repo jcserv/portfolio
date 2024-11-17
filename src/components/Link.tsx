@@ -18,7 +18,7 @@ export const Link = ({ href, children, className }: LinkProps) => (
     target="_blank"
     href={href}
     className={cn(
-      "hover:text-[#1ca7d0] dark:hover:text-[#90cdf4] underline",
+      "hover:text-main dark:hover:text-alt underline",
       className
     )}
     rel="noreferrer"
@@ -35,7 +35,7 @@ export const StyledLink = ({ href, children, className }: LinkProps) => (
   <a
     target="_blank"
     href={href}
-    className={cn("text-[#1ca7d0] underline", className)}
+    className={cn("text-main underline", className)}
     rel="noreferrer"
     onClick={() => captureEvent(analyticsEvents.CLICK_LINK, {
       origin: "experience", // TODO: hard coded

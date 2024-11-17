@@ -22,7 +22,7 @@ export const ContinueIndicator: React.FC<ContinueIndicatorProps> = ({
     }}>
       <ChevronDown
         aria-label="Continue to next section"
-        className="w-8 h-8 animate-bounce hover:text-[#1ca7d0] dark:hover:text-[#90cdf4]"
+        className="w-8 h-8 animate-bounce hover:text-main dark:hover:text-alt"
         onClick={() => scrollToSection("about")}
       />
     </Button>

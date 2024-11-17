@@ -25,7 +25,7 @@ export const ExperienceSection: React.FC = () => {
       className="flex justify-center items-center px-4 h-[60vh] min-h-screen page-section"
     >
       <div className="w-full max-w-4xl">
-        <h1 className="mb-20 font-semibold text-[#1ca7d0] text-4xl text-center dark:text-[#90cdf4]">
+        <h1 className="mb-20 font-semibold text-main text-4xl text-center dark:text-alt">
           Experience
         </h1>
         <div className="flex md:flex-row flex-col items-center md:items-start">
@@ -35,7 +35,7 @@ export const ExperienceSection: React.FC = () => {
               <Button
                 key={`${exp.workplace}`}
                 onClick={() => setActiveExp(`${idx}`)}
-                className={`w-2/3 ${activeExp === `${idx}` ? "bg-[#1ca7d0] dark:bg-[#90cdf4]" : ""}`}
+                className={`w-2/3 ${activeExp === `${idx}` ? "bg-main dark:bg-alt" : ""}`}
               >
                 {exp.workplace}
               </Button>

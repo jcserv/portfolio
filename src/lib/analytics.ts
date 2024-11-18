@@ -1,14 +1,15 @@
 import posthog, { Properties } from 'posthog-js'
 
 const POSTHOG_TOKEN = import.meta.env.VITE_POSTHOG_TOKEN;
+const POSTHOG_API_HOST = import.meta.env.VITE_POSTHOG_API_HOST || 'https://us.i.posthog.com';
 
 if (!POSTHOG_TOKEN) {
     console.error('POSTHOG_TOKEN is not set')
 } else {
     posthog.init(POSTHOG_TOKEN,
         {
-            api_host: 'https://us.i.posthog.com',
-            person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+            api_host: POSTHOG_API_HOST,
+            person_profiles: 'identified_only'
         }
     )
 }

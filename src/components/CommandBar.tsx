@@ -154,13 +154,17 @@ export const CommandBar: React.FC = () => {
       <Button
         variant="outline"
         className={cn(
-          "relative h-10 justify-start rounded-[0.5rem] bg-muted/50 text-base font-normal text-muted-foreground shadow-none sm:pr-12 md:w-64 lg:w-80 xl:w-96"
+          "relative h-10 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none",
+          "sm:pr-12 sm:text-base",
+          "md:w-64",
+          "lg:w-80",
+          "xl:w-96"
         )}
         onClick={() => setOpen(true)}
       >
         <span className="inline-flex">Search</span>
-        <div className="absolute right-[0.3rem] top-1/2 -translate-y-1/2 flex items-center gap-2">
-          <AskAIToggle />
+        <div className="absolute right-[0.3rem] top-1/2 -translate-y-1/2 flex items-center gap-1 sm:gap-2">
+          <AskAIToggle className="hidden sm:flex" />
           <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
             <span className="text-xs">⌘</span>K
           </kbd>
@@ -177,7 +181,7 @@ export const CommandBar: React.FC = () => {
           value={query}
           onValueChange={(val) => setQuery(val)}
         />
-        <CommandList inputMode="search">
+        <CommandList className="max-h-[calc(80vh-100px)]" inputMode="search">
           {query.length > 0 && (
             <CommandGroup
               heading={`Search results - ${searchResults.length} total`}
@@ -206,7 +210,7 @@ export const CommandBar: React.FC = () => {
               ))}
             </CommandGroup>
           )}
-          {searchResults.length === 0 && (
+          {searchResults.length === 0 && query.length > 0 && (
             <CommandEmpty>No results found.</CommandEmpty>
           )}
         </CommandList>

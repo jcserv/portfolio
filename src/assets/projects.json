@@ -1,9 +1,17 @@
 [
   {
     "name": "Bling My Deck",
-    "description": "Bling My Deck is a site that allows Magic: The Gathering players to find the most expensive version of their pet decks ✨",
+    "description": "Bling My Deck helps Magic: The Gathering players find the most expensive version of their favourite decks, using data from the ManaQL API. Built with a Django ETL pipeline for data ingestion from Scryfall.",
     "pic": "/blingmydeck.webp",
-    "tech": ["React", "TypeScript", "Tailwind", "ShadCN"],
+    "tech": [
+      "React",
+      "Django",
+      "PostgreSQL",
+      "TypeScript",
+      "GraphQL",
+      "Tailwind",
+      "ShadCN"
+    ],
     "links": [
       {
         "label": "Website",
@@ -11,9 +19,19 @@
         "url": "https://bling-my-deck.vercel.app/"
       },
       {
-        "label": "Github",
+        "label": "Bling My Deck Repo",
         "icon": "github",
         "url": "https://github.com/jcserv/bling-my-deck"
+      },
+      {
+        "label": "ManaQL API Repo",
+        "icon": "github",
+        "url": "https://github.com/jcserv/manaql"
+      },
+      {
+        "label": "ETL Pipeline Repo",
+        "icon": "github",
+        "url": "https://github.com/jcserv/manaql-ingest"
       }
     ]
   },

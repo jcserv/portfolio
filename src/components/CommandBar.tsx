@@ -158,7 +158,7 @@ export const CommandBar: React.FC = () => {
           "sm:pr-12 sm:text-base",
           "md:w-64",
           "lg:w-80",
-          "xl:w-96"
+          "xl:w-96",
         )}
         onClick={() => setOpen(true)}
       >

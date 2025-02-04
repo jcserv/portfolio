@@ -17,15 +17,14 @@ export const Link = ({ href, children, className }: LinkProps) => (
   <a
     target="_blank"
     href={href}
-    className={cn(
-      "hover:text-main dark:hover:text-alt underline",
-      className
-    )}
+    className={cn("hover:text-main dark:hover:text-alt underline", className)}
     rel="noreferrer"
-    onClick={() => captureEvent(analyticsEvents.CLICK_LINK, {
-      origin: "about", // TODO: hard coded
-      target: href,
-    })}
+    onClick={() =>
+      captureEvent(analyticsEvents.CLICK_LINK, {
+        origin: "about", // TODO: hard coded
+        target: href,
+      })
+    }
   >
     {children}
   </a>
@@ -37,10 +36,12 @@ export const StyledLink = ({ href, children, className }: LinkProps) => (
     href={href}
     className={cn("text-main underline", className)}
     rel="noreferrer"
-    onClick={() => captureEvent(analyticsEvents.CLICK_LINK, {
-      origin: "experience", // TODO: hard coded
-      target: href,
-    })}
+    onClick={() =>
+      captureEvent(analyticsEvents.CLICK_LINK, {
+        origin: "experience", // TODO: hard coded
+        target: href,
+      })
+    }
   >
     {children}
   </a>

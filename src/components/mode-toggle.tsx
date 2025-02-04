@@ -11,7 +11,12 @@ export function ModeToggle() {
   };
 
   return (
-    <Button variant="ghost" aria-label={`Set theme to ${theme === "dark" ? 'light mode' : 'dark mode'}` } onClick={toggleDarkMode} className="p-2 w-8 h-8">
+    <Button
+      variant="ghost"
+      aria-label={`Set theme to ${theme === "dark" ? "light mode" : "dark mode"}`}
+      onClick={toggleDarkMode}
+      className="p-2 w-8 h-8"
+    >
       {theme === "dark" ? (
         <Moon className="w-4 h-4" />
       ) : (

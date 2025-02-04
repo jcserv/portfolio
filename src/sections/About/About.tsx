@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import {
   Tooltip,
   TooltipContent,
@@ -39,10 +38,12 @@ const images: Image[] = [
 export const About: React.FC = () => {
   const [currImage, setCurrImage] = React.useState(0);
   const [isTooltipOpen, setIsTooltipOpen] = React.useState(false);
-  const handleClick = () => { 
-    captureEvent(analyticsEvents.CLICK_IMAGE, { target: `about-pic-${currImage}`});
+  const handleClick = () => {
+    captureEvent(analyticsEvents.CLICK_IMAGE, {
+      target: `about-pic-${currImage}`,
+    });
     setCurrImage((currImage + 1) % images.length);
-  }
+  };
 
   return (
     <section
@@ -56,8 +57,8 @@ export const About: React.FC = () => {
         <div className="flex md:flex-row flex-col-reverse items-center md:items-start gap-8">
           <div className="flex flex-col justify-center items-center w-full md:w-1/2">
             <p className="mt-4">
-              Howdy! 🤠 I studied computer science at the University
-              of Toronto, and I&apos;m currently working at{" "}
+              Howdy! 🤠 I studied computer science at the University of Toronto,
+              and I&apos;m currently working at{" "}
               <Link href="https://www.getdbt.com/">dbt Labs</Link> as a{" "}
               <strong className="text-main dark:text-alt">
                 Software Engineer

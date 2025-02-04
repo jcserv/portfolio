@@ -16,7 +16,8 @@ export const CertificatesBar: React.FC = () => {
           onClick={() =>
             captureEvent(analyticsEvents.CLICK_BUTTON, {
               type: "cert",
-              target: "https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url",
+              target:
+                "https://www.credly.com/badges/517ae2cf-990f-4e3f-acf7-c7dc692c67a0/public_url",
             })
           }
         >
@@ -31,7 +32,8 @@ export const CertificatesBar: React.FC = () => {
           onClick={() =>
             captureEvent(analyticsEvents.CLICK_BUTTON, {
               type: "cert",
-              target: "https://www.credly.com/badges/e6715f11-b3a5-4793-ad15-569250ac42f6/public_url"
+              target:
+                "https://www.credly.com/badges/e6715f11-b3a5-4793-ad15-569250ac42f6/public_url",
             })
           }
         >
@@ -46,7 +48,8 @@ export const CertificatesBar: React.FC = () => {
           onClick={() =>
             captureEvent(analyticsEvents.CLICK_BUTTON, {
               type: "cert",
-              target: "https://www.credly.com/badges/646b9426-2046-459d-a0cf-f2c3fd8c6fa1/public_url"
+              target:
+                "https://www.credly.com/badges/646b9426-2046-459d-a0cf-f2c3fd8c6fa1/public_url",
             })
           }
         >
@@ -61,7 +64,8 @@ export const CertificatesBar: React.FC = () => {
           onClick={() =>
             captureEvent(analyticsEvents.CLICK_BUTTON, {
               type: "cert",
-              target: "https://credentials.getdbt.com/0eda8bc8-abda-43ca-80ae-10ffb87fcfd2",
+              target:
+                "https://credentials.getdbt.com/0eda8bc8-abda-43ca-80ae-10ffb87fcfd2",
             })
           }
         >

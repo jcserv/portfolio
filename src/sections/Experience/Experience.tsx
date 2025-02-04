@@ -47,7 +47,10 @@ export const ExperienceSection: React.FC = () => {
               onValueChange={(value) => setActiveExp(value)}
               aria-label="Select experience"
             >
-              <SelectTrigger className="mb-8 w-1/2" aria-label="Select experience">
+              <SelectTrigger
+                className="mb-8 w-1/2"
+                aria-label="Select experience"
+              >
                 <SelectValue placeholder="View past roles" />
               </SelectTrigger>
               <SelectContent onSelect={() => {}}>

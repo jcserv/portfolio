@@ -37,9 +37,7 @@ export const Section: React.FC<SectionProps> = ({
     }}
     className="flex items-center gap-3"
   >
-    <div className="flex-shrink-0 w-5 h-5">
-      {icon}
-    </div>
+    <div className="flex-shrink-0 w-5 h-5">{icon}</div>
     <div className="flex flex-col min-w-0 flex-1">
       <span className="truncate">{label}</span>
       {(matches ?? []).length > 0 && (
@@ -91,6 +89,8 @@ export const Section: React.FC<SectionProps> = ({
         </span>
       )}
     </div>
-    {shortcut && <CommandShortcut className="flex-shrink-0">{shortcut}</CommandShortcut>}
+    {shortcut && (
+      <CommandShortcut className="flex-shrink-0">{shortcut}</CommandShortcut>
+    )}
   </CommandItem>
 );

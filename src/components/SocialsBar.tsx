@@ -5,9 +5,7 @@ import { analyticsEvents, captureEvent } from "@/lib/analytics";
 import { getSocials } from "@/assets/socials";
 
 export const SocialsBar: React.FC = () => {
-  const socials = getSocials(
-    "w-6 h-6 hover:text-main dark:hover:text-alt"
-  );
+  const socials = getSocials("w-6 h-6 hover:text-main dark:hover:text-alt");
   return (
     <TooltipProvider>
       <div className="flex flex-row items-center space-x-4">

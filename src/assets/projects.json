@@ -91,6 +91,19 @@
     ]
   },
   {
+    "name": "RivalsLFG.com",
+    "description": "RivalsLFG.com is a real-time matchmaking platform for Marvel Rivals players, enabling group formation based on rank, region, platform, and other preferences (notably providing role queue as an option).",
+    "pic": "/rivalslfg.webp",
+    "tech": ["Go", "React", "PostgreSQL", "Redis"],
+    "links": [
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/rivalslfg.com"
+      }
+    ]
+  },
+  {
     "name": "ULinks.io",
     "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
     "pic": "/ulinks-preview.webp",
@@ -100,6 +113,19 @@
         "label": "Github",
         "icon": "github",
         "url": "https://github.com/jcserv/ulinks"
+      }
+    ]
+  },
+  {
+    "name": "nvy",
+    "type": "Personal",
+    "description": "A CLI tool, written in Rust, for managing multiple .env files in a project.",
+    "tech": ["Rust"],
+    "links": [
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/nvy"
       }
     ]
   },

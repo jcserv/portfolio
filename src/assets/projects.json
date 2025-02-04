@@ -107,7 +107,7 @@
     "name": "ULinks.io",
     "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
     "pic": "/ulinks-preview.webp",
-    "tech": ["React", "GraphQL", "Node.js"],
+    "tech": ["React", "GraphQL", "Node.js", "MongoDB"],
     "links": [
       {
         "label": "Github",

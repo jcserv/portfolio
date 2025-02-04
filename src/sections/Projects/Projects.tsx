@@ -12,7 +12,7 @@ import { Project } from "@/types/project";
 
 import projects from "@/assets/projects.json";
 
-const FEATURED_PROJECTS_COUNT = 5;
+const FEATURED_PROJECTS_COUNT = 6;
 
 type LinkType = "github" | "youtube" | "devpost" | "link";
 

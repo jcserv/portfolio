@@ -42,7 +42,7 @@ const sections: SearchItem[] = [
     content: [
       "I studied computer science at the University of Toronto",
       "working at dbt Labs as a Senior Software Engineer, working on dbt Catalog.",
-      "I've worked at SailPoint, Citigroup, and Citylitics.",
+      "I've worked at SailPoint, Citi, and Citylitics.",
       "Certifications: AWS Certified Developer, DataDog Fundamentals, PagerDuty Incident Responder, dbt Fundamentals",
     ],
     value: "about",

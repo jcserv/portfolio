@@ -1,13 +1,13 @@
 [
   {
     "workplace": "dbt Labs",
-    "position": "Software Engineer",
+    "position": "Senior Software Engineer",
     "duration": ["Aug 2024 - Present"],
-    "tech": ["React", "Django", "GraphQL", "Python", "TypeScript", "RabbitMQ"],
+    "tech": ["Python", "Rust", "React", "TypeScript", "Django", "GraphQL"],
     "description": [
-      "Developed and maintained customer-facing features for dbt Explorer using React, Django, and GraphQL to enhance user experience and product capabilities",
-      "Collaborated closely with engineers and product managers to understand requirements and build quality solutions",
-      "Participated in code reviews and provide constructive feedback to maintain code quality"
+      "Spearheaded the development of UI rework",
+      "Enhanced search to surface more relevant results, increasing search efficiency to 99.4%",
+      "Championed frontend best practices™ and established automation to improve developer velocity"
     ],
     "url": "https://getdbt.com/"
   },

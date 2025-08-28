@@ -61,11 +61,11 @@ export const About: React.FC = () => {
               and I&apos;m currently working at{" "}
               <Link href="https://www.getdbt.com/">dbt Labs</Link> as a{" "}
               <strong className="text-main dark:text-alt">
-                Software Engineer
+                Senior Software Engineer
               </strong>
               , working on{" "}
               <Link href="https://www.getdbt.com/product/dbt-explorer">
-                dbt Explorer
+                dbt Catalog
               </Link>
               . Prior to that, I&apos;ve worked at{" "}
               <Link href="https://www.sailpoint.com/">SailPoint</Link>,{" "}

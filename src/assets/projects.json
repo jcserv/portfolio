@@ -91,6 +91,19 @@
     ]
   },
   {
+    "name": "sqli",
+    "description": "sqli is a SQL client written as a Rust TUI application, allowing teams to share common SQL queries in Git repositories.",
+    "pic": "/sqli.webp",
+    "tech": ["Rust"],
+    "links": [
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/sqli"
+      }
+    ]
+  },
+  {
     "name": "RivalsLFG.com",
     "description": "RivalsLFG.com is a real-time matchmaking platform for Marvel Rivals players, enabling group formation based on rank, region, platform, and other preferences (notably providing role queue as an option).",
     "pic": "/rivalslfg.webp",

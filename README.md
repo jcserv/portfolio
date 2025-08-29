@@ -1,7 +1,5 @@
 ## 🚀 Portfolio V3.0
 
-![visitors](https://img.shields.io/endpoint?url=https://vu-mi.com/api/v1/views?id=jcserv/portfolio)
-
 > [!TIP]
 > Want to use this portfolio? Click the fork button above!
 >

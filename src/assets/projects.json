@@ -79,11 +79,6 @@
     "tech": ["React"],
     "links": [
       {
-        "label": "Website",
-        "icon": "link",
-        "url": "https://www.resume-words.com/"
-      },
-      {
         "label": "Github",
         "icon": "github",
         "url": "https://github.com/ShahmeerShahid/ResumeWords"

@@ -183,11 +183,6 @@
     "tech": ["React", "TypeScript", "Docker"],
     "links": [
       {
-        "label": "Website",
-        "icon": "link",
-        "url": "https://resume-words.com/"
-      },
-      {
         "label": "Github",
         "icon": "github",
         "url": "https://github.com/ShahmeerShahid/ResumeWords"

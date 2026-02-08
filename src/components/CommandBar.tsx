@@ -65,7 +65,7 @@ const sections: SearchItem[] = [
   },
 ];
 
-const projs: SearchItem[] = projects.slice(0, 4).map((proj, index) => {
+const projs: SearchItem[] = projects.slice(0, 5).map((proj, index) => {
   return {
     label: proj.name,
     content: [proj.description, proj.tech.join(", ")],

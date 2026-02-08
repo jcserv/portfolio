@@ -1,5 +1,28 @@
 [
   {
+    "name": "Countryguessr",
+    "description": "Countryguessr is an interactive web application that helps players learn geography. It also supports a real-time competitive mode using an Elixir API.",
+    "pic": "/countryguessr.webp",
+    "tech": ["React", "Elixir", "TypeScript", "ShadCN", "Tailwind"],
+    "links": [
+      {
+        "label": "Website",
+        "icon": "link",
+        "url": "https://countryguessr-cet.pages.dev/"
+      },
+      {
+        "label": "UI Repo",
+        "icon": "github",
+        "url": "https://github.com/jcserv/countryguessr"
+      },
+      {
+        "label": "API Repo",
+        "icon": "github",
+        "url": "https://github.com/jcserv/countryguessr-api"
+      }
+    ]
+  },
+  {
     "name": "Bling My Deck",
     "description": "Bling My Deck helps Magic: The Gathering players find the most expensive version of their favourite decks, using data from the ManaQL API. Built with a Django ETL pipeline for data ingestion from Scryfall.",
     "pic": "/blingmydeck.webp",

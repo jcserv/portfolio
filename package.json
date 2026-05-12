@@ -28,7 +28,7 @@
     "clsx": "^2.1.1",
     "cmdk": "1.1.1",
     "fuse.js": "^7.3.0",
-    "lucide-react": "^0.162.0",
+    "lucide-react": "^1.14.0",
     "posthog-js": "^1.373.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

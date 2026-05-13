@@ -1,6 +1,6 @@
 import React from "react";
-import { Github, Youtube, Link } from "lucide-react";
-import { SiDevpost } from "react-icons/si";
+import { Link } from "lucide-react";
+import { SiDevpost, SiGithub, SiYoutube } from "react-icons/si";
 
 import { Card } from "@/components/ui/card";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,7 +19,7 @@ type LinkType = "github" | "youtube" | "devpost" | "link";
 const linkIcons: Map<LinkType, JSX.Element> = new Map([
   [
     "github",
-    <Github
+    <SiGithub
       key="github"
       aria-label="Github Repository"
       className="hover:text-main dark:hover:text-alt"
@@ -27,7 +27,7 @@ const linkIcons: Map<LinkType, JSX.Element> = new Map([
   ],
   [
     "youtube",
-    <Youtube
+    <SiYoutube
       key="youtube"
       aria-label="YouTube Demo"
       className="hover:text-main dark:hover:text-alt"

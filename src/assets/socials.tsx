@@ -1,14 +1,16 @@
-import { File, Github, Linkedin } from "lucide-react";
+import { File } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
 
 export const getSocials = (className: string) => [
   {
     label: "Github",
-    icon: <Github aria-label="Github Profile" className={className} />,
+    icon: <SiGithub aria-label="Github Profile" className={className} />,
     url: "https://github.com/jcserv",
   },
   {
     label: "LinkedIn",
-    icon: <Linkedin aria-label="LinkedIn Profile" className={className} />,
+    icon: <FaLinkedin aria-label="LinkedIn Profile" className={className} />,
     url: "https://linkedin.com/in/jarrod-servilla",
   },
   {

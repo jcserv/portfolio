@@ -45,7 +45,7 @@
     "@types/react-scroll": "^1.8.10",
     "@vitejs/plugin-react": "^6.0.2",
     "autoprefixer": "^10.5.0",
-    "cypress": "^13.17.0",
+    "cypress": "^15.17.0",
     "eslint": "^9.37.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-simple-import-sort": "^13.0.0",

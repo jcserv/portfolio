@@ -1,5 +1,31 @@
 [
   {
+    "name": "maindeck.xyz",
+    "description": "Maindeck is a fast, minimal Magic: The Gathering deck builder optimized for brewers: one-click deck categorization, keyboard-first editing, manabase suggestions, an in-browser playtest simulator, and mobile support. Plus collaborative tools like suggested changes, forking, and side-by-side deck comparison.",
+    "pic": "/maindeck.webp",
+    "tech": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind",
+      "ShadCN"
+    ],
+    "links": [
+      {
+        "label": "Website",
+        "icon": "link",
+        "url": "https://maindeck.xyz"
+      },
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/maindeck"
+      }
+    ]
+  },
+  {
     "name": "Countryguessr",
     "description": "Countryguessr is an interactive web application that helps players learn geography. It also supports a real-time competitive mode using an Elixir API.",
     "pic": "/countryguessr.webp",
@@ -109,6 +135,19 @@
     ]
   },
   {
+    "name": "ULinks.io",
+    "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
+    "pic": "/ulinks-preview.webp",
+    "tech": ["React", "GraphQL", "Node.js", "MongoDB"],
+    "links": [
+      {
+        "label": "Github",
+        "icon": "github",
+        "url": "https://github.com/jcserv/ulinks"
+      }
+    ]
+  },
+  {
     "name": "sqli",
     "description": "sqli is a SQL client written as a Rust TUI application, allowing teams to share common SQL queries in Git repositories.",
     "pic": "/sqli.webp",
@@ -131,19 +170,6 @@
         "label": "Github",
         "icon": "github",
         "url": "https://github.com/jcserv/rivalslfg.com"
-      }
-    ]
-  },
-  {
-    "name": "ULinks.io",
-    "description": "ULinks.io is a platform for students to browse & upload academic group chats to stay connected during online school",
-    "pic": "/ulinks-preview.webp",
-    "tech": ["React", "GraphQL", "Node.js", "MongoDB"],
-    "links": [
-      {
-        "label": "Github",
-        "icon": "github",
-        "url": "https://github.com/jcserv/ulinks"
       }
     ]
   },

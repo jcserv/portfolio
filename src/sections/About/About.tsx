@@ -62,7 +62,7 @@ export const About: React.FC = () => {
               <Link href="https://www.withdavid.ai/">David AI</Link> as a{" "}
               <strong className="text-main dark:text-alt">
                 Platform Engineer
-              </strong>
+              </strong>{" "}
               building data pipelines that process petabytes of audio data. 
               Prior to that, I&apos;ve worked at{" "}
               <Link href="https://www.getdbt.com/">dbt Labs</Link>,{" "}

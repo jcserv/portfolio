@@ -1,8 +1,20 @@
 [
   {
+    "workplace": "David AI",
+    "position": "Platform Engineer",
+    "duration": ["Jul 2026 - Present"],
+    "tech": ["Go", "dbt", "AWS", "Kubernetes", "Terraform", "Temporal"],
+    "description": [
+      "Built cost attribution system mapping infrastructure spend to internal projects, enabling data-driven business decisions",
+      "Developed Temporal workflows in Go on EKS for audio data pipelines processing petabyte-scale datasets",
+      "Designed S3 and PostgreSQL storage for audio data, partnering with product and ML teams to ensure scalability and data integrity"
+    ],
+    "url": "https://withdavid.ai/"
+  },
+  {
     "workplace": "dbt Labs",
     "position": "Senior Software Engineer",
-    "duration": ["Aug 2024 - Present"],
+    "duration": ["Aug 2024 - Jul 2026"],
     "tech": ["Python", "Rust", "React", "TypeScript", "Django", "GraphQL"],
     "description": [
       "Spearheaded the development of UI rework",

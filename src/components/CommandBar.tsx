@@ -41,8 +41,8 @@ const sections: SearchItem[] = [
     label: "About Me",
     content: [
       "I studied computer science at the University of Toronto",
-      "working at dbt Labs as a Senior Software Engineer, working on dbt Catalog.",
-      "I've worked at SailPoint, Citi, and Citylitics.",
+      "working at David AI as a Platform Engineer.",
+      "I've worked at dbt Labs, SailPoint, Citi, and Citylitics.",
       "Certifications: AWS Certified Developer, DataDog Fundamentals, PagerDuty Incident Responder, dbt Fundamentals",
     ],
     value: "about",

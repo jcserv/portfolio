@@ -59,18 +59,15 @@ export const About: React.FC = () => {
             <p className="mt-4">
               Howdy! 🤠 I studied computer science at the University of Toronto,
               and I&apos;m currently working at{" "}
-              <Link href="https://www.getdbt.com/">dbt Labs</Link> as a{" "}
+              <Link href="https://www.withdavid.ai/">David AI</Link> as a{" "}
               <strong className="text-main dark:text-alt">
-                Senior Software Engineer
+                Platform Engineer
               </strong>
-              , working on{" "}
-              <Link href="https://www.getdbt.com/product/dbt-explorer">
-                dbt Catalog
-              </Link>
-              . Prior to that, I&apos;ve worked at{" "}
-              <Link href="https://www.sailpoint.com/">SailPoint</Link>,{" "}
-              <Link href="https://www.citigroup.com/">Citigroup</Link>, and{" "}
-              <Link href="https://citylitics.com/">Citylitics</Link>.
+              building data pipelines that process petabytes of audio data. 
+              Prior to that, I&apos;ve worked at{" "}
+              <Link href="https://www.getdbt.com/">dbt Labs</Link>,{" "}
+              <Link href="https://www.sailpoint.com/">SailPoint</Link>, and {" "}
+              <Link href="https://www.citigroup.com/">Citi</Link>.
             </p>
             <br />
             <p>
